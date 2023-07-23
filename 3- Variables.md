@@ -61,7 +61,9 @@ ________________________________________________________________________________
 ## in the variable block, Type and Description are optional
 
 
-Type: string, number, bool, list(string), map(string), set(number), object, tuple
+Type: string, number, bool, list(string), list(number), map(string), set(number), object, tuple
+
+Default Type: any
 
 __________________________________________________________________________________________
 
@@ -75,6 +77,7 @@ variable "string_var" {
   default     = "Hello, Terraform!"
 }
 ```
+__________________________________________________________________________________________
 
 ## number
 
@@ -86,6 +89,7 @@ variable "number_var" {
   default     = 42
 }
 ```
+__________________________________________________________________________________________
 
 ## bool
 
@@ -97,6 +101,9 @@ variable "bool_var" {
   default     = true
 }
 ```
+
+__________________________________________________________________________________________
+
 ## list(string)
 
 ```bash
@@ -107,6 +114,17 @@ variable "list_var" {
   default     = ["item1", "item2", "item3"]
 }
 ```
+
+
+
+```bash
+resource "local_file" "games" {
+  filename     = "/root/favorite-games"
+  content  = var.list_var[0]
+}
+```
+__________________________________________________________________________________________
+
 ## map(string)
 
 ```bash
@@ -121,7 +139,40 @@ variable "map_var" {
   }
 }
 ```
+
+
+
+```bash
+resource "local_file" "games" {
+  filename     = "/root/favorite-games"
+  content  = var.map_var[key1]
+}
+```
+
+__________________________________________________________________________________________
+
+## map(number)
+
+```bash
+# Declaring a map variable
+variable "map_var" {
+  type        = map(number)
+  description = "A map of number variable"
+  default     = {
+    key1 = "100"
+    key2 = "400"
+    key3 = "3123"
+  }
+}
+```
+
+__________________________________________________________________________________________
+
 ## set(number)
+
+
+the difference between set and list is that in the set we cannot have duplicate values.
+
 
 ```bash
 # Declaring a set variable
@@ -131,6 +182,8 @@ variable "set_var" {
   default     = [1, 2, 3]
 }
 ```
+__________________________________________________________________________________________
+
 ## object
 
 ```bash
@@ -149,7 +202,12 @@ variable "object_var" {
   }
 }
 ```
+__________________________________________________________________________________________
+
 ## tuple
+
+the difference between a tuple and a list is that list is list uses elements of the same variable type, but in tuple, we can use different variable types
+
 
 ```bash
 # Declaring a tuple variable
