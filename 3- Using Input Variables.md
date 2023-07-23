@@ -58,10 +58,87 @@ ________________________________________________________________________________
 
 
 
+## in the variable block, Type and Description are optional
 
 
+Type: string, number, bool, list(string), map(string), set(number), object, tuple
 
 ```bash
+# Declaring a string variable
+variable "string_var" {
+  type        = string
+  description = "A string variable"
+  default     = "Hello, Terraform!"
+}
+```
+
+```bash
+# Declaring a number variable
+variable "number_var" {
+  type        = number
+  description = "A number variable"
+  default     = 42
+}
+```
+```bash
+# Declaring a boolean variable
+variable "bool_var" {
+  type        = bool
+  description = "A boolean variable"
+  default     = true
+}
+```
+```bash
+# Declaring a list variable
+variable "list_var" {
+  type        = list(string)
+  description = "A list of strings variable"
+  default     = ["item1", "item2", "item3"]
+}
+```
+```bash
+# Declaring a map variable
+variable "map_var" {
+  type        = map(string)
+  description = "A map of strings variable"
+  default     = {
+    key1 = "value1"
+    key2 = "value2"
+    key3 = "value3"
+  }
+}
+```
+```bash
+# Declaring a set variable
+variable "set_var" {
+  type        = set(number)
+  description = "A set of numbers variable"
+  default     = [1, 2, 3]
+}
+```
+```bash
+# Declaring an object variable
+variable "object_var" {
+  type = object({
+    name    = string
+    age     = number
+    is_male = bool
+  })
+  description = "An object variable"
+  default = {
+    name    = "John Doe"
+    age     = 30
+    is_male = true
+  }
+}
+```
+```bash
+# Declaring a tuple variable
+variable "tuple_var" {
+  type        = tuple([string, number, bool])
+  description = "A tuple variable"
+  default     = ["tuple_value", 123, false]
+}
 
 ```
 
