@@ -226,11 +226,12 @@ ________________________________________________________________________________
 
 
 
+# other methods of use variables
 
-
+### use variables in command line
 
 ```bash
-
+terraform apply -var "filename=/root/pets.txt"
 ```
 
 
@@ -240,10 +241,38 @@ ________________________________________________________________________________
 
 
 
-
+### use environment variables
 
 ```bash
+export TF_VAR_filename="/root/pets.txt"
 
+terraform apply
+```
+
+
+
+__________________________________________________________________________________________
+
+
+### use separate variable file ( terraform.tfvars OR terraform.tfvars.json )
+
+it should be added manually
+
+```bash
+terraform apply -var-file terraform.tfvars
+```
+
+
+
+__________________________________________________________________________________________
+
+
+### Automatically loaded ( *.auto.tfvars OR *.auto.tfvars.json )
+
+it will be added automatically
+
+```bash
+terraform apply
 ```
 
 
@@ -252,12 +281,18 @@ ________________________________________________________________________________
 
 
 
+## In Terraform, variables can be defined in several ways, with different sources providing values for those variables. The typical variable sources are:
 
+#### Variable Defaults: You can define default values for variables in the Terraform configuration. If no other value is provided, Terraform will use the default value.
 
+#### Terraform Variable Files (.tfvars): You can create separate variable definition files with the extension .tfvars that contain values for variables. Terraform automatically loads these files if they are present in the same directory as the configuration file.
 
-```bash
+#### Command-line Flags: You can override variable values by specifying them via command-line flags when running terraform apply or terraform plan.
 
-```
+#### Environment Variables: Terraform allows you to set variables through environment variables prefixed with TF_VAR_.
+
+#### Variable Input: When using Terraform with remote backends, such as Terraform Cloud or AWS S3, you can input variable values through the backend's interface.
+
 
 
 
@@ -266,37 +301,17 @@ ________________________________________________________________________________
 
 
 
+## When Terraform executes a plan or applies changes, it follows a specific order of precedence to determine the final value for a variable:
+
+#### Command-line flags take the highest priority, so if a variable is set via a command-line flag, it will override any other source.
+
+#### Environment variables have the next highest priority. If a variable is set as an environment variable, it will override the default value and values from .tfvars files.
+
+#### The .tfvars files come next in priority. If a variable is defined in multiple .tfvars files, the values from the file with the highest precedence will be used.
+
+#### If none of the above sources provide a value, Terraform falls back to using the default value defined in the configuration.
 
 
-```bash
-
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-```bash
-
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-```bash
-
-```
 
 
 
