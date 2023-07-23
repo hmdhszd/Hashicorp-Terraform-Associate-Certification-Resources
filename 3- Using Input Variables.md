@@ -63,6 +63,10 @@ ________________________________________________________________________________
 
 Type: string, number, bool, list(string), map(string), set(number), object, tuple
 
+__________________________________________________________________________________________
+
+## string
+
 ```bash
 # Declaring a string variable
 variable "string_var" {
@@ -72,6 +76,8 @@ variable "string_var" {
 }
 ```
 
+## number
+
 ```bash
 # Declaring a number variable
 variable "number_var" {
@@ -80,6 +86,9 @@ variable "number_var" {
   default     = 42
 }
 ```
+
+## bool
+
 ```bash
 # Declaring a boolean variable
 variable "bool_var" {
@@ -88,6 +97,8 @@ variable "bool_var" {
   default     = true
 }
 ```
+## list(string)
+
 ```bash
 # Declaring a list variable
 variable "list_var" {
@@ -96,6 +107,8 @@ variable "list_var" {
   default     = ["item1", "item2", "item3"]
 }
 ```
+## map(string)
+
 ```bash
 # Declaring a map variable
 variable "map_var" {
@@ -108,6 +121,8 @@ variable "map_var" {
   }
 }
 ```
+## set(number)
+
 ```bash
 # Declaring a set variable
 variable "set_var" {
@@ -116,6 +131,8 @@ variable "set_var" {
   default     = [1, 2, 3]
 }
 ```
+## object
+
 ```bash
 # Declaring an object variable
 variable "object_var" {
@@ -132,6 +149,8 @@ variable "object_var" {
   }
 }
 ```
+## tuple
+
 ```bash
 # Declaring a tuple variable
 variable "tuple_var" {
