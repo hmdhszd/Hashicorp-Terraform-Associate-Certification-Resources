@@ -68,7 +68,12 @@ to see all the providers used in the current configuration directory
 
 
 ```bash
+iac-server $ terraform providers 
 
+Providers required by configuration:
+.
+├── provider[registry.terraform.io/hashicorp/local]
+└── provider[registry.terraform.io/hashicorp/aws]
 ```
 
 
