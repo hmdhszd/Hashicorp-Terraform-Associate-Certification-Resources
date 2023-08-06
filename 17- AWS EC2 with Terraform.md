@@ -113,3 +113,10 @@ output "publicip" {
 
 
 __________________________________________________________________________________________
+
+##
+
+AWS user_data is the set of commands/data you can provide to a instance at launch time.
+
+if it's already run, and you add user_data, it will not be applied on the instance.
+
