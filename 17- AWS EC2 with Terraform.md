@@ -105,7 +105,7 @@ we can get the public IP of the machine for further uses:
 
 
 ```bash
-output publicip {
+output "publicip" {
   value  =  aws_instance.my-instance.public_ip
 }
 ```
