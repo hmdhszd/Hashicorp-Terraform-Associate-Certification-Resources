@@ -120,3 +120,54 @@ resource "aws_instance" "monitoring_instance" {
 
 
 __________________________________________________________________________________________
+
+
+### if "==" (equal to)
+
+In this example, the value of the ami attribute for the aws_instance resource is determined based on the equality comparison (==) with the value of the environment variable.
+
+If the environment is set to "production," a specific AMI ID is used; otherwise, a different AMI ID is used.
+
+```bash
+# Example: Using the "==" (equal to) operator
+variable "environment" {
+  type    = string
+  default = "production"
+}
+
+resource "aws_instance" "web_server" {
+  ami           = var.environment == "production" ? "ami-12345678" : "ami-87654321"
+  instance_type = "t2.micro"
+
+  # Other instance configuration...
+}
+```
+
+
+
+__________________________________________________________________________________________
+
+
+### if "<" (less than) operator
+
+Here, the desired_capacity attribute of an AWS Auto Scaling Group resource is determined based on the comparison of the value of the num_users variable with the threshold of 100.
+
+If the number of users is less than 100, the desired capacity is set to 2; otherwise, it's set to 4.
+
+```bash
+# Example: Using the "<" (less than) operator
+variable "num_users" {
+  type    = number
+  default = 50
+}
+
+resource "aws_autoscaling_group" "scaling_group" {
+  desired_capacity = var.num_users < 100 ? 2 : 4
+  min_size         = 1
+  max_size         = 10
+
+  # Other autoscaling group configuration...
+}
+```
+
+
