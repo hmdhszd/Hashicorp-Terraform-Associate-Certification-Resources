@@ -39,7 +39,7 @@ ________________________________________________________________________________
 
 in the Terraform Registry, you can find 2 types of modules:
 
-- Verified Modules (have verified checkmark beside it's name)
+- Verified Modules (have verified checkmark beside its name)
 
 - Community Modules
 
@@ -58,10 +58,133 @@ ________________________________________________________________________________
 
 
 
+## 1- Public Module - Terraform Registry
 
+
+in the terraform module, we can use our variables by adding them inside the module block
+
+
+main.tf
+
+```bash
+module "iam_iam-user" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+  version = "3.4.0"
+  # insert the required variables here
+  name = "max"
+}
+```
+
+
+
+__________________________________________________________________________________________
+
+
+
+## 2- Local Module
+
+directory structure:
+
+```bash
+my_terraform_project/
+├── main.tf
+├── variables.tf
+├── terraform.tfvars
+├── modules/
+│   └── s3_bucket/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+└── .terraform/ (directory created after running 'terraform init')
+```
+
+
+__________________________________________________________________________________________
+
+
+
+we use module block to refer to the module:
+
+
+my_terraform_project/main.tf
 
 
 ```bash
+# This is the main configuration file
+
+provider "aws" {
+  region = "us-west-1"
+}
+
+module "my_s3_bucket" {
+  source     = "./modules/s3_bucket"
+  bucket_name = "my-unique-bucket-name"
+}
+
+output "bucket_id" {
+  description = "ID of the created S3 bucket from the local module"
+  value       = module.my_s3_bucket.bucket_id
+}
+```
+
+
+__________________________________________________________________________________________
+
+my_terraform_project/variables.tf
+
+
+```bash
+# This is the variables.tf file in the root directory
+
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+}
+
+# You can add more variables here if needed
+```
+
+
+__________________________________________________________________________________________
+
+
+my_terraform_project/terraform.tfvars
+
+
+```bash
+# This is the terraform.tfvars file in the root directory
+
+bucket_name = "my-unique-bucket-name"
+```
+
+
+__________________________________________________________________________________________
+
+my_terraform_project/modules/s3_bucket/main.tf
+
+```bash
+# This is the main.tf file for the local module named "s3_bucket"
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = var.bucket_name
+  acl    = "private"
+}
+
+resource "aws_iam_policy" "s3_policy" {
+  name        = "s3-policy"
+  description = "Policy for accessing the S3 bucket"
+
+  policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Effect   = "Allow",
+        Action   = ["s3:GetObject"],
+        Resource = "${aws_s3_bucket.my_bucket.arn}/*",
+      },
+    ],
+  })
+}
 
 ```
 
@@ -73,9 +196,15 @@ ________________________________________________________________________________
 
 
 
+my_terraform_project/modules/s3_bucket/variables.tf
 
 ```bash
+# This is the variables.tf file for the local module named "s3_bucket"
 
+variable "bucket_name" {
+  description = "Name of the S3 bucket"
+  type        = string
+}
 ```
 
 
@@ -85,66 +214,18 @@ ________________________________________________________________________________
 
 
 
+my_terraform_project/modules/s3_bucket/outputs.tf
 
 
 ```bash
+# This is the outputs.tf file for the local module named "s3_bucket"
 
+output "bucket_id" {
+  description = "ID of the created S3 bucket"
+  value       = aws_s3_bucket.my_bucket.id
+}
 ```
 
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-```bash
-
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
-```bash
-
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
-```bash
-
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
-```bash
-
-```
 
 
 
