@@ -256,8 +256,51 @@ ________________________________________________________________________________
 
 
 
+terraform init:  will downloads the latest version of the provider plugins
 
 
+
+__________________________________________________________________________________________
+
+
+Version constraints:
+
+1- required_providers
+
+2- required_version
+
+3- modules
+
+Version constraints can be used anywhere terraform allows us to specify versions.
+
+Most commonly they can be set at:
+
+1. Within the provider version configuration (Inside the required_providers block nested inside the terraform block)
+
+2. The "required_version" argument which is used to set the version of Terraform to use.
+
+3. Within modules. This is where we specify the version of module to be used.
+
+
+
+__________________________________________________________________________________________
+
+
+plugin-based
+
+Providers use a ______-based architecture that is available for most infrastructure platforms within the public Terraform registry.
+
+
+
+__________________________________________________________________________________________
+
+
+ " , "
+
+version = ">= 1.2.0, < 2.0.0"
+
+
+A version constraint is a string literal containing one or more conditions, which are separated by commas. 
 
 
 __________________________________________________________________________________________
@@ -265,29 +308,18 @@ ________________________________________________________________________________
 
 
 
+when using version constraints, we can use:
 
 
+- pessimistic operator
 
-__________________________________________________________________________________________
+- "!=" operator
 
+- "~>" operator
 
+- combination comparison operation to use specific version within a range
 
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
+- comparison operator
 
 
 
