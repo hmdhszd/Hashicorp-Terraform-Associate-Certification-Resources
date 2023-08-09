@@ -329,6 +329,14 @@ ________________________________________________________________________________
 
 
 
+A variable name or a label must be unique within the same module or configuration
+
+
+__________________________________________________________________________________________
+
+
+
+we can NOT use "providers" as a variable name.
 
 
 
@@ -337,6 +345,14 @@ ________________________________________________________________________________
 
 
 
+The variable block begins with the "variable" keyword followed by a user defined name/label for the variable.
+
+
+__________________________________________________________________________________________
+
+
+
+to see terraform attributes after creation of a resource, use "terraform show"
 
 
 
@@ -345,6 +361,29 @@ ________________________________________________________________________________
 
 
 
+Resource targeting in Terraform is a feature that allows you to apply changes to only a subset of your infrastructure, instead of applying the entire plan at once.
+
+
+terraform plan -target aws_instance.web -target module.network
+
+
+
+__________________________________________________________________________________________
+
+
+
+Terraform resources and data sources make all of their arguments available as readable attributes,
+
+and also typically export additional read-only attributes.
+
+
+
+__________________________________________________________________________________________
+
+
+local-only
+
+The behavior of __________ data sources is the same as all other data sources, but their result data exists only temporarily during a Terraform operation, and is re-calculated each time a new plan is created.
 
 
 
@@ -353,6 +392,15 @@ ________________________________________________________________________________
 
 
 
+The behavior of local-only data sources is the same as all other data sources, but their result data exists only temporarily during a Terraform operation, and is re-calculated each time a new plan is created.
+
+
+__________________________________________________________________________________________
+
+
+
+
+The terraform_remote_state data source uses the latest state snapshot from a specified state backend to retrieve the root module output values from some other Terraform configuration. You can use the terraform_remote_state data source without requiring or configuring a provider.
 
 
 
@@ -361,6 +409,7 @@ ________________________________________________________________________________
 
 
 
+A data source can be created using the data block.
 
 
 
@@ -369,6 +418,7 @@ ________________________________________________________________________________
 
 
 
+Each data source in turn belongs to a provider.
 
 
 
@@ -376,15 +426,9 @@ ________________________________________________________________________________
 
 
 
+The terraform refresh command is used to reconcile the state Terraform knows about (via its state file) with the real-world infrastructure.
 
-
-
-
-__________________________________________________________________________________________
-
-
-
-
+This can be used to detect any drift from the last-known state and to update the state file. This does not modify infrastructure, but does modify the state file.
 
 
 
@@ -392,30 +436,17 @@ ________________________________________________________________________________
 
 
 
+the refresh command is automatically issued by the "terraform plan" command.
 
+The -refresh=false option is used in normal planning mode to skip the default behavior of refreshing Terraform state before checking for configuration changes.
 
+CLI:
 
+terraform plan -refresh=false
 
-__________________________________________________________________________________________
+OR
 
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
+terraform apply -refresh=false
 
 
 
@@ -425,23 +456,21 @@ ________________________________________________________________________________
 
 
 
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
+state file keeps the dependency between the resources
 
 
 __________________________________________________________________________________________
 
 
 
+state lock in terraform
 
 
+If supported by your backend, Terraform will lock your state for all operations that could write state.
+
+This prevents others from doing changes and potentially corrupting your state.
+
+State locking happens automatically on all operations that could write state.
 
 
 __________________________________________________________________________________________
