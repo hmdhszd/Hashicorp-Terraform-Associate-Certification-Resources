@@ -36,6 +36,7 @@ terraform {
     bucket = "mybucket"
     key    = "my-state-dir/terraform.tfstate"
     region = "us-east-1"
+    dynamodb_table = "state-locking-table"
   }
 }
 ```
@@ -51,7 +52,7 @@ ________________________________________________________________________________
 
 ### terraform state list
 
-### terraform state list <resource-name>
+### terraform state list < resource-name >
 
 The terraform state list command is used to list resources within a Terraform state.
 
