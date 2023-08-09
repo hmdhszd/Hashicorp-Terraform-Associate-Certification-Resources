@@ -47,3 +47,25 @@ data "aws_s3_bucket" "selected" {
 
 
 __________________________________________________________________________________________
+
+
+
+data rource with filter:
+
+```bash
+data "aws_ec2_transit_gateway" "tgw" {
+  filter {
+    name   = "tag:Name"
+    values = ["wahlnetwork-tgw-prod"]
+  }
+}
+```
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
