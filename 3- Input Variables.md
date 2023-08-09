@@ -31,6 +31,8 @@ ________________________________________________________________________________
 
 variables.tf
 
+if we don't define the "default" value, it will ask us to enter in manually at the moment of issue the command "terraform apply"
+
 ```bash
 variable "aws_region" {
   description = "The AWS region where the EC2 instance will be created."
