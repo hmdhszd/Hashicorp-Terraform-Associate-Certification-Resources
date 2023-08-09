@@ -113,3 +113,52 @@ terraform state rm [options] ADDRESS... Terraform will search the state for any 
 
 
 __________________________________________________________________________________________
+
+
+
+What are the steps required to remove a resource from the management of terraform?
+
+terraform state rm
+
+
+
+
+__________________________________________________________________________________________
+
+
+A requirement has come up which requires you to inspect the state file of terraform configuration. Your terraform script is already configured to work with the remote backend. Which of the following commands would you use to view a specific field in the state file?
+
+
+terraform state pull
+
+
+
+__________________________________________________________________________________________
+
+
+
+You can disable state locking for most commands with the -lock flag but it is not recommended.
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+Areas of Terraform’s behavior that are not determined by the backend: none
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
