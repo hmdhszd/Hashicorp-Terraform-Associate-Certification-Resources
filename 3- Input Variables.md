@@ -230,18 +230,6 @@ ________________________________________________________________________________
 
 # other methods of use variables
 
-### use variables in command line
-
-```bash
-terraform apply -var "filename=/root/pets.txt"
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
 
 ### use environment variables
 
@@ -256,20 +244,7 @@ terraform apply
 __________________________________________________________________________________________
 
 
-### use separate variable file ( terraform.tfvars OR terraform.tfvars.json )
-
-it should be added manually
-
-```bash
-terraform apply -var-file terraform.tfvars
-```
-
-
-
-__________________________________________________________________________________________
-
-
-### Automatically loaded ( *.auto.tfvars OR *.auto.tfvars.json )
+### Automatically loaded ( *.auto.tfvars OR *.auto.tfvars.json OR terraform.tfvars OR terraform.tfvars.json )
 
 it will be added automatically
 
@@ -280,6 +255,34 @@ terraform apply
 
 
 __________________________________________________________________________________________
+
+
+
+### use separate variable file ( *.tfvars OR *.tfvars.json )
+
+it should be added manually
+
+```bash
+terraform apply -var-file variables.tfvars
+```
+
+
+
+__________________________________________________________________________________________
+
+
+
+### use variables in command line
+
+```bash
+terraform apply -var "filename=/root/pets.txt"
+```
+
+
+
+__________________________________________________________________________________________
+
+
 
 
 
@@ -302,19 +305,15 @@ ________________________________________________________________________________
 
 
 
+## The Order of Precedence
 
-## When Terraform executes a plan or applies changes, it follows a specific order of precedence to determine the final value for a variable:
+#### 1. Environment variables
 
-#### Command-line flags take the highest priority, so if a variable is set via a command-line flag, it will override any other source.
+#### 2. terraform.tfvars OR terraform.tfvars.json
 
-#### Environment variables have the next highest priority. If a variable is set as an environment variable, it will override the default value and values from .tfvars files.
+#### 3. *.auto.tfvars OR *.auto.tfvars.json
 
-#### The .tfvars files come next in priority. If a variable is defined in multiple .tfvars files, the values from the file with the highest precedence will be used.
-
-#### If none of the above sources provide a value, Terraform falls back to using the default value defined in the configuration.
-
-
-
+#### 4. Any -var and -var-file options on the command line
 
 
 __________________________________________________________________________________________
