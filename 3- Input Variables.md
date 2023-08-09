@@ -222,6 +222,22 @@ variable "tuple_var" {
 
 ```
 
+__________________________________________________________________________________________
+__________________________________________________________________________________________
+
+## sensitive variable:
+
+Here's an example:
+
+In this example, db_password is a sensitive variable. The sensitive attribute ensures that Terraform will treat this variable as sensitive and hide its value in the console output.
+
+```bash
+variable "db_password" {
+  description = "The password for the database"
+  type = string
+  sensitive = true
+}
+```
 
 
 __________________________________________________________________________________________
