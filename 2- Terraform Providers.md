@@ -37,3 +37,64 @@ other configuration files can be created for specific reasons like: main.tf , va
 
 
 
+
+
+__________________________________________________________________________________________
+
+
+
+
+The terraform providers ______ command can automatically populate a directory that will be used as a local filesystem mirror in the provider installation configuration.
+
+
+
+terraform providers mirror
+
+
+__________________________________________________________________________________________
+
+
+### terraform providers schema
+
+The terraform providers schema command is used to print detailed schemas for the providers used in the current configuration.
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+### terraform providers lock
+
+Terraform provider locking involves specifying a specific version of a provider in your configuration, ensuring stability and predictability by preventing automatic provider updates.
+
+This helps maintain consistent infrastructure management.
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+### terraform providers mirror
+
+
+Terraform Providers Mirror is a feature that allows organizations to host a local copy of external providers' plugins, enhancing control and reliability in infrastructure provisioning through Terraform.
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
