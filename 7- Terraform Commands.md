@@ -157,3 +157,40 @@ Every terraform command listed is useful for inspecting infrastructure:- output,
 __________________________________________________________________________________________
 
 
+
+
+to validate a Terraform configuration using the terraform validate command, it's important to FIRST, run terraform init in order to set up the necessary dependencies and initialize the configuration directory.
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+Certainly, here's a concise description of each command in two lines:
+
+1. **`terraform fmt`**: Automatically formats Terraform code for consistent layout, **`improving readability`** by adjusting indentation and spacing as per the style guide.
+
+2. **`terraform validate`**: Checks Terraform configuration files for **`syntax errors`** and verifies the correctness of references to providers and modules, helping prevent invalid configurations.
+
+
+__________________________________________________________________________________________
+
+
+
+The terraform graph command is used to generate a visual representation in which format? DOT format
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
