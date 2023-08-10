@@ -439,3 +439,42 @@ output "lookup_value" {
 
 
 __________________________________________________________________________________________
+
+
+
+
+If the arguments for passing to a function are available in the form of list or tuple value, how would you expand that inside the function?
+
+
+
+Provide the list value as an argument and follow it with the “…” symbol
+
+
+
+__________________________________________________________________________________________
+
+
+
+We cannot use the file or templatefile function to read files that our configuration might generate dynamically on disk as part of the plan or apply steps.
+
+
+
+__________________________________________________________________________________________
+
+
+Select the correct options that produce a string by concatenating together all elements of a given list of strings with the given delimiter:
+
+join(separator, list)
+
+
+__________________________________________________________________________________________
+
+
+
+Which of the following function is no longer available in terraform:
+
+
+map()
+
+
+__________________________________________________________________________________________
