@@ -255,3 +255,23 @@ in the provisioners, we can use "when" and "on_failure"
 if running the command is not important for us, we use: on_failure = continue, otherwise we use on_failure = fail
 
 If when = destroy is specified, the provisioner will run when the resource it is defined within is destroyed.
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+What happens when provisioners fail to execute successfully?
+
+it will taint the resource and that will be replaced on the next run
+
+
+
+
+
