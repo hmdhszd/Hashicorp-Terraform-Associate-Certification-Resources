@@ -145,3 +145,15 @@ digraph {
 
 
 __________________________________________________________________________________________
+
+
+
+
+Every terraform command listed is useful for inspecting infrastructure:- output, graph, show, state list, state show
+
+
+
+
+__________________________________________________________________________________________
+
+
