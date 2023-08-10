@@ -68,4 +68,28 @@ ________________________________________________________________________________
 
 
 
+### Terraform Data Sources:
+
+Data sources are used to query and fetch information about existing resources in your infrastructure environment.
+
+They allow you to access attributes of resources that are already created outside of Terraform, like information from cloud providers or other systems.
+
+Data sources provide input values for your Terraform configuration, helping you make informed decisions when creating or configuring resources.
+
+
+### Terraform Import Command:
+
+The terraform import command is used to bring existing resources into Terraform's management.
+
+It allows you to include resources that were created manually or through other means into your Terraform configuration, making them part of your infrastructure as code setup.
+
+Importing resources helps Terraform understand the existing state of those resources, allowing you to further manage and modify them using Terraform.
+
+After importing, you need to define the resource in your Terraform configuration to align its desired state with the actual state.
+
+In summary, data sources fetch information about existing resources, while the terraform import command adds existing resources to be managed by Terraform, enabling you to manage them consistently using your Terraform configuration.
+
+
+
+
 
