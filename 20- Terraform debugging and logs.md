@@ -80,3 +80,28 @@ To disable debug mode and reset the logging verbosity to its default level, clea
 
 
 __________________________________________________________________________________________
+
+
+You can set TF_LOG to one of the log levels (in order of decreasing verbosity) TRACE, DEBUG, INFO, WARN or ERROR to change the verbosity of the logs. Also if we set TF_LOG to JSON, it output logs at the TRACE level or higher, and uses a parseable JSON encoding as the formatting.
+
+__________________________________________________________________________________________
+
+
+How would you achieve the force replacement of a particular object even though there are no configuration changes? Choose the most appropriate option among the following:
+
+Usage of terraform apply -replace=”<resource_name>” is preferred overterraform taint`
+
+
+__________________________________________________________________________________________
+
+
+
+Your team is working collaboratively on a project that uses terraform scripts heavily. In your team one team member was not familiar with terraform, so he was making the required changes manually, using the GUI console of that specific cloud provider on the resources provisioned using terraform. Since these unmanaged changes are hampering the efficiency of the team , you want to revert these changes. How would you go about doing this?
+
+
+Use terraform destroy and then terraform apply commands in this specific order,You will taint the resources that you want removed on the next terraform apply.
+
+
+__________________________________________________________________________________________
+
+
