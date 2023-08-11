@@ -110,10 +110,7 @@ ________________________________________________________________________________
 
 
 
-
-```bash
-
-```
+Within your Terraform configuration, how can you include the name of the current workspace?    ${terraform.workspace}
 
 
 
