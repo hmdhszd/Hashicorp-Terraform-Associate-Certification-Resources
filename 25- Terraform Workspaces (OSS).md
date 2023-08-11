@@ -19,10 +19,7 @@ ________________________________________________________________________________
 
 
 
-
-```bash
-
-```
+with Terraform Workspaces, we can use the same configuration directory, to create multiple environment infrastructure.
 
 
 
@@ -34,7 +31,43 @@ ________________________________________________________________________________
 
 
 ```bash
+project/
+├── main.tf
+├── variables.tf
+```
 
+
+
+
+
+variables.tf
+
+```bash
+variable "ami" {
+  description = "Map of AMIs for different projects"
+  type        = map(string)
+  default = {
+    ProjectA = "ami-xxxxxxxxxxxxxxxxx"  # Replace with actual AMI IDs
+    ProjectB = "ami-yyyyyyyyyyyyyyyyy"
+  }
+}
+```
+
+
+main.tf
+
+```bash
+provider "aws" {
+  region = "us-west-2"  # Update with your desired AWS region
+}
+
+resource "aws_instance" "ec2_instance" {
+  ami           = lookup(var.ami, terraform.workspace)
+  instance_type = "t2.micro"
+  tags = {
+    Name = "EC2 Instance"
+  }
+}
 ```
 
 
@@ -44,9 +77,34 @@ ________________________________________________________________________________
 
 
 
+### Create a new workspace
 
 
 ```bash
+terraform workspace new ProjectA
+```
+
+
+```bash
+terraform workspace new ProjectB
+```
+
+once we create a workspace, Terraform will immidietely switch to it.
+
+
+__________________________________________________________________________________________
+
+
+
+### list workspaces
+
+
+```bash
+terraform workspace list
+
+default
+ProjectA
+* ProjectB
 
 ```
 
@@ -56,11 +114,19 @@ ________________________________________________________________________________
 
 
 
+### Select and apply configuration on a specific terraform workspace
+
+
+```bash
+terraform workspace select ProjectA
+terraform apply
+```
 
 
 
 ```bash
-
+terraform workspace select ProjectB
+terraform apply
 ```
 
 
@@ -70,10 +136,16 @@ ________________________________________________________________________________
 
 
 
+when using workspaces, we will have a directory called "terraform.tfstate.d" for the state files:
 
 
 ```bash
-
+terraform.tfstate.d/
+├── default.tfstate
+├── ProjectA
+│   └── terraform.tfstate
+└── ProjectB
+    └── terraform.tfstate
 ```
 
 
