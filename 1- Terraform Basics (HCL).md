@@ -44,7 +44,7 @@ each resource has a list of required or optional arguments
 
 #### Resource = file
 
-#### Logical Name to identify the resource (can be anything) = games
+#### Resource Name to identify the resource (can be anything) = games
 
 #### Arguments = content / filename
 
