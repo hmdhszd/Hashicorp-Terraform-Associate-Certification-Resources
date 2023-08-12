@@ -43,6 +43,22 @@ ________________________________________________________________________________
 
 
 
+### terraform providers mirror
+
+
+The terraform providers mirror command downloads the providers required for the current configuration and copies them into a directory in the local filesystem.
+
+In normal use, terraform init will automatically download needed providers from provider registries as part of initializing the current working directory.
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
 
 The terraform providers ______ command can automatically populate a directory that will be used as a local filesystem mirror in the provider installation configuration.
 
