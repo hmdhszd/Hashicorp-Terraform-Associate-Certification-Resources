@@ -101,10 +101,7 @@ ________________________________________________________________________________
 
 
 
-
-```bash
-
-```
+Which feature is used to manage how members of your organization can use modules from the terraform private registry?    sentien policies
 
 
 
