@@ -7,7 +7,7 @@ a Resource is an object that Terraform manages it.
 it could be a file, s3 bucket, virtual machine, ec2, DynamoDB, IAM user and Groups, Roles, Policies,...
 
 
-a HCL tile (.tf) consist of blocks and arguments,
+a HCL file (.tf) consist of blocks and arguments,
 
 
 
@@ -19,10 +19,9 @@ ________________________________________________________________________________
 
 Example:
 
+main.tf
 
 ```bash
-cat main.tf
-
 resource "local_file" "games" {
   filename     = "/root/favorite-games"
   content  = "FIFA 21"
