@@ -19,7 +19,7 @@ ex:
 
 Orgazinational Namespace: hashicorp (registry.terraform.io/hashicorp/local)
 
-Type: local
+Provider: local
 
 
 
