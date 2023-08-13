@@ -17,15 +17,13 @@ then check the "Schema" part to see what output of this provider can be used in 
 for example for the "time_static" provider:
 
 
-Schema:
+#### Schema:
 
 
 
 rfc3339: (String) Base timestamp in RFC3339 format (see RFC3339 time string e.g., YYYY-MM-DDTHH:MM:SSZ). Defaults to the current time.
 
 triggers: (Map of String) Arbitrary map of values that, when changed, will trigger a new base timestamp value to be saved. See the main provider documentation for more information.
-
-
 
 day: (Number) Number day of timestamp.
 
@@ -45,6 +43,21 @@ year: (Number) Number year of timestamp.
 
 
 __________________________________________________________________________________________
+
+
+### Interpolation
+
+A ${ ... } sequence is an interpolation, which evaluates the expression given between the markers,
+
+converts the result to a string if necessary,
+
+and then inserts it into the final string:
+
+"Hello, ${var.name}!" "Hello, ${var.name}!"
+
+
+__________________________________________________________________________________________
+
 
 
 ${time_static.time_update.id}
@@ -104,31 +117,3 @@ resource "time_static" "time_update" {
 
 __________________________________________________________________________________________
 
-
-
-## These dependencies come in two flavours: 
-
-#### Implicit – where a resource may reference another resource/data source.
-
-#### Explicit – where an engineer explicitly calls out a dependency between two resources/data sources.
-
-for explicit dependency, we should use "depends_on" : 
-
-
-```bash
-resource "local_file" "whale" {
-  filename   = "/root/whale"
-  content    = "whale"
-  depends_on = [
-      local_file.krill
-      ]
-}
-resource "local_file" "krill" {
-  filename = "/root/krill"
-  content  = "krill"
-}
-```
-
-
-
-__________________________________________________________________________________________
