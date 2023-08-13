@@ -1,4 +1,30 @@
+# lifecycle
 
+The `lifecycle` meta-argument in Terraform controls how resources are managed during their lifecycle, like creation, updates, and deletion. It lets you specify actions for updates, replacements, and prevent accidental deletions.
+
+
+```bash
+resource "aws_s3_bucket" "example_bucket" {
+  bucket = "example-bucket-name"
+  acl    = "private"
+
+  # Other bucket configuration settings...
+
+  lifecycle {
+    prevent_destroy = true
+
+    # Define actions to be taken when the resource is replaced
+    create_before_destroy = true
+  }
+}
+
+```
+
+
+
+
+
+__________________________________________________________________________________________
 
 
 
