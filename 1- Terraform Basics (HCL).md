@@ -346,10 +346,10 @@ ________________________________________________________________________________
 
 
 
-# terraform apply -auto-approve
+#### terraform apply -auto-approve
 
 
-Which of the options can be used to run a terraform apply without confirmation?
+Which of the options can be used to run a terraform apply without confirmation?    -auto-approve
 
 
 
