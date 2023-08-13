@@ -342,3 +342,19 @@ Destroy complete! Resources: 1 destroyed.
 
 
 __________________________________________________________________________________________
+
+
+
+
+# terraform apply -auto-approve
+
+
+Which of the options can be used to run a terraform apply without confirmation?
+
+
+
+
+__________________________________________________________________________________________
+
+
+
