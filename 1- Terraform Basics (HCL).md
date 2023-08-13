@@ -103,7 +103,7 @@ commands will detect it and remind you to do so if necessary.
 
 __________________________________________________________________________________________
 
-# terraform plan:
+# terraform plan:  display the blueprint of the infrastructure to be applied
 
 ### After initialization, this command is used to create an execution plan. Terraform inspects the configuration files, compares the current state with the desired state, and generates a detailed plan of what actions (create, modify, delete) will be taken to achieve the desired configuration.
 
