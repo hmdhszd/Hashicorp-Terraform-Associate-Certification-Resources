@@ -156,7 +156,7 @@ ________________________________________________________________________________
 
 
 
-Running terraform plan will not render outputs
+Running the "terraform plan" will NOT render outputs
 
 Running the “terraform apply” will render the output variables defined
 
