@@ -17,7 +17,14 @@ then check the "Schema" part to see what output of this provider can be used in 
 for example for the "time_static" provider:
 
 
-Read-Only:
+Schema:
+
+
+
+rfc3339: (String) Base timestamp in RFC3339 format (see RFC3339 time string e.g., YYYY-MM-DDTHH:MM:SSZ). Defaults to the current time.
+
+triggers: (Map of String) Arbitrary map of values that, when changed, will trigger a new base timestamp value to be saved. See the main provider documentation for more information.
+
 
 
 day: (Number) Number day of timestamp.
