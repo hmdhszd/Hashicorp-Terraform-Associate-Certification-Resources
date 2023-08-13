@@ -1,6 +1,39 @@
 
 
 
+
+
+# depends_on
+
+## These dependencies come in two flavours: 
+
+#### Implicit – where a resource may reference another resource/data source.
+
+#### Explicit – where an engineer explicitly calls out a dependency between two resources/data sources.
+
+for explicit dependency, we should use "depends_on" : 
+
+
+```bash
+resource "local_file" "whale" {
+  filename   = "/root/whale"
+  content    = "whale"
+  depends_on = [
+      local_file.krill
+      ]
+}
+resource "local_file" "krill" {
+  filename = "/root/krill"
+  content  = "krill"
+}
+```
+
+
+__________________________________________________________________________________________
+
+
+
+
 # count
 
 we've seen 2 meta arguments: "depends_on" and "lifecycle"
