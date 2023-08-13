@@ -153,3 +153,19 @@ Welcome to Kodekloud.
 
 
 __________________________________________________________________________________________
+
+
+
+Running terraform plan will not render outputs
+
+Running the “terraform apply” will render the output variables defined
+
+Running the “terraform output” will render the output variables defined
+
+
+__________________________________________________________________________________________
+
+
+
+
+
