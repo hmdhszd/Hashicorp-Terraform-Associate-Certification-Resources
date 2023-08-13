@@ -249,6 +249,8 @@ ________________________________________________________________________________
 
 ### use environment variables
 
+set the environment variable in the format TF_VAR_< variable name >
+
 ```bash
 export TF_VAR_filename="/root/pets.txt"
 
