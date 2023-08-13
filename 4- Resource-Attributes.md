@@ -12,7 +12,7 @@ ________________________________________________________________________________
 
 
 
-then check the "Read-Only" part to see what output of this provider can be used in another provider:
+then check the "Schema" part to see what output of this provider can be used in another provider:
 
 for example for the "time_static" provider:
 
