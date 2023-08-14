@@ -185,17 +185,9 @@ ________________________________________________________________________________
 
 
 
-The terraform graph command is used to generate a visual representation in which format? DOT format
+The terraform graph command is used to generate a visual representation in which format? ‍`DOT format`
 
 
 __________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
 
 
