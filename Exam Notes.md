@@ -521,9 +521,9 @@ ________________________________________________________________________________
 
 
 
-### output variable  -->  output block
+### output variable  -->  `output` block
 
-### data source      -->  data block
+### data source      -->  `data` block
 
 
 
