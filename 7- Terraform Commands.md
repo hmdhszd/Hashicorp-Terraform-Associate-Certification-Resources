@@ -36,10 +36,6 @@ The terraform fmt command is used to rewrite Terraform configuration files to a 
 to improve readability
 
 
-```bash
-
-```
-
 
 
 __________________________________________________________________________________________
@@ -52,9 +48,6 @@ ________________________________________________________________________________
 
 shows the current state of the infra as seen by terraform
 
-```bash
-
-```
 
 
 
@@ -87,7 +80,10 @@ ________________________________________________________________________________
 to see all output variables in the configuration directory
 
 ```bash
+iac-server $ terraform output
 
+id1 = a3449786-c28b-2617-8833-e80d74f0505b
+order1 = 75392
 ```
 
 
@@ -100,7 +96,7 @@ ________________________________________________________________________________
 
 sync terraform with the real-world infrastructure (it will only update the state file NOT the infrastructure)
 
-the command "terraform refresh" is called automatically with "terraform plan" and "terraform apply" command
+the command `terraform refresh` is called automatically with `terraform plan` and `terraform apply` command
 
 ```bash
 
