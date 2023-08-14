@@ -176,6 +176,36 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
+### When a module has multiple configurations for the same provider, which meta-argument can you use to specify the configuration? `providers`
+
+
+```bash
+provider "aws" {
+  alias = "region_a"
+  region = "us-east-1"
+}
+
+provider "aws" {
+  alias = "region_b"
+  region = "us-west-2"
+}
+
+module "example_module" {
+  source = "./example_module"
+  
+  providers = {
+    aws = aws.region_a
+  }
+}
+```
+
+
+
+__________________________________________________________________________________________
+
+
+
+
 
 
 
