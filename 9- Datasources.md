@@ -110,7 +110,7 @@ Data resources have the different dependency resolution behavior as defined for 
 
 __________________________________________________________________________________________
 
-
+The behavior of `local-only` data sources is the same as all other data sources, but their result data exists only temporarily during a Terraform operation, and is re-calculated each time a new plan is created.
 
 __________________________________________________________________________________________
 
