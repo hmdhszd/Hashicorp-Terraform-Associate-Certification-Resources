@@ -58,3 +58,34 @@ resource "local_file" "games" {
 
 
 __________________________________________________________________________________________
+
+
+?????
+
+### What are the steps required to remove a resource from the management of terraform?    -lock=false
+
+
+
+terraform apply -lock=false
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+### What are the steps required to remove a resource from the management of terraform?
+
+Use the terraform state rm command followed by manual removal of corresponding resources from the configuration file as well
+
+
+__________________________________________________________________________________________
+
+
+
+
+Areas of Terraform’s behavior that are not determined by the backend:    none!
+
+
+__________________________________________________________________________________________
