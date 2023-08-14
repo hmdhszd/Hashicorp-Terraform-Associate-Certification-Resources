@@ -98,9 +98,7 @@ sync terraform with the real-world infrastructure (it will only update the state
 
 the command `terraform refresh` is called automatically with `terraform plan` and `terraform apply` command
 
-```bash
 
-```
 
 
 
@@ -145,7 +143,18 @@ ________________________________________________________________________________
 
 
 
-Every terraform command listed is useful for inspecting infrastructure:- output, graph, show, state list, state show
+Every terraform command listed is useful for inspecting infrastructure:
+
+terraform output
+
+terraform graph
+
+terraform show
+
+terraform list
+
+terraform state
+
 
 
 
@@ -153,7 +162,7 @@ Every terraform command listed is useful for inspecting infrastructure:- output,
 __________________________________________________________________________________________
 
 
-
+### FIRST, run terraform init  -->  THEN, run terraform validate
 
 to validate a Terraform configuration using the terraform validate command, it's important to FIRST, run terraform init in order to set up the necessary dependencies and initialize the configuration directory.
 
