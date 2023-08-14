@@ -51,7 +51,7 @@ resource "random_integer" "order2" {
 
 
 
-
+# we use "output" block type
 
 output.tf
 
