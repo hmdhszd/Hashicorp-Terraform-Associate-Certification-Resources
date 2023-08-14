@@ -5,7 +5,7 @@ you can use a specific version of the terraform provider: (default = latest vers
 
 we use "terraform" block to configure settings related to terraform itself.
 
-inside this block, we use "required" to specify the version of the provider.
+inside this block, we use `required_providers` to specify the version of the provider.
 
 
 
