@@ -153,7 +153,10 @@ terraform show
 
 terraform list
 
-terraform state
+terraform state list
+
+
+terraform state show
 
 
 
