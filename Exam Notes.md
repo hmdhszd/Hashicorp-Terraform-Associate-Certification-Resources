@@ -295,34 +295,6 @@ Providers use a ______-based architecture that is available for most infrastruct
 __________________________________________________________________________________________
 
 
- " , "
-
-version = ">= 1.2.0, < 2.0.0"
-
-
-A version constraint is a string literal containing one or more conditions, which are separated by commas. 
-
-
-__________________________________________________________________________________________
-
-
-
-
-when using version constraints, we can use:
-
-
-- pessimistic operator
-
-- "!=" operator
-
-- "~>" operator
-
-- combination comparison operation to use specific version within a range
-
-- comparison operator
-
-
-
 
 __________________________________________________________________________________________
 
