@@ -14,6 +14,14 @@ ________________________________________________________________________________
 
 
 
+The functionality of a provider plugin may vary drastically from one version to another.
+
+Our terraform configuration may not work as expected when using a version different than the one it was written in.
+
+As a best practice, always declare the exact version of the provider we want to use within the `required_providers` block.
+
+
+
 main.tf
 
 ```bash
@@ -46,7 +54,7 @@ ________________________________________________________________________________
 
 
 
- " , "
+ `Comma` `,` 
 
 version = ">= 1.2.0, < 2.0.0"
 
@@ -62,7 +70,7 @@ ________________________________________________________________________________
 when using version constraints, we can use:
 
 
-- pessimistic operator
+- pessimistic operator "~>"
 
 - "!=" operator
 
@@ -79,30 +87,20 @@ ________________________________________________________________________________
 
 
 
-
-
-
-The functionality of a provider plugin may vary drastically from one version to another.
-
-Our terraform configuration may not work as expected when using a version different than the one it was written in.
-
-As a best practice, always declare the exact version of the provider we want to use within the "required_providers" block.
-
-
-__________________________________________________________________________________________
-
-
-
-* see the version of providers:
+### see the version of providers    -->    `terraform version`
 
 
 The "terraform version" command provides the version of terraform as well as the version of the provider plugins that are downloaded in the configuration directory.
 
 For example, the below command shows that the version of aws provider is v3.69.0 and that of local provider is v2.1.0
 
-iac-server $ terraform version Terraform v0.13.3 + provider registry.terraform.io/hashicorp/aws v3.69.0 + provider registry.terraform.io/hashicorp/local v2.1.0
+```bash
 
+iac-server $ terraform version
 
+Terraform v0.13.3 + provider registry.terraform.io/hashicorp/aws v3.69.0 + provider registry.terraform.io/hashicorp/local v2.1.0
+
+```
 __________________________________________________________________________________________
 
 
@@ -110,14 +108,14 @@ ________________________________________________________________________________
 
 There are two reasons to use a provider argument in the configuration.
 
-1. To override the default provider configuration.
+1. To `override` the `default` `provider` `configuration`.
 
 For example, the default configuration may be to deploy resources in the "us-east-1" region.
 
 If the requirement is to deploy resources in a different region, we can use the provider argument to override the default.
 
 
-2. In some cases, a configuration may need to use multiple versions of the same provider.
+2. In some cases, a configuration may need to use `multiple` `versions` of the `same` `provider`.
 
 For example - a resource that deploys to the "us-east-1" and another resource within the same configuration that deploys to the "us-west-2" region.
 
