@@ -64,7 +64,7 @@ ________________________________________________________________________________
 
 ### terraform state show
 
-### terraform state show <resource-name> 
+### terraform state show < resource-name > 
 
 
 
