@@ -1,4 +1,4 @@
-
+# 3 ways of setting the  "access_key" and "secret_key"
 
 
 for connect terraform to AWS, we need to set the "access_key" and "secret_key"
