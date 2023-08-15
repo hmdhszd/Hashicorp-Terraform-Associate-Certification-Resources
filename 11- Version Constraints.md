@@ -104,9 +104,9 @@ Terraform v0.13.3 + provider registry.terraform.io/hashicorp/aws v3.69.0 + provi
 __________________________________________________________________________________________
 
 
+## Provider argument in configuration:
 
-
-There are two reasons to use a provider argument in the configuration.
+There are two reasons to use a `provider` `argument` in the configuration.
 
 1. To `override` the `default` `provider` `configuration`.
 
@@ -131,7 +131,7 @@ ________________________________________________________________________________
 
 
 
-Version constraints:
+## Version constraints:
 
 1- required_providers
 
@@ -154,6 +154,108 @@ Most commonly they can be set at:
 __________________________________________________________________________________________
 
 
+
+
+
+
+### Where can we make use of version constraints?
+
+
+Version constraints can be used anywhere terraform allows us to specify versions. Most commonly they can be set at:
+
+1. Within the provider version configuration (Inside the "required_providers" block nested inside the terraform block)
+
+
+```bash
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 3.0, < 4.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+```
+
+
+2. The "required_version" argument which is used to set the version of Terraform to use.
+
+
+
+```bash
+terraform {
+  required_version = ">= 0.14, < 0.15"
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
+# Resources and other configurations here
+```
+
+
+
+3. Within modules.
+
+
+
+
+```bash
+module_aws_s3_bucket/
+  ├── main.tf
+  └── variables.tf
+```
+
+
+
+module_aws_s3_bucket/variables.tf
+
+```bash
+variable "bucket_name" {
+  type    = string
+  default = "my-tf-bucket"
+}
+```
+
+
+module_aws_s3_bucket/main.tf
+
+```bash
+provider "aws" {
+  region = "us-west-2"
+}
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = var.bucket_name
+  # Other bucket configuration here
+}
+```
+
+
+
+my-tf-bucket.tf
+
+```bash
+module "s3_bucket" {
+  source = "./module_aws_s3_bucket"
+  version = ">= 1.0, < 2.0"
+
+  bucket_name = "my-tf-bucket"
+}
+
+```
+
+
+
+
+
+
+__________________________________________________________________________________________
 
 
 __________________________________________________________________________________________
