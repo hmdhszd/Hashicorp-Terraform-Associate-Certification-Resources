@@ -75,7 +75,7 @@ resource "aws_instance" "my-instance" {
 	vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 	user_data = << EOF
 		#! /bin/bash
-    sudo apt-get update
+		sudo apt-get update
 		sudo apt-get install -y apache2
 		sudo systemctl start apache2
 		sudo systemctl enable apache2
