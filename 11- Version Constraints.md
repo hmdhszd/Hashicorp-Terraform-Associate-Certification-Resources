@@ -163,7 +163,7 @@ ________________________________________________________________________________
 
 Version constraints can be used anywhere terraform allows us to specify versions. Most commonly they can be set at:
 
-1. Within the provider version configuration (Inside the "required_providers" block nested inside the terraform block)
+1. Within the `provider` `version` `configuration` (Inside the `required_providers` block nested inside the `terraform block`)
 
 
 ```bash
@@ -182,7 +182,7 @@ provider "aws" {
 ```
 
 
-2. The "required_version" argument which is used to set the version of Terraform to use.
+2. The `required_version` argument which is used to set the `version of Terraform` to use.
 
 
 
@@ -200,7 +200,7 @@ provider "aws" {
 
 
 
-3. Within modules.
+3. Within `modules`.
 
 
 
