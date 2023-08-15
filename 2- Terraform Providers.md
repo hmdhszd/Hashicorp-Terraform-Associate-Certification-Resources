@@ -5,9 +5,9 @@
 you can find terraform providers here:    https://registry.terraform.io/browse/providers
 
 
-with the "terraform init" command, the terraform provider plugins will be installed.
+with the `terraform init` command, the terraform `provider` `plugins` will be `installed`.
 
-these plugins will be downloaded in the ".terraform/plugins" in the current working directory
+these plugins will be downloaded in the `.terraform/plugins` in the current working directory
 
 
 
@@ -53,19 +53,6 @@ In normal use, terraform init will automatically download needed providers from 
 
 
 
-__________________________________________________________________________________________
-
-
-
-
-
-
-The terraform providers ______ command can automatically populate a directory that will be used as a local filesystem mirror in the provider installation configuration.
-
-
-
-terraform providers mirror
-
 
 __________________________________________________________________________________________
 
@@ -99,6 +86,19 @@ ________________________________________________________________________________
 
 
 Terraform Providers Mirror is a feature that allows organizations to host a local copy of external providers' plugins, enhancing control and reliability in infrastructure provisioning through Terraform.
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+The terraform providers ______ command can automatically populate a directory that will be used as a local filesystem mirror in the provider installation configuration.
+
+
+
+terraform providers mirror
 
 
 __________________________________________________________________________________________
