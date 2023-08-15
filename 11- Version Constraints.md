@@ -104,30 +104,6 @@ Terraform v0.13.3 + provider registry.terraform.io/hashicorp/aws v3.69.0 + provi
 __________________________________________________________________________________________
 
 
-## Provider argument in configuration:
-
-There are two reasons to use a `provider` `argument` in the configuration.
-
-1. To `override` the `default` `provider` `configuration`.
-
-For example, the default configuration may be to deploy resources in the "us-east-1" region.
-
-If the requirement is to deploy resources in a different region, we can use the provider argument to override the default.
-
-
-2. In some cases, a configuration may need to use `multiple` `versions` of the `same` `provider`.
-
-For example - a resource that deploys to the "us-east-1" and another resource within the same configuration that deploys to the "us-west-2" region.
-
-
-
-
-*** to use multiple versions of the same provider NOT multiple configurations of the same provider
-
-
-
-__________________________________________________________________________________________
-
 
 
 
