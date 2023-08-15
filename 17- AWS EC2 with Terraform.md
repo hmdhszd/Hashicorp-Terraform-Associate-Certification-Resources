@@ -72,7 +72,7 @@ resource "aws_instance" "my-instance" {
 	ami = "ami-04169656fea786776"
 	instance_type = "t2.nano"
 	key_name = "${aws_key_pair.terraform-demo.key_name}"
-  vpc_security_group_ids = [aws_security_group.ec2_sg.id]
+	vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 	user_data = << EOF
 		#! /bin/bash
     sudo apt-get update
