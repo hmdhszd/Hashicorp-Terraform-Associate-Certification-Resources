@@ -61,12 +61,7 @@ ________________________________________________________________________________
 
 
 
-
-
-```bash
-
-```
-
+Select the workflows that Terraform cloud utilizes to manage Terraform runs: CLI-driven run workflow
 
 
 __________________________________________________________________________________________
@@ -75,25 +70,16 @@ ________________________________________________________________________________
 
 
 
-
-```bash
-
-```
+In the UI and VCS workflow, every workspace is associated with a specific branch of a VCS repo of Terraform configurations.
 
 
 
 __________________________________________________________________________________________
 
 
+#### Sentinel : policy as code framework
 
-
-
-
-```bash
-
-```
-
-
+Sentinel Policies are rules which are enforced on Terraform runs to validate that the plan and corresponding resources are in compliance with company policies.
 
 __________________________________________________________________________________________
 
