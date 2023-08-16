@@ -39,9 +39,9 @@ ________________________________________________________________________________
 
 in the Terraform Registry, you can find 2 types of modules:
 
-- Verified Modules (have verified checkmark beside its name)
+- `Verified` Modules (have verified checkmark beside its name)
 
-- Community Modules
+- `Community` Modules
 
 
 __________________________________________________________________________________________
