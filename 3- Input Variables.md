@@ -376,7 +376,7 @@ when defining variables, "Default" argument is optional.
 __________________________________________________________________________________________
 
 
-
+Interpolation syntax allows us to reference `variables`, `resource attributes` and even make use of `built-in functions` in terraform
 
 __________________________________________________________________________________________
 
