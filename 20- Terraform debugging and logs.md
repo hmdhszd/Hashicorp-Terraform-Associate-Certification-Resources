@@ -119,3 +119,14 @@ Your team is working collaboratively on a project that uses terraform scripts he
 __________________________________________________________________________________________
 
 
+
+
+Logging can be enabled separately for terraform itself and the provider plugins using the `TF_LOG_CORE` or `TF_LOG_PROVIDER` environment variables.
+
+These take the same level arguments as `TF_LOG`, but only activate a subset of the logs.
+
+
+
+
+__________________________________________________________________________________________
+
