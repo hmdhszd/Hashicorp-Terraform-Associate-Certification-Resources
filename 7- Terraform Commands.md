@@ -194,3 +194,23 @@ The terraform graph command is used to generate a visual representation in which
 __________________________________________________________________________________________
 
 
+What is the significance of -chdir option in terraform?
+
+
+It instructs Terraform to change its working directory to the given directory before running the given subcommand.
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
