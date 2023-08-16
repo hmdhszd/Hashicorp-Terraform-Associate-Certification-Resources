@@ -218,7 +218,44 @@ A given resource or module block CAN NOT use both `count` and `for_each` simulta
 __________________________________________________________________________________________
 
 
+`alias` and `version` are the `meta-arguments` which are available for all provider blocks.
 
+
+
+
+
+__________________________________________________________________________________________
+
+
+Which argument of the lifecycle meta-argument supports a list as a value ?
+
+
+ignore_changes (list of attribute names)
+
+By default, Terraform detects any difference in the current settings of a real infrastructure object and plans to update the remote object to match configuration.
+
+
+
+__________________________________________________________________________________________
+
+
+Which meta-argument is not supported by the data block? lifecycle
+
+__________________________________________________________________________________________
+
+
+
+
+The for_each meta-argument accepts: `maps` and `set of strings`
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+__________________________________________________________________________________________
 
 
 
