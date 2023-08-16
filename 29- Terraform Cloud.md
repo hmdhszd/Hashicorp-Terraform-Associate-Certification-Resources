@@ -61,7 +61,13 @@ ________________________________________________________________________________
 
 
 
-Select the workflows that Terraform cloud utilizes to manage Terraform runs: CLI-driven run workflow
+Select the workflows that Terraform cloud utilizes to manage Terraform runs: 
+
+UI/VCS-driven run workflow,
+
+API-driven run workflow,
+
+CLI-driven run workflow
 
 
 __________________________________________________________________________________________
