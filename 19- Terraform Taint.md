@@ -43,3 +43,13 @@ terraform taint aws_instance.my_vm_1
 
 
 __________________________________________________________________________________________
+
+
+#### terraform apply -replace=”<resource_name>”
+
+How would you achieve the force replacement of a particular object even though there are no configuration changes? Choose the most appropriate option among the following:
+
+Usage of terraform apply -replace=”<resource_name>” is preferred overterraform taint
+
+
+__________________________________________________________________________________________
