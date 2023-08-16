@@ -2,7 +2,7 @@
 
 
 
-###  In Terraform, a locals block is used to define local variables within a module, allowing you to create reusable expressions and reduce duplication in your code.
+###  In Terraform, a `locals` `block` is used to define local variables within a module, allowing you to create reusable expressions and reduce duplication in your code.
 
 
 __________________________________________________________________________________________
