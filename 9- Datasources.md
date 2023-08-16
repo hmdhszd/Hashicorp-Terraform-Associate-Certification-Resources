@@ -118,7 +118,11 @@ but their result data exists only temporarily during a Terraform operation, and 
 
 __________________________________________________________________________________________
 
+Resources declared using `data block` are known as `data resource`s.
 
+Resources declared by a `resource block` are known as `managed resources`.
+
+`Managed resources` are often referred to just as `resources` when the meaning is clear from context.
 
 __________________________________________________________________________________________
 
