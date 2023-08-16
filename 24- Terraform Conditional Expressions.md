@@ -5,7 +5,7 @@
 
 In this example, the count parameter is conditionally set based on the value of the variable create_web_servers.
 
-If the variable is true, three instances of type "t2.micro" will be created; otherwise, no instances will be created.
+If the variable is true, 3 instances of type "t2.micro" will be created; otherwise, no instances will be created.
 
 ```bash
 # Example: Conditional Expression - "count"
@@ -73,7 +73,7 @@ ________________________________________________________________________________
 
 
 
-### coalesce
+### coalesce (coalesce takes any number of arguments and returns the first one that isn't null or an empty string)
 
 In this scenario, the coalesce function is used to set the TTL value for a Route 53 record.
 
