@@ -382,8 +382,17 @@ ________________________________________________________________________________
 
 
 
+Which among the following are the techniques that could be used to safely and securely manage secrets inside terraform?
 
 
+
+- Secret Stores (e.g., Vault, AWS Secrets manager)
+
+- Store Terraform state in a backend that supports encryption.
+
+- Encrypted Files (e.g., KMS, PGP, SOPS)
+
+- Environment Variables
 
 
 
