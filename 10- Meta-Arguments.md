@@ -227,10 +227,11 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
-Which argument of the lifecycle meta-argument supports a list as a value ?
+Which argument of the `lifecycle` meta-argument supports a `list` as a value ?
 
 
-ignore_changes (list of attribute names)
+`ignore_changes` (list of attribute names)
+
 
 By default, Terraform detects any difference in the current settings of a real infrastructure object and plans to update the remote object to match configuration.
 
