@@ -29,6 +29,7 @@ ________________________________________________________________________________
 
 ### Then, use the terraform import command:
 
+by running this command, terraform will update the stats file and add the new resource.
 
 ```bash
 terraform import aws_instance.jade-mw <id-of-the-resource>
