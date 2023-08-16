@@ -1,7 +1,7 @@
 
 
 
-toset: Converts a list to a set
+`toset`: Converts a list to a set
 
 
 
@@ -27,7 +27,7 @@ ________________________________________________________________________________
 
 
 
-min: Returns the minimum value from a list of numbers
+`min`: Returns the minimum value from a list of numbers
 
 
 
@@ -51,7 +51,7 @@ ________________________________________________________________________________
 
 
 
-max: Returns the maximum value from a list of numbers
+`max`: Returns the maximum value from a list of numbers
 
 
 
@@ -75,7 +75,7 @@ ________________________________________________________________________________
 
 
 
-ceil: Rounds a number up to the nearest integer
+`ceil`: Rounds a number up to the nearest integer
 
 
 
@@ -97,7 +97,7 @@ ________________________________________________________________________________
 
 
 
-floor: Rounds a number down to the nearest integer
+`floor`: Rounds a number down to the nearest integer
 
 
 
@@ -124,7 +124,7 @@ ________________________________________________________________________________
 
 
 
-split: Splits a string into a list using a delimiter
+`split`: Splits a string into a list using a delimiter
 
 
 
@@ -146,7 +146,7 @@ ________________________________________________________________________________
 
 
 
-lower: Converts a string to lowercase
+`lower`: Converts a string to lowercase
 
 
 
@@ -171,7 +171,7 @@ ________________________________________________________________________________
 
 
 
-upper: Converts a string to uppercase
+`upper`: Converts a string to uppercase
 
 
 
@@ -194,7 +194,7 @@ ________________________________________________________________________________
 
 
 
-title: Converts the first letter of each word in a string to uppercase
+`title`: Converts the first letter of each word in a string to uppercase
 
 
 
@@ -219,7 +219,7 @@ ________________________________________________________________________________
 
 
 
-substr: Extracts a substring from a string based on start index and length
+`substr`: Extracts a substring from a string based on start index and length
 
 
 
@@ -244,7 +244,7 @@ ________________________________________________________________________________
 
 
 
-join: Joins elements of a list into a string using a separator
+`join`: Joins elements of a list into a string using a separator
 
 
 
@@ -267,7 +267,7 @@ ________________________________________________________________________________
 
 
 
-length: Returns the number of elements in a list or the length of a string
+`length`: Returns the number of elements in a list or the length of a string
 
 
 
@@ -291,7 +291,7 @@ ________________________________________________________________________________
 
 
 
-index: Returns the index of a value in a list
+`index`: Returns the index of a value in a list
 
 
 
@@ -314,7 +314,7 @@ ________________________________________________________________________________
 
 
 
-element: Returns the nth element from a list
+`element`: Returns the nth element from a list
 
 
 
@@ -338,7 +338,7 @@ ________________________________________________________________________________
 
 
 
-contains: Checks if a list contains a specific value
+`contains`: Checks if a list contains a specific value
 
 
 
@@ -361,7 +361,7 @@ ________________________________________________________________________________
 
 
 
-keys: Returns a list of keys from a map
+`keys`: Returns a list of keys from a map
 
 
 
@@ -388,7 +388,7 @@ ________________________________________________________________________________
 
 
 
-values: Returns a list of values from a map
+`values`: Returns a list of values from a map
 
 
 
@@ -416,7 +416,7 @@ ________________________________________________________________________________
 
 
 
-lookup: Looks up a value in a map using a key
+`lookup`: Looks up a value in a map using a key
 
 
 
@@ -475,6 +475,16 @@ Which of the following function is no longer available in terraform:
 
 
 map()
+
+
+__________________________________________________________________________________________
+
+
+
+
+The Terraform language DO NOT supports "user-defined" functions!
+
+
 
 
 __________________________________________________________________________________________
