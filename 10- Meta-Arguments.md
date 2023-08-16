@@ -254,6 +254,10 @@ ________________________________________________________________________________
 
 
 
+`lifecycle` is a nested block that can appear within a resource block.
+
+The lifecycle block and its contents are meta-arguments, available for `all` `resource` `blocks` regardless of type.
+
 
 __________________________________________________________________________________________
 
