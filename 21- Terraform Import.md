@@ -83,5 +83,46 @@ resource "aws_instance" "jade-mw" {
 ```
 
 
+__________________________________________________________________________________________
+
+
+
+
+
+You intend to import two resources to your terraform configuration. You executed only the `terraform` `import` command until now and it worked. Will the `terraform` `apply` work if executed now?
+
+
+
+
+It will throw an error,We haven’t updated the resource with correct argument values yet
+
+
 
 __________________________________________________________________________________________
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
