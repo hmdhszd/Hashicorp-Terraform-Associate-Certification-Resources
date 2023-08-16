@@ -166,6 +166,23 @@ Running the “terraform output” will render the output variables defined
 __________________________________________________________________________________________
 
 
+Choose the suitable option that could be used to access one of the module’s output values:
 
+
+module.[MODULE NAME].[OUTPUT NAME]
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
 
 
