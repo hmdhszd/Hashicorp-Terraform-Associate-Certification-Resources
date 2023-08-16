@@ -213,7 +213,7 @@ Which meta-argument is not supported by the data block? lifecycle
 __________________________________________________________________________________________
 
 
-
+A given resource or module block CAN NOT use both `count` and `for_each` simultaneously.
 
 __________________________________________________________________________________________
 
