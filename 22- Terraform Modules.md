@@ -39,6 +39,8 @@ ________________________________________________________________________________
 
 in the Terraform Registry, you can find 2 types of modules:
 
+- `Official` Modules own and maintain by HashiCorp
+
 - `Verified` Modules (have verified checkmark beside its name)
 
 - `Community` Modules
@@ -227,6 +229,39 @@ output "bucket_id" {
 ```
 
 
+
+
+__________________________________________________________________________________________
+
+
+
+### Module Composition
+
+
+
+We call this flat style of module usage module composition, because it takes multiple composable building-block modules and assembles them together to produce a larger system.
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+Modules can be used to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
+
+
+__________________________________________________________________________________________
+
+
+
+#### Choose the ways available to download the module in your current terraform configuration directory.
+
+- terraform init
+
+- terraform get
 
 
 __________________________________________________________________________________________
