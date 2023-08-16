@@ -112,11 +112,13 @@ ________________________________________________________________________________
 
 
 
-#### Select the reasons why we may need to specify the provider’s argument?
+#### Select the reasons why we may need to specify the `provider’s argument`?
 
 
 
-To use multiple configurations of the same provider,  To change the default Provider Configurations
+To use `multiple configurations` of the `same provider`
+
+To change the `default` `Provider` `Configurations`
 
 
 __________________________________________________________________________________________
