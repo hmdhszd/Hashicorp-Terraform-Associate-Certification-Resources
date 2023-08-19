@@ -28,6 +28,19 @@ ________________________________________________________________________________
 
 
 
+with Terraform Workspaces, we can have `multiple` `state` `files` of a `single` `configuration`.
+
+
+
+__________________________________________________________________________________________
+
+`multiple` `workspaces`, `different` `environment` `variable` for each workspace
+
+__________________________________________________________________________________________
+
+
+
+
 
 
 ```bash
