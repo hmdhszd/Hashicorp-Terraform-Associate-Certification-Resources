@@ -87,6 +87,10 @@ ________________________________________________________________________________
 
 Sentinel Policies are rules which are enforced on Terraform runs to validate that the plan and corresponding resources are in compliance with company policies.
 
+ex: checks if in the s3 bucket, encryption is enabled
+
+`terraform plan` `-->` `sentinel checks` `-->` `terraform apply`
+
 __________________________________________________________________________________________
 
 
