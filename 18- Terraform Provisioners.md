@@ -289,10 +289,27 @@ ________________________________________________________________________________
 
 
 
+## Creation-Time Provisioner:
+
+
+Creation-time provisioners are only run during creation, not during updating or any other lifecycle
+
+If a creation-time provisioner fails, the resource is marked as tainted.
+
+__________________________________________________________________________________________
+
+
+## Destroy-Time Provisioner
+
+Destroy provisioners are run before the resource is destroyed.
+
+
+__________________________________________________________________________________________
 
 
 
 __________________________________________________________________________________________
+
 
 
 
