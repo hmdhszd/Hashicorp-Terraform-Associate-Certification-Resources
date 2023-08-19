@@ -102,7 +102,12 @@ ________________________________________________________________________________
 
 
 
+#### force-unlock Manually unlock the state for the defined configuration
 
+
+```bash
+terraform force-unlock [options] LOCK_ID
+```
 
 __________________________________________________________________________________________
 
