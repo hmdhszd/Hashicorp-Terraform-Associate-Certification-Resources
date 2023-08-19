@@ -347,7 +347,7 @@ A variable name or a label must be unique within the same "module" or "configura
 __________________________________________________________________________________________
 
 
-### valid variable names:
+### Invalid variable names:
 
 We can use any name for a variable except for:
 
@@ -397,6 +397,20 @@ Which among the following are the techniques that could be used to safely and se
 
 
 __________________________________________________________________________________________
+
+
+## Data Types:
+
+####  string
+
+
+####  list
+
+
+####  map
+
+
+####  number
 
 
 
