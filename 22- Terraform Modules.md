@@ -265,3 +265,45 @@ ________________________________________________________________________________
 
 
 __________________________________________________________________________________________
+
+
+
+
+
+## use GIT as the source of module
+
+
+
+
+**Example 1: Using HTTPS as the Git Source**
+
+```hcl
+# git_https_example/main.tf
+module "example_module" {
+  source = "https://github.com/your-username/your-module-repo.git"
+
+  # Input variables (if any)
+  variable_name = "example_value"
+}
+```
+
+Replace `"https://github.com/your-username/your-module-repo.git"` with the actual HTTPS URL of your Git repository containing the Terraform module code.
+
+
+**Example 2: Using SSH as the Git Source**
+
+
+```hcl
+# git_ssh_example/main.tf
+module "example_module" {
+  source = "git::ssh://github.com/your-username/your-module-repo.git"
+
+  # Input variables (if any)
+  variable_name = "example_value"
+}
+```
+
+Replace `"git::ssh://github.com/your-username/your-module-repo.git"` with the actual SSH URL of your Git repository containing the Terraform module code.
+
+Remember that when using SSH, you need to have your SSH key properly configured and the repository accessible using SSH authentication.
+itories.
