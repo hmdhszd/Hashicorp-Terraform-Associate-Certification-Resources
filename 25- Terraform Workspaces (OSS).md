@@ -216,7 +216,7 @@ ________________________________________________________________________________
 
 
 
-
+Terraform worksoace is Not suitable for isolation for strong separation between workspace (stage/prod)
 
 
 
