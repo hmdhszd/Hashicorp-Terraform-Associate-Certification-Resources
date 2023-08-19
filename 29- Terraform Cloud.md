@@ -113,6 +113,21 @@ In the UI and VCS workflow, every workspace is associated with a specific branch
 __________________________________________________________________________________________
 
 
+### Terraform Enterprise & Terraform Cloud
+
+Terraform Enterprise provides several added advantage compared to Terraform Cloud.
+
+Some of these include:
+
+● Single Sign-On
+
+● Auditing
+
+● Private Data Center Networking
+
+● Clustering
+
+Team & Governance features are not available for Terraform Cloud Free (Paid)
 
 
 __________________________________________________________________________________________
