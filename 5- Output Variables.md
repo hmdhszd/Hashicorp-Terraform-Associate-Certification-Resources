@@ -180,7 +180,24 @@ ________________________________________________________________________________
 
 
 
+## splat expression
 
+
+```bash
+resource "aws_instance" "example" {
+  count         = 5
+  ami           = "ami-12345678"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Example Instance ${count.index}"
+  }
+}
+
+output "instance_public_ips" {
+  value = aws_instance.example[*].public_ip
+}
+```
 
 
 __________________________________________________________________________________________
