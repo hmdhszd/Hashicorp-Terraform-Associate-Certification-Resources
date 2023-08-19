@@ -280,7 +280,7 @@ ________________________________________________________________________________
 ```hcl
 # git_https_example/main.tf
 module "example_module" {
-  source = "https://github.com/your-username/your-module-repo.git"
+  source = "git::https://github.com/your-username/your-module-repo.git"
 
   # Input variables (if any)
   variable_name = "example_value"
