@@ -324,7 +324,7 @@ To pass values to a Terraform module when calling the module in your code, you u
 __________________________________________________________________________________________
 
 
-
+#### to use a variable from a module ===> output block
 
 
 __________________________________________________________________________________________
