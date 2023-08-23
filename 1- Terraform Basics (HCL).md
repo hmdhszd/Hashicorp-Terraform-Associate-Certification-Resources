@@ -388,7 +388,9 @@ What allows Terraform to make use of a declarative approach?    state file
 __________________________________________________________________________________________
 
 
+IaC allows you to create a blueprint of your data center as code that can be versioned, shared, and reused.
 
+Because IaC is code, it and should be stored and managed in a code repository
 
-
+IaC is platform agnostic and easy to read
 
