@@ -76,6 +76,12 @@ ________________________________________________________________________________
 ### This command is used to initialize a new or existing Terraform configuration in a working directory. During initialization, Terraform downloads and installs the required providers and modules specified in the configuration.
 
 
+the provider plugins are downloaded into : .terraform/providers
+
+
+the modules are downloaded into : .terraform/modules
+
+
 ```bash
 iac-server $ terraform init
 
