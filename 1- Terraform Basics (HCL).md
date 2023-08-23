@@ -421,6 +421,10 @@ In order to reduce the time it takes to provision resources, Terraform uses para
 __________________________________________________________________________________________
 
 
+### terraform apply -replace=aws_instance.web
+
+recreate the one resource without having to destroy everything that was created
+
 
 
 __________________________________________________________________________________________
