@@ -90,7 +90,7 @@ ________________________________________________________________________________
 
 
 
-### Create a new workspace
+### Create a `new` workspace
 
 
 ```bash
@@ -102,7 +102,7 @@ terraform workspace new ProjectA
 terraform workspace new ProjectB
 ```
 
-once we create a workspace, Terraform will immidietely switch to it.
+once we create a `NEW` `workspace`, Terraform will immidietely switch to it.
 
 
 __________________________________________________________________________________________
