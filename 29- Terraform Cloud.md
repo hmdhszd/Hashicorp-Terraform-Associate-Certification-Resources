@@ -21,12 +21,27 @@ ________________________________________________________________________________
 
 
 
+### Terraform Cloud supported VCS providers:
 
 
 
-```bash
+  - `GitHub`
 
-```
+  - GitHub.com (OAuth)
+
+  - GitHub Enterprise
+
+  - GitLab.com
+
+  - `GitLab` EE and CE
+
+  - `Bitbucket` Cloud
+
+  - Bitbucket Server
+
+  - `Azure` DevOps Server
+
+  - Azure DevOps Services
 
 
 
