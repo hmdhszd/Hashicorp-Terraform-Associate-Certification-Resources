@@ -307,3 +307,40 @@ Replace `"git::ssh://github.com/your-username/your-module-repo.git"` with the ac
 
 Remember that when using SSH, you need to have your SSH key properly configured and the repository accessible using SSH authentication.
 itories.
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+To pass values to a Terraform module when calling the module in your code, you use input variables. 
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
