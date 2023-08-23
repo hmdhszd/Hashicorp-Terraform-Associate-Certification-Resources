@@ -420,7 +420,15 @@ ________________________________________________________________________________
 
 
 
+### Here are some examples of invalid variable names:
 
+Names that start with a number: 1_invalid_variable_name
+
+Names that contain spaces or special characters (space) (other than underscores): invalid variable name
+
+Names that contain only numbers: 12345
+
+Names that are the same as Terraform reserved words, such as var, module, data, count, etc.
 
 
 
