@@ -199,7 +199,7 @@ Team & Governance features are not available for Terraform Cloud Free (Paid)
 __________________________________________________________________________________________
 
 
-
+migrating from terraform OSS to terraform cloud --> on the cloud we use the `same Terraform Version` that was used on the OSS
 
 __________________________________________________________________________________________
 
