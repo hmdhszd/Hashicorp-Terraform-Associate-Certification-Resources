@@ -146,6 +146,8 @@ For example - a resource that deploys to the "us-east-1" and another resource wi
 
 __________________________________________________________________________________________
 
+
+
 __________________________________________________________________________________________
 
 #### Choose the easiest way to list the versions of all installed plugins in terraform along with terraform versions
@@ -163,6 +165,59 @@ ________________________________________________________________________________
 
 
 Providers use a ______-based architecture that is available for most infrastructure platforms within the public Terraform registry.
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+### Version of a provider:
+
+in this example it can be 1.0.0 1.0.1 1.0.2 1.0.3 ...
+
+```hcl
+terraform {
+  required_providers {
+    aws = "~> 1.0.0"
+  }
+}
+```
+
+
+
+
+__________________________________________________________________________________________
+
+
+when you want to delete all the resources except one of them,
+
+you should remove that one resource from terraform by this command:  `terraform` `state` `rm`
+
+then destroy the rest of the infrastructure:  `terraform` `destroy`
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
 
 
 
