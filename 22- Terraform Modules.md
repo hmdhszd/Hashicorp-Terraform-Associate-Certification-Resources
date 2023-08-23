@@ -330,10 +330,36 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
+### `Terraform Public Module Registry`
+
+#### - GitHub: The module must be on GitHub and must be a public repo.
+
+#### - Named terraform-<PROVIDER>-<NAME>
+
+
+#### - Repository description: The GitHub repository description is used to populate the short description of the module.
+
+
+#### - Standard module structure
+
+#### - `x.y.z` tags for releases: The registry uses tags to identify module versions. Release tag names must be a `semantic version`, which can optionally be `prefixed` with a `v` .
 
 
 
 __________________________________________________________________________________________
+
+
+
+### download and update modules
+
+
+- terraform get
+
+- terraform init
+
+
+
+
 
 
 
