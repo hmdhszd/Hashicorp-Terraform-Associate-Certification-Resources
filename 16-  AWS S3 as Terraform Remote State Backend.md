@@ -23,6 +23,8 @@ like:
 by using a "remote state backend", it will get the state file before doing any changes, it will also upload it after doing the changes.
 
 
+"Github is NOT a supported backend"
+
 __________________________________________________________________________________________
 
 
