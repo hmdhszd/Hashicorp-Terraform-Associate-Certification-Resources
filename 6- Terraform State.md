@@ -114,6 +114,8 @@ ________________________________________________________________________________
 
 
 
+By default, Terraform does not provide the ability to mask secrets in the Terraform plan and state files regardless of what provider you are using.
+
 
 
 __________________________________________________________________________________________
