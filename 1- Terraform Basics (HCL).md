@@ -124,6 +124,9 @@ ________________________________________________________________________________
 
 ### After initialization, this command is used to create an execution plan. Terraform inspects the configuration files, compares the current state with the desired state, and generates a detailed plan of what actions (create, modify, delete) will be taken to achieve the desired configuration.
 
+### validate the changes that will be made without impacting existing workloads? terraform plan
+
+
 
 ```bash
 iac-server $ terraform plan
@@ -403,6 +406,14 @@ IaC is platform agnostic and easy to read
 
 
 __________________________________________________________________________________________
+
+
+### Terraform uses parallelism  `10`
+
+In order to reduce the time it takes to provision resources, Terraform uses parallelism. By default, Terraform will provision `10` resources concurrently during a terraform apply.
+
+
+
 
 
 
