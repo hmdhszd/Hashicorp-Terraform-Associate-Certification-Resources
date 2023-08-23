@@ -50,12 +50,13 @@ ________________________________________________________________________________
 
 
 
+## Terraform Cloud workspace linked to a GitHub repo
 
 
-```bash
+After approving a merge request that modifies Terraform configurations in a GitHub repository linked to a Terraform Cloud workspace, the default action that can be expected to run automatically is a `speculative plan` operation.
 
-```
 
+then validate the changes against `Sentinel Policy`
 
 
 __________________________________________________________________________________________
