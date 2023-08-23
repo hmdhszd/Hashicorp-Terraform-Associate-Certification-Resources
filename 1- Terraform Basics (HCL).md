@@ -17,6 +17,17 @@ a HCL file (.tf) consist of blocks and arguments,
 __________________________________________________________________________________________
 
 
+
+
+Terraform is written in HashiCorp Configuration Language `HCL`. However, Terraform also supports a syntax that is `JSON` compatible
+
+Terraform is primarily designed on `immutable` infrastructure principles
+
+Terraform is also a `declarative` language, where you simply declare the desired state, and Terraform ensures that real-world resources match the desired state as written.
+
+__________________________________________________________________________________________
+
+
 Example:
 
 main.tf
