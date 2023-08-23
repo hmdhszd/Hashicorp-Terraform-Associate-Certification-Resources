@@ -12,8 +12,11 @@ the "data" block only reads the infrastructure,
 
 but "resource" block create,update,destroy infrastructure
 
+__________________________________________________________________________________________
 
 
+
+### Data Block --> retrieve information about existing resources
 
 __________________________________________________________________________________________
 
