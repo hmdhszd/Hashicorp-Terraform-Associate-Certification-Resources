@@ -151,6 +151,7 @@ ________________________________________________________________________________
 
 when using workspaces, we will have a directory called "terraform.tfstate.d" for the state files:
 
+terraform.tfstate.d/<workspace_name>
 
 ```bash
 terraform.tfstate.d/
