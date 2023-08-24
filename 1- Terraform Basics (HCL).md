@@ -175,6 +175,9 @@ ________________________________________________________________________________
 
 
 
+###  tilde (~) --> resource update in place
+
+
 ```bash
 iac-server $ terraform apply
 
