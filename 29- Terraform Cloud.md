@@ -210,7 +210,11 @@ Terraform Cloud can be managed from the CLI but requires an _____`API TOKEN`____
 __________________________________________________________________________________________
 
 
+### Terraform Cloud for Business
 
+`Terraform` `Cloud` `Agents` are a feature that allows Terraform Cloud to communicate with private infrastructure, such as VMware hosts running on-premises.
+
+Which version of Terraform Cloud supports this feature?  `Terraform` `Cloud` `for` `Business`
 
 __________________________________________________________________________________________
 
