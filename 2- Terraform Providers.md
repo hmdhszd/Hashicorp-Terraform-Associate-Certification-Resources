@@ -219,7 +219,16 @@ upgrade all previously-selected plugins to the `newest` (`latest`) available ver
 __________________________________________________________________________________________
 
 
+#### how add `credentials` to access the API for the underlying platform, such as VMware, AWS, or Google Cloud?
 
+
+- in the provider block by hardcoding or using variable
+
+
+- integrated services: AWS IAM, Azure Managed Service Identity
+
+
+- Environment Variable
 
 
 __________________________________________________________________________________________
