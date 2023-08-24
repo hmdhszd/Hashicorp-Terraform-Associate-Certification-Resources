@@ -6,7 +6,7 @@ ________________________________________________________________________________
 
 ## The remote-exec provisioner invokes a script on a remote resource after it is created. This can be used to run a configuration management tool, bootstrap into a cluster, etc.
 
-but there should be a network connectivity between the local machine and the instance. (SSH for Linux / WINRM for Windows)
+but there should be a network connectivity between the local machine and the instance. (`SSH` for Linux / `WINRM` for Windows)
 
 so we make use of a AWS security group.
 
