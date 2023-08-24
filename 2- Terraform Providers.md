@@ -1,6 +1,10 @@
 
 
 
+`Terraform Privider` = `Terraform Plugin`
+
+__________________________________________________________________________________________
+
 
 you can find terraform providers here:    https://registry.terraform.io/browse/providers
 
@@ -141,10 +145,6 @@ For example - a resource that deploys to the "us-east-1" and another resource wi
 
 
 *** to use multiple versions of the same provider NOT multiple configurations of the same provider
-
-
-
-__________________________________________________________________________________________
 
 
 
