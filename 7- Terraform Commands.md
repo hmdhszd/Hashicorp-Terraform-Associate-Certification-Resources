@@ -101,6 +101,15 @@ the command `terraform refresh` is called automatically with `terraform plan` an
 
 
 
+__________________________________________________________________________________________
+
+
+
+
+
+The `terraform apply -refresh-only` command creates a plan whose goal is only to update the Terraform state and any root module output values to match changes made to remote objects outside of Terraform.
+
+
 
 __________________________________________________________________________________________
 
