@@ -467,8 +467,9 @@ Infrastructure as Code (IaC) makes infrastructure changes _______, ________, ___
 
 __________________________________________________________________________________________
 
+`terraform apply -out=my-execution.plan`
 
-
+When running a terraform plan, how can you save the plan so it can be applied at a later time? -out
 
 __________________________________________________________________________________________
 
