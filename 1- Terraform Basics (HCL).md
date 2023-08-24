@@ -451,7 +451,19 @@ Traditionally, infrastructure was managed using manual processes and user interf
 __________________________________________________________________________________________
 
 
+Infrastructure as Code (IaC) makes infrastructure changes _______, ________, ________, and __________.
 
+
+- `idempotent`
+
+
+- `consistent`
+
+
+- `repeatable`
+
+
+- `predictable`
 
 __________________________________________________________________________________________
 
