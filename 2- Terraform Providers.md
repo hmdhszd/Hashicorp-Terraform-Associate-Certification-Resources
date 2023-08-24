@@ -201,7 +201,7 @@ then destroy the rest of the infrastructure:  `terraform` `destroy`
 __________________________________________________________________________________________
 
 
-
+`Multiple` `providers` can be declared within a `single` Terraform configuration `file`.
 
 
 __________________________________________________________________________________________
