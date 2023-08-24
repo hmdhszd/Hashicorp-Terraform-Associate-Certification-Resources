@@ -64,12 +64,13 @@ ________________________________________________________________________________
 
 
 
+When using variables in Terraform Cloud, what level of scope can the variable be applied to?
 
+- a specific terraform run in a single workspace
 
-```bash
+- multiple workspaces using a variable set
 
-```
-
+- all current and future workspaces in a project using a variable set
 
 
 __________________________________________________________________________________________
@@ -79,11 +80,11 @@ ________________________________________________________________________________
 
 Select the workflows that Terraform cloud utilizes to manage Terraform runs: 
 
-UI/VCS-driven run workflow,
+- UI/VCS-driven run workflow,
 
-API-driven run workflow,
+- API-driven run workflow,
 
-CLI-driven run workflow
+- CLI-driven run workflow
 
 
 __________________________________________________________________________________________
@@ -203,8 +204,8 @@ migrating from terraform OSS to terraform cloud --> on the cloud we use the `sam
 
 __________________________________________________________________________________________
 
-
-
+### API TOKEN
+Terraform Cloud can be managed from the CLI but requires an _____`API TOKEN`_____?
 
 __________________________________________________________________________________________
 
