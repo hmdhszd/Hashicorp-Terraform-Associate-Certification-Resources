@@ -128,6 +128,64 @@ The terraform plan -refresh-only command is used to create a plan whose goal is 
 __________________________________________________________________________________________
 
 
+### `.gitignore`
+
+### Which of the following Terraform files should be ignored by Git when committing code to a repo? 
+
+
+
+
+`.terraform` directory
+
+`terraform.tfstate` and `terraform.tfstate.backup`
+
+
+`.tfvars` files
+
+`*.tfplan` files
+
+__________________________________________________________________________________________
+
+
+
+
+
+### state encryption
+
+- `local state`, state is stored in `plain-text` JSON files
+
+- `Terraform Cloud`, state is alwasys `encrypted` at-rest
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
 
 
 
