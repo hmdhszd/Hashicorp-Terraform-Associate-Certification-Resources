@@ -246,6 +246,7 @@ ________________________________________________________________________________
 
 # other methods of use variables
 
+*** set explicit values for the current working directory that will override the default variable values
 
 ### use environment variables
 
