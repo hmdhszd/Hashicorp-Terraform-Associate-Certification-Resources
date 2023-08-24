@@ -401,16 +401,16 @@ ________________________________________________________________________________
 
 ## Variable Types:
 
-####  string
+####  - string
 
 
-####  list
+####  - list
 
 
-####  map
+####  - map
 
 
-####  number
+####  - number
 
 
 float is not a valid variable type
@@ -422,19 +422,31 @@ ________________________________________________________________________________
 
 ### Here are some examples of invalid variable names:
 
-Names that start with a number: 1_invalid_variable_name
+- Names that start with a number: 1_invalid_variable_name
 
-Names that contain spaces or special characters (space) (other than underscores): invalid variable name
+- Names that contain spaces or special characters (space) (other than underscores): invalid variable name
 
-Names that contain only numbers: 12345
+- Names that contain only numbers: 12345
 
-Names that are the same as Terraform reserved words, such as var, module, data, count, etc.
+- Names that are the same as Terraform reserved words, such as var, module, data, count, etc.
 
 
 
 __________________________________________________________________________________________
 
 
+When configuring a remote backend in Terraform, it might be a good idea to purposely omit some of the required arguments to ensure secrets and other relevant data are not inadvertently shared with others. 
+
+What alternatives are available to provide the remaining values to Terraform to initialize and communicate with the remote backend?
+
+#### With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
+
+- `Interactively on the command line`: Terraform will interactively ask you for the required values unless interactive input is disabled.
+
+
+- `File` (`-backend-config=PATH`): To specify a configuration file, use the -backend-config=PATH option when running terraform init.
+
+- `Command-line key/value pairs` (`-backend-config="KEY=VALUE"`): To specify a single key/value pair, use the -backend-config="KEY=VALUE" option when running terraform init.
 
 
 __________________________________________________________________________________________
