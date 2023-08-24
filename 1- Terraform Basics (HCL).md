@@ -434,7 +434,19 @@ we use replace instead of taint
 __________________________________________________________________________________________
 
 
+Traditionally, infrastructure was managed using manual processes and user interfaces, which could lead to several problems, including:
 
+
+
+- Configuration drift
+
+- Lack of standardization
+
+- Slow provisioning
+
+- Human error
+
+- Difficulty in documentation
 
 __________________________________________________________________________________________
 
