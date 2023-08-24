@@ -207,6 +207,12 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
+#### What function does the `terraform init -upgrade` command perform?
+
+
+
+upgrade all previously-selected plugins to the `newest` (`latest`) available version that complies with the configuration's version constraints.
+
 
 
 
