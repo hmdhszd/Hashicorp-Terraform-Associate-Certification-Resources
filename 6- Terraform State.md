@@ -171,7 +171,17 @@ ________________________________________________________________________________
 
 
 
+ ####  these backends support `state` `locking`
 
+
+- Kubernetes
+
+- Consul
+
+- S3 / DynamoDB
+
+
+but local backend does not support state locking
 
 __________________________________________________________________________________________
 
