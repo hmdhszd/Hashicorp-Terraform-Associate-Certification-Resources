@@ -188,7 +188,9 @@ ________________________________________________________________________________
 
 
 
-Terraform `State` File can be `encrypted` on `S3`
+Terraform `State` File can be `encrypted` on `S3` (it is not encrypted on S3 by default)
+
+Terraform `State` File is always `encrypted` on `Terraform Cloud` 
 
 
 __________________________________________________________________________________________
