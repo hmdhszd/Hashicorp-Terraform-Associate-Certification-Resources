@@ -162,5 +162,41 @@ Areas of Terraform’s behavior that are not determined by the backend: none
 __________________________________________________________________________________________
 
 
+### terraform init -migrate-state
+
+After using Terraform locally to deploy cloud resources, you have decided to move your state file to an Amazon S3 remote backend. You configure Terraform with the proper configuration as shown below. What command should be run in order to complete the state migration while copying the existing state to the new backend?
+
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________
 
 
