@@ -36,7 +36,10 @@ The terraform fmt command is used to rewrite Terraform configuration files to a 
 to improve readability
 
 
+## terraform fmt -recursive
 
+
+you can use the -recursive flag to instruct terraform fmt to also process files in subdirectories.
 
 __________________________________________________________________________________________
 
