@@ -454,7 +454,13 @@ ________________________________________________________________________________
 
 
 
+#### where should you store the credentials?
 
+
+- `Environment Variables`
+
+
+- `Credentials Files`
 
 
 
