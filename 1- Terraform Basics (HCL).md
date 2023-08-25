@@ -11,7 +11,7 @@ a HCL file (.tf) consist of blocks and arguments,
 
 
 
-
+IaC enables API-driven workflows
 
 
 __________________________________________________________________________________________
