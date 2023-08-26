@@ -222,3 +222,14 @@ ________________________________________________________________________________
 
 
 
+
+
+when you want to delete all the resources except one of them,
+
+you should remove that one resource from terraform by this command:  `terraform` `state` `rm`
+
+then destroy the rest of the infrastructure:  `terraform` `destroy`
+
+
+__________________________________________________________________________________________
+
