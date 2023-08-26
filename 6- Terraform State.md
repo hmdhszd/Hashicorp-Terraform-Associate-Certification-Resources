@@ -208,3 +208,17 @@ In both `Terraform OSS` and `Terraform Cloud`, workspaces provide similar functi
 __________________________________________________________________________________________
 
 
+
+
+
+
+
+What allows Terraform to make use of a declarative approach?    state file
+
+
+
+
+__________________________________________________________________________________________
+
+
+
