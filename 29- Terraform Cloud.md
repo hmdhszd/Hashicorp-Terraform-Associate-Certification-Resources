@@ -219,7 +219,9 @@ Which version of Terraform Cloud supports this feature?  `Terraform` `Cloud` `fo
 __________________________________________________________________________________________
 
 
+### enhanced storage backend
 
+Using an enhanced storage backend allows you to execute your Terraform on infrastructure either locally or in Terraform Cloud.
 
 __________________________________________________________________________________________
 
