@@ -385,16 +385,29 @@ Which of the following Terraform features supports the versioning of a module?
 __________________________________________________________________________________________
 
 
+### Private Module Registry
 
-
-
+helps you share Terraform providers and Terraform modules across your organization. It includes support for versioning, a searchable list of available providers and modules, and a configuration designer to help you build new workspaces faster.
 
 __________________________________________________________________________________________
 
 
 
 
+You have a number of different variables in a parent module that calls multiple child modules. Can the child modules refer to any of the variables declared in the parent module?
 
+
+
+No, it cannot refer to the variable
+
+BUT
+
+it can only refer to values that are passed to the child module
+
+
+However,
+
+the child module can declare output values to selectively export certain values to be accessed by the calling module.
 
 __________________________________________________________________________________________
 
