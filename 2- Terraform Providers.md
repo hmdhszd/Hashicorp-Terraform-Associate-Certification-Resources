@@ -6,12 +6,12 @@
 __________________________________________________________________________________________
 
 
-you can find terraform providers here:    https://registry.terraform.io/browse/providers
+you can find terraform providers here at `terraform registry`:    https://registry.terraform.io/browse/providers
 
 
 with the `terraform init` command, the terraform `provider` `plugins` will be `installed`.
 
-these plugins will be downloaded in the `.terraform/plugins` in the current working directory
+these plugins will be downloaded in the `.terraform/providers` in the current working directory
 
 
 
@@ -50,6 +50,9 @@ ________________________________________________________________________________
 ### terraform providers mirror
 
 
+Terraform Providers Mirror is a feature that allows organizations to host a local copy of external providers' plugins, enhancing control and reliability in infrastructure provisioning through Terraform.
+
+
 The terraform providers mirror command downloads the providers required for the current configuration and copies them into a directory in the local filesystem.
 
 In normal use, terraform init will automatically download needed providers from provider registries as part of initializing the current working directory.
@@ -66,8 +69,6 @@ ________________________________________________________________________________
 The terraform providers schema command is used to print detailed schemas for the providers used in the current configuration.
 
 
-
-
 __________________________________________________________________________________________
 
 
@@ -81,18 +82,6 @@ This helps maintain consistent infrastructure management.
 
 
 __________________________________________________________________________________________
-
-
-
-
-
-### terraform providers mirror
-
-
-Terraform Providers Mirror is a feature that allows organizations to host a local copy of external providers' plugins, enhancing control and reliability in infrastructure provisioning through Terraform.
-
-__________________________________________________________________________________________
-
 
 
 
@@ -254,45 +243,3 @@ Official Terraform providers and modules are owned and maintained by HashiCorp.
 
 
 __________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
