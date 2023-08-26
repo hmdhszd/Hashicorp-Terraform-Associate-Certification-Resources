@@ -109,7 +109,7 @@ ________________________________________________________________________________
 
 
 
-To use `multiple configurations` of the `same provider`
+To use `multiple configurations` of the `same provider` ???????????????
 
 To change the `default` `Provider` `Configurations`
 
@@ -133,7 +133,7 @@ For example - a resource that deploys to the "us-east-1" and another resource wi
 
 
 
-*** to use multiple versions of the same provider NOT multiple configurations of the same provider
+*** to use multiple versions of the same provider NOT multiple configurations of the same provider ???????????????
 
 
 
@@ -201,13 +201,13 @@ ________________________________________________________________________________
 #### how add `credentials` to access the API for the underlying platform, such as VMware, AWS, or Google Cloud?
 
 
-- in the provider block by hardcoding or using variable
+- in the `provider` `block` by hardcoding or using variable
 
 
-- integrated services: AWS IAM, Azure Managed Service Identity
+- `integrated` `services`: AWS IAM, Azure Managed Service Identity
 
 
-- Environment Variable
+- `Environment` `Variable`
 
 
 __________________________________________________________________________________________
