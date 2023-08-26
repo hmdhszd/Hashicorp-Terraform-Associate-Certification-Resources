@@ -64,28 +64,6 @@ In normal use, terraform init will automatically download needed providers from 
 __________________________________________________________________________________________
 
 
-### terraform providers schema
-
-The terraform providers schema command is used to print detailed schemas for the providers used in the current configuration.
-
-
-__________________________________________________________________________________________
-
-
-
-### terraform providers lock
-
-Terraform provider locking involves specifying a specific version of a provider in your configuration, ensuring stability and predictability by preventing automatic provider updates.
-
-This helps maintain consistent infrastructure management.
-
-
-
-__________________________________________________________________________________________
-
-
-
-
 
 The terraform providers ______ command can automatically populate a directory that will be used as a local filesystem mirror in the provider installation configuration.
 
@@ -95,6 +73,28 @@ terraform providers mirror
 
 
 __________________________________________________________________________________________
+
+
+### terraform providers schema
+
+The terraform providers schema command is used to `print detailed schemas` for the `providers used` in the current configuration.
+
+
+__________________________________________________________________________________________
+
+
+
+### terraform providers lock
+
+Terraform provider locking involves specifying a specific `version` of a provider in your configuration, ensuring stability and predictability by preventing automatic provider updates.
+
+This helps maintain consistent infrastructure management.
+
+
+
+__________________________________________________________________________________________
+
+
 
 
 #### When you run terraform apply, you see an error that states - “Failed to instantiate provider”. What could be the reason for this error?
@@ -175,16 +175,6 @@ terraform {
 ```
 
 
-
-
-__________________________________________________________________________________________
-
-
-when you want to delete all the resources except one of them,
-
-you should remove that one resource from terraform by this command:  `terraform` `state` `rm`
-
-then destroy the rest of the infrastructure:  `terraform` `destroy`
 
 
 __________________________________________________________________________________________
