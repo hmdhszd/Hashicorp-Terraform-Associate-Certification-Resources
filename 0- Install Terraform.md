@@ -7,17 +7,18 @@
 Terraform is distributed as a single binary and available for many different platforms:
 
 
--  Linux
+-  `Linux`
 
--  Windows
+-  `Windows`
 
--  MacOS
+-  `MacOS`
 
--  Solaris
+-  `Solaris`
 
--  FreeBSD
+-  `FreeBSD`
 
 
+Terraform can NOT be inestalled on UNIX
 
 __________________________________________________________________________________________
 
