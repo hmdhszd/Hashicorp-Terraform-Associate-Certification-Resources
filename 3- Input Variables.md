@@ -373,10 +373,6 @@ We can use any name for a variable except for:
 
 __________________________________________________________________________________________
 
-Interpolation syntax allows us to reference `variables`, `resource attributes` and even make use of `built-in functions` in terraform
-
-__________________________________________________________________________________________
-
 
 
 Which among the following are the techniques that could be used to safely and securely manage secrets inside terraform?
