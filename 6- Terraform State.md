@@ -197,6 +197,10 @@ ________________________________________________________________________________
 
 
 
+In both `Terraform OSS` and `Terraform Cloud`, workspaces provide similar functionality of using a `separate` `state` `file` for each workspace.
+
+
+
 
 
 
