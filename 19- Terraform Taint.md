@@ -1,13 +1,23 @@
 
 
 
-NOTE: This used to be `terraform taint` and has been replaced with `terraform apply -replace`
-
-
+### NOTE: This used to be `terraform taint` and has been replaced with `terraform apply -replace`
 
 
 
 __________________________________________________________________________________________
+
+
+
+### terraform apply -replace=aws_instance.web
+
+recreate the one resource without having to destroy everything that was created
+
+we use replace instead of taint
+
+
+__________________________________________________________________________________________
+
 
 
 
