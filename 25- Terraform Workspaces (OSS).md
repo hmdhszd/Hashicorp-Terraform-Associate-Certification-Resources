@@ -220,6 +220,24 @@ Terraform worksoace is Not suitable for isolation for strong separation between 
 __________________________________________________________________________________________
 
 
+### terraform workspace new
+
+will create a new workspace
+
+
+
+__________________________________________________________________________________________
+
+
+### terraform workspace select
+
+will tell Terraform what workspace to change to and use
+
+
+__________________________________________________________________________________________
+
+
+
 ### terraform workspace show
 
 When working with Terraform CLI/OSS workspaces, what command can you use to display the current workspace you are working in?
