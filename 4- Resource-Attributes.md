@@ -58,10 +58,7 @@ and then inserts it into the final string:
 
 __________________________________________________________________________________________
 
-
-Interpolation syntax allows us to reference variables, resource attributes and even make use of built-in functions in terraform.
-
-
+Interpolation syntax allows us to reference `variables`, `resource attributes` and even make use of `built-in functions` in terraform
 
 __________________________________________________________________________________________
 
