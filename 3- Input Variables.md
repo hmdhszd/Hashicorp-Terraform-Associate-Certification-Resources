@@ -61,7 +61,7 @@ ________________________________________________________________________________
 
 
 
-## in the variable block, Type and Description are optional
+## in the variable block, the "Type", "Description" and "Default" arguments are optional
 
 
 Type: string, number, bool, list(string), list(number), map(string), set(number), object, tuple
@@ -246,11 +246,11 @@ ________________________________________________________________________________
 
 # other methods of use variables
 
-*** set explicit values for the current working directory that will override the default variable values
+*** set explicit values for the current working directory that will `override` the `default` `variable` values
 
 ### use environment variables
 
-set the environment variable in the format TF_VAR_< variable name >
+set the environment variable in the format `TF_VAR_< variable name >`
 
 ```bash
 export TF_VAR_filename="/root/pets.txt"
@@ -263,9 +263,9 @@ terraform apply
 __________________________________________________________________________________________
 
 
-### Automatically loaded ( *.auto.tfvars OR *.auto.tfvars.json OR terraform.tfvars OR terraform.tfvars.json )
+### Automatically loaded ( `*.auto.tfvars` OR `*.auto.tfvars.json` OR `terraform.tfvars` OR `terraform.tfvars.json` )
 
-it will be added automatically
+it will be added `automatically`
 
 ```bash
 terraform apply
@@ -277,9 +277,9 @@ ________________________________________________________________________________
 
 
 
-### use separate variable file ( *.tfvars OR *.tfvars.json )
+### use separate variable file ( `*.tfvars` OR `*.tfvars.json` )
 
-it should be added manually
+it should be added `manually` by `-var-file`
 
 ```bash
 terraform apply -var-file variables.tfvars
@@ -292,6 +292,8 @@ ________________________________________________________________________________
 
 
 ### use variables in command line
+
+it should be added `manually` by `-var`
 
 ```bash
 terraform apply -var "filename=/root/pets.txt"
@@ -326,13 +328,13 @@ ________________________________________________________________________________
 
 ## The Order of Precedence
 
-#### 1. Environment variables
+#### 1. `Environment` `variables`
 
-#### 2. terraform.tfvars OR terraform.tfvars.json
+#### 2. `terraform.tfvars` OR `terraform.tfvars.json`
 
-#### 3. *.auto.tfvars OR *.auto.tfvars.json
+#### 3. `*.auto.tfvars` OR `*.auto.tfvars.json`
 
-#### 4. Any -var and -var-file options on the command line
+#### 4. Any `-var` and `-var-file` options on the `command line`
 
 
 __________________________________________________________________________________________
@@ -370,12 +372,6 @@ We can use any name for a variable except for:
 
 
 __________________________________________________________________________________________
-
-
-when defining variables, "Default" argument is optional.
-
-__________________________________________________________________________________________
-
 
 Interpolation syntax allows us to reference `variables`, `resource attributes` and even make use of `built-in functions` in terraform
 
@@ -466,11 +462,3 @@ ________________________________________________________________________________
 
 
 __________________________________________________________________________________________
-
-
-
-
-__________________________________________________________________________________________
-
-
-
