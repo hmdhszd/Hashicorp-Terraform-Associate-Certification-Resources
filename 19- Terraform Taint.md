@@ -1,6 +1,14 @@
 
 
 
+NOTE: This used to be `terraform taint` and has been replaced with `terraform apply -replace`
+
+
+
+
+
+__________________________________________________________________________________________
+
 
 
 ### when you apply and the resource creation fails for any reason, Terraform marks the resource as tainted.
