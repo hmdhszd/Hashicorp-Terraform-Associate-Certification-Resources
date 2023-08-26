@@ -97,6 +97,16 @@ In the UI and VCS workflow, every workspace is associated with a specific branch
 
 
 
+
+__________________________________________________________________________________________
+
+
+
+
+In Terraform OSS, workspaces generally use the same code repository while workspaces in Terraform Enterprise/Cloud are often mapped to different code repositories.
+
+
+
 __________________________________________________________________________________________
 
 
@@ -165,15 +175,6 @@ ________________________________________________________________________________
 
 
 Which feature is used to manage how members of your organization can use modules from the terraform private registry?    sentien policies
-
-
-
-__________________________________________________________________________________________
-
-
-In the UI and VCS workflow, every workspace is associated with a specific branch of a VCS repo of Terraform configurations.
-
-
 
 
 
