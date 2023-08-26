@@ -105,6 +105,24 @@ the command `terraform refresh` is called automatically with `terraform plan` an
 
 
 
+
+__________________________________________________________________________________________
+
+
+
+
+## terraform console
+
+The Terraform console is an interpreter that you can use to evaluate Terraform expressions and explore your Terraform project's state. 
+
+In order to use the terraform console command, the `CLI` must be able to `lock state` to prevent changes.
+
+```hcl
+$ terraform console
+Acquiring state lock. This may take a few moments...
+> 
+```
+
 __________________________________________________________________________________________
 
 
