@@ -11,7 +11,7 @@ a HCL file (.tf) consist of blocks and arguments,
 
 
 
-IaC enables API-driven workflows
+IaC enables `API-driven` workflows
 
 
 __________________________________________________________________________________________
@@ -73,13 +73,13 @@ ________________________________________________________________________________
 
 # terraform init:
 
-### This command is used to initialize a new or existing Terraform configuration in a working directory. During initialization, Terraform downloads and installs the required providers and modules specified in the configuration.
+### During initialization, Terraform downloads and installs the required providers and modules specified in the configuration.
 
 
-the provider plugins are downloaded into : .terraform/providers
+the provider plugins are downloaded into : `.terraform/providers`
 
 
-the modules are downloaded into : .terraform/modules
+the modules are downloaded into : `.terraform/modules`
 
 
 ```bash
@@ -122,7 +122,9 @@ ________________________________________________________________________________
 
 # terraform plan:  display the blueprint of the infrastructure to be applied
 
-### After initialization, this command is used to create an execution plan. Terraform inspects the configuration files, compares the current state with the desired state, and generates a detailed plan of what actions (create, modify, delete) will be taken to achieve the desired configuration.
+### After initialization, this command is used to create an execution plan.
+
+### Terraform inspects the configuration files, compares the current state with the desired state, and generates a detailed plan of what actions (create, modify, delete) will be taken to achieve the desired configuration.
 
 ### validate the changes that will be made without impacting existing workloads? terraform plan
 
@@ -231,7 +233,7 @@ iac-server $ ls -l /root/favorite-games
 
 __________________________________________________________________________________________
 
-# terraform show:
+# terraform show: (show state from `terraform.tfstate` file)
 
 ### The terraform show command is used to display the current state of the infrastructure managed by Terraform.
 
@@ -319,6 +321,7 @@ ________________________________________________________________________________
 
 # terraform destroy
 
+# terraform apply -destroy
 
 
 
@@ -369,7 +372,7 @@ ________________________________________________________________________________
 
 
 
-#### terraform apply -auto-approve
+# terraform apply -auto-approve
 
 
 Which of the options can be used to run a terraform apply without confirmation?    -auto-approve
@@ -378,16 +381,6 @@ Which of the options can be used to run a terraform apply without confirmation? 
 
 
 __________________________________________________________________________________________
-
-
-
-What allows Terraform to make use of a declarative approach?    state file
-
-
-
-
-__________________________________________________________________________________________
-
 
 
 When writing Terraform code, how many spaces between each nesting level does HashiCorp recommends that you use? `2 space`
@@ -399,13 +392,11 @@ When writing Terraform code, how many spaces between each nesting level does Has
 __________________________________________________________________________________________
 
 
-IaC allows you to create a blueprint of your data center as code that can be versioned, shared, and reused.
+IaC allows you to create a `blueprint` of your data center as code that can be `versioned`, `shared`, and `reused`.
 
-Because IaC is code, it and should be stored and managed in a code repository
+Because IaC is code, it and should be stored and managed in a code repository (`VCS`)
 
-IaC is platform agnostic and easy to read
-
-
+IaC is `platform agnostic` and `easy to read`
 
 
 __________________________________________________________________________________________
@@ -415,20 +406,6 @@ ________________________________________________________________________________
 
 In order to reduce the time it takes to provision resources, Terraform uses parallelism. By default, Terraform will provision `10` resources concurrently during a terraform apply.
 
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-### terraform apply -replace=aws_instance.web
-
-recreate the one resource without having to destroy everything that was created
-
-we use replace instead of taint
 
 
 __________________________________________________________________________________________
@@ -467,14 +444,8 @@ Infrastructure as Code (IaC) makes infrastructure changes _______, ________, ___
 
 __________________________________________________________________________________________
 
-`terraform apply -out=my-execution.plan`
+# terraform apply -out=my-execution.plan
 
-When running a terraform plan, how can you save the plan so it can be applied at a later time? -out
-
-__________________________________________________________________________________________
-
-
-
+When running a terraform plan, how can you save the plan so it can be applied at a later time? `-out`
 
 __________________________________________________________________________________________
-
