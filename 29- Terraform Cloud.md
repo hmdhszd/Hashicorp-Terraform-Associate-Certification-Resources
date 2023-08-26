@@ -226,7 +226,9 @@ Using an enhanced storage backend allows you to execute your Terraform on infras
 __________________________________________________________________________________________
 
 
+### Sentinel
 
+You can use a combination of Terraform Cloud's cost estimation feature and Sentinel policies to ensure your organization doesn't apply changes to your environment that would result in `exceeding` your monthly operating `budget`.
 
 __________________________________________________________________________________________
 
