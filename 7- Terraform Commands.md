@@ -111,6 +111,16 @@ ________________________________________________________________________________
 
 
 
+
+The `terraform apply -refresh-only` command creates a plan whose goal is only to update the Terraform state and any root module output values to match changes made to remote objects outside of Terraform.
+
+
+
+__________________________________________________________________________________________
+
+
+
+
 ## terraform console
 
 The Terraform console is an interpreter that you can use to evaluate Terraform expressions and explore your Terraform project's state. 
@@ -122,16 +132,6 @@ $ terraform console
 Acquiring state lock. This may take a few moments...
 > 
 ```
-
-__________________________________________________________________________________________
-
-
-
-
-
-The `terraform apply -refresh-only` command creates a plan whose goal is only to update the Terraform state and any root module output values to match changes made to remote objects outside of Terraform.
-
-
 
 __________________________________________________________________________________________
 
