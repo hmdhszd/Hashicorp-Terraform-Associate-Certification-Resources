@@ -1,7 +1,25 @@
 
+# lifecycle
+
+
+- ### create_before_destroy
+
+
+- ### prevent_destroy
+
+
+- ### Ignore Changes
+
+
+
+
+
+__________________________________________________________________________________________
+
+
 ### create_before_destroy
 
-By default, terraform is immutable, meaning it first deletes a resource and then creates the new one with the updated configuration.
+By default, terraform is `immutable`, meaning it `first deletes` a resource and `then creates` the new one with the updated configuration.
 
 
 but we can change that by add "lifecycle" :
