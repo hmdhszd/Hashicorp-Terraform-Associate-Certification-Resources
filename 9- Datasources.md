@@ -94,13 +94,19 @@ ________________________________________________________________________________
 
 ### Terraform Import Command:
 
-The terraform import command is used to bring existing resources into Terraform's management.
+The terraform import command is used to `bring` existing resources `into` `Terraform's` `management`.
 
 It allows you to include resources that were created manually or through other means into your Terraform configuration, making them part of your infrastructure as code setup.
 
 Importing resources helps Terraform understand the existing state of those resources, allowing you to further manage and modify them using Terraform.
 
-After importing, you need to define the resource in your Terraform configuration to align its desired state with the actual state.
+Before importing, you need to define the resource in your Terraform configuration, After importing you need to to align its desired state with the actual state.
+
+
+__________________________________________________________________________________________
+
+
+
 
 In summary, data sources fetch information about existing resources, while the terraform import command adds existing resources to be managed by Terraform, enabling you to manage them consistently using your Terraform configuration.
 
@@ -130,12 +136,5 @@ Resources declared by a `resource block` are known as `managed resources`.
 `Managed resources` are often referred to just as `resources` when the meaning is clear from context.
 
 __________________________________________________________________________________________
-
-
-
-
-__________________________________________________________________________________________
-
-
 
 
