@@ -138,7 +138,7 @@ ________________________________________________________________________________
 
 
 
-## terraform graph
+## terraform graph ( ‍`DOT format` )
 
 create a visual representation of the dependencies in a terraform configuration or execution plan.
 
@@ -213,13 +213,6 @@ Certainly, here's a concise description of each command in two lines:
 1. **`terraform fmt`**: Automatically formats Terraform code for consistent layout, **`improving readability`** by adjusting indentation and spacing as per the style guide.
 
 2. **`terraform validate`**: Checks Terraform configuration files for **`syntax errors`** and verifies the correctness of references to providers and modules, helping prevent invalid configurations.
-
-
-__________________________________________________________________________________________
-
-
-
-The terraform graph command is used to generate a visual representation in which format? ‍`DOT format`
 
 
 __________________________________________________________________________________________
