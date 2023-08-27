@@ -66,7 +66,10 @@ we've seen 2 meta arguments: "depends_on" and "lifecycle"
 
 but there are other meta arguments, such as "count"
 
-the resource gonna be a "list"
+the created resource gonna be a `list`
+
+
+we use `count.index`
 
 __________________________________________________________________________________________
 
@@ -110,6 +113,8 @@ ________________________________________________________________________________
 when there are duplicate values, we use "toset"
 
 the resource gonna be a "map"
+
+we use `each.value`
 
 main.tf
 
@@ -204,24 +209,12 @@ module "example_module" {
 __________________________________________________________________________________________
 
 
-
-
-Which meta-argument is not supported by the data block? lifecycle
-
-
-
-__________________________________________________________________________________________
-
-
 A given resource or module block CAN NOT use both `count` and `for_each` simultaneously.
 
 __________________________________________________________________________________________
 
 
 `alias` and `version` are the `meta-arguments` which are available for all provider blocks.
-
-
-
 
 
 __________________________________________________________________________________________
@@ -236,11 +229,6 @@ Which argument of the `lifecycle` meta-argument supports a `list` as a value ?
 By default, Terraform detects any difference in the current settings of a real infrastructure object and plans to update the remote object to match configuration.
 
 
-
-__________________________________________________________________________________________
-
-
-Which meta-argument is not supported by the data block? lifecycle
 
 __________________________________________________________________________________________
 
