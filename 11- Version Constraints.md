@@ -1,46 +1,5 @@
 
-# Terraform block
 
-you can use a specific version of the terraform provider: (default = latest version)
-
-we use "terraform" block to configure settings related to terraform itself.
-
-inside this block, we use `required_providers` to specify the version of the provider.
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-The functionality of a provider plugin may vary drastically from one version to another.
-
-Our terraform configuration may not work as expected when using a version different than the one it was written in.
-
-As a best practice, always declare the exact version of the provider we want to use within the `required_providers` block.
-
-
-
-main.tf
-
-```bash
-terraform {
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "> 3.45.0, !=3.46.0, < 3.48.0"
-    }
-  }
-}
-
-resource "google_compute_instance" "special" {
-  name         = "aone"
-  machine_type = "e2-micro"
-  zone         = "us-west1-c"
-
-}
-```
 
 
 
@@ -73,8 +32,6 @@ when using version constraints, we can use:
 - pessimistic operator "~>"
 
 - "!=" operator
-
-- "~>" operator
 
 - combination comparison operation to use specific version within a range
 
@@ -109,21 +66,11 @@ ________________________________________________________________________________
 
 ## Version constraints:
 
-1- required_providers
+1- terraform --> `required_providers` --> version (`Provider` Version)
 
-2- required_version
+2- terraform --> `required_version` (`Terraform` Version)
 
-3- modules
-
-Version constraints can be used anywhere terraform allows us to specify versions.
-
-Most commonly they can be set at:
-
-1. Within the provider version configuration (Inside the required_providers block nested inside the terraform block)
-
-2. The "required_version" argument which is used to set the version of Terraform to use.
-
-3. Within modules. This is where we specify the version of module to be used.
+3- module --> `version` (`Module` Version)
 
 
 
@@ -140,6 +87,14 @@ ________________________________________________________________________________
 Version constraints can be used anywhere terraform allows us to specify versions. Most commonly they can be set at:
 
 1. Within the `provider` `version` `configuration` (Inside the `required_providers` block nested inside the `terraform block`)
+
+you can use a specific version of the terraform provider: (default = latest version)
+
+
+The functionality of a provider plugin may vary drastically from one version to another.
+
+Our terraform configuration may not work as expected when using a version different than the one it was written in.
+
 
 
 ```bash
