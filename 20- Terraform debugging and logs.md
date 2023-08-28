@@ -14,15 +14,15 @@ ________________________________________________________________________________
 
 
 
-
+Bash: 
 ```bash
-Bash: export TF_LOG="DEBUG"
+export TF_LOG="DEBUG"
 ```
 
 
-
-```bash
-PowerShell: $env:TF_LOG="DEBUG"
+PowerShell:
+```powershell
+$env:TF_LOG="DEBUG"
 ```
 
 
@@ -48,13 +48,13 @@ You can set TF_LOG to one of the log levels (in order of decreasing verbosity)
 __________________________________________________________________________________________
 
 
-#### TF_LOG="JSON"
+#### TF_LOG="`JSON`"
 
 Also if we set TF_LOG to JSON, it output logs at the `TRACE` level or HIGHER, and uses a parseable JSON encoding as the formatting.
 
-
+Bash:
 ```bash
-Bash: export TF_LOG="JSON"
+export TF_LOG="JSON"
 ```
 
 __________________________________________________________________________________________
@@ -76,18 +76,18 @@ ________________________________________________________________________________
 
 
 
-
-
+Bash: 
 ```bash
-PowerShell: $env:TF_LOG_PATH="C:\tmp\terraform.log"
+export TF_LOG_PATH="tmp/terraform.log"
 ```
 
 
 
-
-```bash
-Bash: export TF_LOG_PATH="tmp/terraform.log"
+PowerShell:
+```powershell
+$env:TF_LOG_PATH="C:\tmp\terraform.log"
 ```
+
 
 
 
@@ -105,20 +105,6 @@ unset TF_LOG_PATH
 ```
 
 __________________________________________________________________________________________
-
-
-
-Your team is working collaboratively on a project that uses terraform scripts heavily. In your team one team member was not familiar with terraform, so he was making the required changes manually, using the GUI console of that specific cloud provider on the resources provisioned using terraform. Since these unmanaged changes are hampering the efficiency of the team , you want to revert these changes. How would you go about doing this?
-
-
--  Use `terraform destroy` and then `terraform apply` commands in this specific order,
-
--  You will `taint` the resources that you want removed on the next terraform apply.
-
-
-__________________________________________________________________________________________
-
-
 
 
 Logging can be enabled separately for terraform itself and the provider plugins using the `TF_LOG_CORE` or `TF_LOG_PROVIDER` environment variables.
