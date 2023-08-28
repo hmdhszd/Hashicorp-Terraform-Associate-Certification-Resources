@@ -8,7 +8,7 @@ the file "terraform-demo.pub" is previously created.
 
 
 
-```bash
+```hcl
 resource "aws_key_pair" "terraform-demo" {
   key_name   = "terraform-demo"
   public_key = "${file("terraform-demo.pub")}"
@@ -21,7 +21,7 @@ resource "aws_key_pair" "terraform-demo" {
 
 
 
-```bash
+```hcl
 resource "aws_security_group" "ec2_sg" {
   name        = "allow_http"
   description = "Allow http and ssh traffic"
@@ -67,7 +67,7 @@ resource "aws_security_group" "ec2_sg" {
 ### Finally create the ec2 with the "key_name" and "vpc_security_group_ids" configuration:
 
 
-```bash
+```hcl
 resource "aws_instance" "my-instance" {
 	ami = "ami-04169656fea786776"
 	instance_type = "t2.nano"
@@ -104,7 +104,7 @@ we can get the public IP of the machine for further uses:
 
 
 
-```bash
+```hcl
 output "publicip" {
   value  =  aws_instance.my-instance.public_ip
 }
