@@ -254,7 +254,7 @@ in the provisioners, we can use "when" and "on_failure"
 
 if running the command is not important for us, we use: `on_failure = continue`, otherwise "default" is `on_failure = fail`
 
-If `when = destroy` is specified, the provisioner will run when the resource it is defined within is destroyed.
+If `when = destroy` is specified, the provisioner will run when the resource it is defined within is destroyed, otherwise "default" when create.
 
 
 
@@ -277,7 +277,6 @@ it will taint the resource and that will be replaced on the next run
 
 
 __________________________________________________________________________________________
-
 
 
 
