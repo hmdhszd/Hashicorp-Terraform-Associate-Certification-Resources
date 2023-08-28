@@ -71,3 +71,18 @@ Usage of terraform apply -replace=”<resource_name>” is preferred overterrafo
 
 
 __________________________________________________________________________________________
+
+
+
+Your team is working collaboratively on a project that uses terraform scripts heavily. In your team one team member was not familiar with terraform, so he was making the required changes manually, using the GUI console of that specific cloud provider on the resources provisioned using terraform. Since these unmanaged changes are hampering the efficiency of the team , you want to revert these changes. How would you go about doing this?
+
+
+-  Use `terraform destroy` and then `terraform apply` commands in this specific order,
+
+-  You will `taint` the resources that you want removed on the next terraform apply.
+
+
+__________________________________________________________________________________________
+
+
+
