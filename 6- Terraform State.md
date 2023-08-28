@@ -60,20 +60,6 @@ resource "local_file" "games" {
 __________________________________________________________________________________________
 
 
-?????
-
-### What are the steps required to remove a resource from the management of terraform?    -lock=false
-
-
-
-terraform apply -lock=false
-
-
-
-
-__________________________________________________________________________________________
-
-
 
 ### What are the steps required to remove a resource from the management of terraform?
 
