@@ -4,7 +4,7 @@ ________________________________________________________________________________
 
 # 1- remote-exec Provisioner:
 
-## The remote-exec provisioner invokes a script on a remote resource after it is created. This can be used to run a configuration management tool, bootstrap into a cluster, etc.
+## The remote-exec provisioner invokes a script on a `remote resource` after it is created. This can be used to run a configuration management tool, bootstrap into a cluster, etc.
 
 but there should be a network connectivity between the local machine and the instance. (`SSH` for Linux / `WINRM` for Windows)
 
@@ -25,7 +25,7 @@ ________________________________________________________________________________
 ### First, we create a security group
 
 
-```bash
+```hcl
 resource "aws_security_group" "allow_ssh" 
   name        = "tf_Remote_Provisioner"
   description = "Allow SSH Inbound Traffic"
@@ -71,7 +71,7 @@ ________________________________________________________________________________
 ### Then, create a key to connect to the machine
 
 
-```bash
+```hcl
 resource "aws_key_pair" "web" {
   key_name   = "web"
   public_key = tls_private_key.oskey.public_key_openssh
@@ -87,7 +87,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 resource "aws_instance" "my_ec2" 
   ami                    = "ami-0e742cca61fb65051"
   instance_type          = "t2.micro"
@@ -132,7 +132,7 @@ ________________________________________________________________________________
 
 ## The local-exec provisioner invokes a local executable after a resource is created.
 
-## This invokes a process on the machine running Terraform, not on the resource. Basically, this provisioner is used when you want to perform some tasks onto your local machine where you have installed the terraform.
+## This invokes a process on the `machine running Terraform`, not on the resource. Basically, this provisioner is used when you want to perform some tasks onto your local machine where you have installed the terraform.
 
 
 
@@ -144,7 +144,7 @@ ________________________________________________________________________________
 
 we can store the IP address of the created instance in a file (private_ip.txt) on our local machine
 
-```bash
+```hcl
 resource "aws_instance" "my_vm" {
  ami           = var.ami //Amazon Linux AMI
  instance_type = var.instance_type
@@ -168,7 +168,7 @@ ________________________________________________________________________________
 write on a file when the instance is created or destroyed
 
 
-```bash
+```hcl
 resource "aws_instance" "my_vm" {
  ami           = var.ami //Amazon Linux AMI
  instance_type = var.instance_type
@@ -209,7 +209,7 @@ ________________________________________________________________________________
 
 install nginx on the machine using file provisioner and remote_exec privisioner:
 
-```bash
+```hcl
 resource "aws_instance" "my_vm" {
  ami           = var.ami //Amazon Linux AMI
  instance_type = var.instance_type
@@ -252,10 +252,9 @@ ________________________________________________________________________________
 
 in the provisioners, we can use "when" and "on_failure"
 
-if running the command is not important for us, we use: on_failure = continue, otherwise we use on_failure = fail
+if running the command is not important for us, we use: `on_failure = continue`, otherwise "default" is `on_failure = fail`
 
-If when = destroy is specified, the provisioner will run when the resource it is defined within is destroyed.
-
+If `when = destroy` is specified, the provisioner will run when the resource it is defined within is destroyed.
 
 
 
@@ -305,14 +304,3 @@ Destroy provisioners are run before the resource is destroyed.
 
 
 __________________________________________________________________________________________
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-
