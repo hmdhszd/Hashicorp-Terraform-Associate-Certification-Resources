@@ -68,7 +68,7 @@ in the terraform module, we can use our variables by adding them inside the modu
 
 main.tf
 
-```bash
+```hcl
 module "iam_iam-user" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-user"
   version = "3.4.0"
@@ -87,7 +87,7 @@ ________________________________________________________________________________
 
 directory structure:
 
-```bash
+```hcl
 my_terraform_project/
 ├── main.tf
 ├── variables.tf
@@ -111,7 +111,7 @@ we use module block to refer to the module:
 my_terraform_project/main.tf
 
 
-```bash
+```hcl
 # This is the main configuration file
 
 provider "aws" {
@@ -135,7 +135,7 @@ ________________________________________________________________________________
 my_terraform_project/variables.tf
 
 
-```bash
+```hcl
 # This is the variables.tf file in the root directory
 
 variable "bucket_name" {
@@ -153,7 +153,7 @@ ________________________________________________________________________________
 my_terraform_project/terraform.tfvars
 
 
-```bash
+```hcl
 # This is the terraform.tfvars file in the root directory
 
 bucket_name = "my-unique-bucket-name"
@@ -164,7 +164,7 @@ ________________________________________________________________________________
 
 my_terraform_project/modules/s3_bucket/main.tf
 
-```bash
+```hcl
 # This is the main.tf file for the local module named "s3_bucket"
 
 resource "aws_s3_bucket" "my_bucket" {
@@ -200,7 +200,7 @@ ________________________________________________________________________________
 
 my_terraform_project/modules/s3_bucket/variables.tf
 
-```bash
+```hcl
 # This is the variables.tf file for the local module named "s3_bucket"
 
 variable "bucket_name" {
@@ -219,7 +219,7 @@ ________________________________________________________________________________
 my_terraform_project/modules/s3_bucket/outputs.tf
 
 
-```bash
+```hcl
 # This is the outputs.tf file for the local module named "s3_bucket"
 
 output "bucket_id" {
