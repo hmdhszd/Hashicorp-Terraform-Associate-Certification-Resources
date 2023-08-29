@@ -63,7 +63,7 @@ ________________________________________________________________________________
 ## 1- Public Module - Terraform Registry
 
 
-in the terraform module, we can use our variables by adding them inside the module block
+in the modules, we can use our variables by adding them inside the module block
 
 
 main.tf
@@ -275,7 +275,7 @@ ________________________________________________________________________________
 
 
 
-**Example 1: Using HTTPS as the Git Source**
+**Example 1: Using `HTTPS` as the Git Source**
 
 ```hcl
 # git_https_example/main.tf
@@ -290,7 +290,7 @@ module "example_module" {
 Replace `"https://github.com/your-username/your-module-repo.git"` with the actual HTTPS URL of your Git repository containing the Terraform module code.
 
 
-**Example 2: Using SSH as the Git Source**
+**Example 2: Using `SSH` as the Git Source**
 
 
 ```hcl
@@ -306,7 +306,6 @@ module "example_module" {
 Replace `"git::ssh://github.com/your-username/your-module-repo.git"` with the actual SSH URL of your Git repository containing the Terraform module code.
 
 Remember that when using SSH, you need to have your SSH key properly configured and the repository accessible using SSH authentication.
-itories.
 
 
 
@@ -408,40 +407,5 @@ it can only refer to values that are passed to the child module
 However,
 
 the child module can declare output values to selectively export certain values to be accessed by the calling module.
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
 
 __________________________________________________________________________________________
