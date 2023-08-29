@@ -82,6 +82,21 @@ module "iam_iam-user" {
 __________________________________________________________________________________________
 
 
+To pass values to a Terraform module when calling the module in your code, you use `input` `variables`. 
+
+__________________________________________________________________________________________
+
+
+#### to use a variable from a module ===> `output` `block`
+
+When using modules to deploy infrastructure, how would you export a value from one module to import into another module? output block
+
+
+
+__________________________________________________________________________________________
+
+
+
 
 ## 2- Local Module
 
@@ -257,7 +272,7 @@ ________________________________________________________________________________
 
 
 
-#### Choose the ways available to download the module in your current terraform configuration directory.
+#### Choose the ways available to DOWNLOAD and UPDATE the module in your current terraform configuration directory.
 
 - terraform init
 
@@ -314,54 +329,19 @@ Remember that when using SSH, you need to have your SSH key properly configured 
 
 __________________________________________________________________________________________
 
-
-
-
-
-To pass values to a Terraform module when calling the module in your code, you use `input` variables. 
-
-__________________________________________________________________________________________
-
-When using modules to deploy infrastructure, how would you export a value from one module to import into another module?
-
-#### to use a variable from a module ===> output block
-
-
-__________________________________________________________________________________________
-
-
 ### `Terraform Public Module Registry`
 
-#### - GitHub: The module must be on GitHub and must be a public repo.
+- #### GitHub: The module must be on `GitHub` and must be a `public` repo.
 
-#### - Named terraform-<PROVIDER>-<NAME>
-
-
-#### - Repository description: The GitHub repository description is used to populate the short description of the module.
+- #### Named `terraform-<PROVIDER>-<NAME>`
 
 
-#### - Standard module structure
-
-#### - `x.y.z` tags for releases: The registry uses tags to identify module versions. Release tag names must be a `semantic version`, which can optionally be `prefixed` with a `v` .
+- #### Repository description: The `GitHub` `repository` `description` is used to populate the short description of the module.
 
 
+- #### `Standard` `module` `structure`
 
-__________________________________________________________________________________________
-
-
-
-### download and update modules
-
-
-- terraform get
-
-- terraform init
-
-
-
-
-
-
+- #### `x.y.z` tags for releases: The registry uses tags to identify module versions. Release tag names must be a `semantic version`, which can optionally be `prefixed` with a `v` .
 
 
 
@@ -406,6 +386,6 @@ it can only refer to values that are passed to the child module
 
 However,
 
-the child module can declare output values to selectively export certain values to be accessed by the calling module.
+the child module can declare output values to selectively export certain values to be accessed by the calling module (parent module).
 
 __________________________________________________________________________________________
