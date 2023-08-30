@@ -116,6 +116,22 @@ The terraform plan -refresh-only command is used to create a plan whose goal is 
 __________________________________________________________________________________________
 
 
+### `terraform plan -refresh=false`
+
+
+### `terraform apply -refresh=false`
+
+the refresh command is automatically issued by the "terraform plan" and "terraform apply" command.
+
+The -refresh=false option is used in normal planning mode to skip the default behavior of refreshing Terraform state before checking for configuration changes.
+
+
+
+
+
+__________________________________________________________________________________________
+
+
 ### `.gitignore`
 
 ### Which of the following Terraform files should be ignored by Git when committing code to a repo? 
