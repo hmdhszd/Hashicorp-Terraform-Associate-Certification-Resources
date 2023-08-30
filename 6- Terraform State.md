@@ -116,6 +116,22 @@ The terraform plan -refresh-only command is used to create a plan whose goal is 
 __________________________________________________________________________________________
 
 
+### Configuration drift
+
+Configuration drift in Terraform refers to the situation where changes are made directly to resources in your cloud environment, bypassing Terraform.
+
+This causes a mismatch between the actual state of resources and what Terraform expects.
+
+It can lead to confusion, inconsistencies, and difficulties in managing your infrastructure.
+
+To prevent configuration drift, always make changes through Terraform and regularly audit for any discrepancies.
+
+This helps maintain a reliable and predictable infrastructure.
+
+
+__________________________________________________________________________________________
+
+
 ### `terraform plan -refresh=false`
 
 
