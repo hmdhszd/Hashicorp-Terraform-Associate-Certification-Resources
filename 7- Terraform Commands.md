@@ -52,7 +52,7 @@ ________________________________________________________________________________
 
 shows the current state of the infra as seen by terraform
 
-
+to see terraform attributes after creation of a resource, use "terraform show"
 
 
 __________________________________________________________________________________________
