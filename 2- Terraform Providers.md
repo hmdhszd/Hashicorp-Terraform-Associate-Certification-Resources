@@ -1,6 +1,32 @@
 
 
 
+## Terraform Providers:
+
+- official: owned by HashiCorp
+
+  * hashicorp/local
+ 
+    organization --> hashicorp
+    
+    type         --> local
+
+  there can be hostname as well
+
+- partner: owned by a third-party company (reviewed and tested by HashiCorp)
+
+- community: publish and contribute by individual contributers
+
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
 `Terraform Privider` = `Terraform Plugin`
 
 __________________________________________________________________________________________
