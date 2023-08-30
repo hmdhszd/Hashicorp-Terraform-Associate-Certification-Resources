@@ -121,3 +121,18 @@ resource "time_static" "time_update" {
 
 __________________________________________________________________________________________
 
+
+
+
+
+
+
+Terraform resources and data sources make all of their arguments available as readable attributes,
+
+and also typically export additional read-only attributes.
+
+
+
+__________________________________________________________________________________________
+
+
