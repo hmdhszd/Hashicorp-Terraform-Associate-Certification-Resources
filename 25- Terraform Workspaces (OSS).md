@@ -43,7 +43,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 project/
 ├── main.tf
 ├── variables.tf
@@ -55,7 +55,7 @@ project/
 
 variables.tf
 
-```bash
+```hcl
 variable "ami" {
   description = "Map of AMIs for different projects"
   type        = map(string)
@@ -69,7 +69,7 @@ variable "ami" {
 
 main.tf
 
-```bash
+```hcl
 provider "aws" {
   region = "us-west-2"  # Update with your desired AWS region
 }
@@ -93,12 +93,12 @@ ________________________________________________________________________________
 ### Create a `new` workspace
 
 
-```bash
+```hcl
 terraform workspace new ProjectA
 ```
 
 
-```bash
+```hcl
 terraform workspace new ProjectB
 ```
 
@@ -112,7 +112,7 @@ ________________________________________________________________________________
 ### list workspaces
 
 
-```bash
+```hcl
 terraform workspace list
 
 default
@@ -130,14 +130,14 @@ ________________________________________________________________________________
 ### Select and apply configuration on a specific terraform workspace
 
 
-```bash
+```hcl
 terraform workspace select ProjectA
 terraform apply
 ```
 
 
 
-```bash
+```hcl
 terraform workspace select ProjectB
 terraform apply
 ```
@@ -153,26 +153,13 @@ when using workspaces, we will have a directory called "terraform.tfstate.d" for
 
 terraform.tfstate.d/<workspace_name>
 
-```bash
+```hcl
 terraform.tfstate.d/
 ├── default.tfstate
 ├── ProjectA
 │   └── terraform.tfstate
 └── ProjectB
     └── terraform.tfstate
-```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-```bash
-
 ```
 
 
@@ -240,41 +227,10 @@ ________________________________________________________________________________
 
 ### terraform workspace show
 
-When working with Terraform CLI/OSS workspaces, what command can you use to display the current workspace you are working in?
+display the `current` `workspace` you are working in
 
 
 __________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-
-__________________________________________________________________________________________
-
-
-
 
 
 
