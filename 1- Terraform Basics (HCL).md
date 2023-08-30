@@ -1,5 +1,20 @@
 
 
+### IAC:
+
+1- Configuration Managements: Ansible, Chef, Puppet, SALTSTACK
+
+2- Server Templating: Docker, HashiCorp Packer, HashiCorp Vagrant
+
+3- Provisioning Tools: HashiCorp Terraform, CloudFormation
+
+
+* We can use "Configuration Managements" tools to provision infrastructure.
+
+
+
+__________________________________________________________________________________________
+
 
 a Resource is an object that Terraform manages it.
 
