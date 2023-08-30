@@ -17,6 +17,23 @@
 __________________________________________________________________________________________
 
 
+
+
+
+
+
+
+### Immutable Infrastructure:
+
+Immutable infrastructure is another paradigm in which it ensures that resources are `never` `modified` after they have been deployed.
+
+If a change is to be made, a new instance of that resource will be provisioned in place of the old one.
+
+
+
+__________________________________________________________________________________________
+
+
 ### create_before_destroy
 
 By default, terraform is `immutable`, meaning it `first deletes` a resource and `then creates` the new one with the updated configuration.
