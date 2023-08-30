@@ -5,8 +5,21 @@
 
 Terraform Cloud, developed by HashiCorp, offers a centralized platform for managing Terraform code.
 
-Key features include version control integration, secure variable storage, remote state management, and policy enforcement, enabling organizations to efficiently maintain control over their cloud infrastructure.
+__________________________________________________________________________________________
 
+
+
+## Key features:
+
+- `version control integration`
+
+- `secure variable storage`
+
+- `remote state management`
+
+- `policy enforcement`
+
+- `enabling organizations`
 
 
 __________________________________________________________________________________________
@@ -21,7 +34,7 @@ ________________________________________________________________________________
 
 
 
-### Terraform Cloud supported VCS providers:
+### Terraform Cloud supported VCS providers: `GitHub` , `GitLab` , `Bitbucket` , `Azure`
 
 
 
@@ -53,7 +66,7 @@ ________________________________________________________________________________
 ## Terraform Cloud workspace linked to a GitHub repo
 
 
-After approving a merge request that modifies Terraform configurations in a GitHub repository linked to a Terraform Cloud workspace, the default action that can be expected to run automatically is a `speculative plan` operation.
+After approving a `merge` `request` that modifies Terraform configurations in a GitHub repository linked to a Terraform Cloud workspace, the default action that can be expected to run `automatically` is a `speculative plan` operation.
 
 
 then validate the changes against `Sentinel Policy`
@@ -66,11 +79,11 @@ ________________________________________________________________________________
 
 When using variables in Terraform Cloud, what level of scope can the variable be applied to?
 
-- a specific terraform run in a single workspace
+- a specific terraform run in a `single` `workspace`
 
-- multiple workspaces using a variable set
+- `multiple` `workspaces` using a `variable` `set`
 
-- all current and future workspaces in a project using a variable set
+- all `current` and `future` `workspaces` in a project using a `variable` `set`
 
 
 __________________________________________________________________________________________
@@ -80,22 +93,11 @@ ________________________________________________________________________________
 
 Select the workflows that Terraform cloud utilizes to manage Terraform runs: 
 
-- UI/VCS-driven run workflow,
+- `UI/VCS`-driven run workflow,
 
-- API-driven run workflow,
+- `API`-driven run workflow,
 
-- CLI-driven run workflow
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-In the UI and VCS workflow, every workspace is associated with a specific branch of a VCS repo of Terraform configurations.
-
-
+- `CLI`-driven run workflow
 
 
 __________________________________________________________________________________________
@@ -103,7 +105,20 @@ ________________________________________________________________________________
 
 
 
-In Terraform OSS, workspaces generally use the same code repository while workspaces in Terraform Enterprise/Cloud are often mapped to different code repositories.
+
+In the `UI/VCS` workflow, `every workspace` is associated with a `specific branch` of a VCS repo of Terraform configurations.
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+In Terraform `OSS`, `workspaces` generally use the `same` `code` repository
+
+while workspaces in Terraform `Enterprise/Cloud` are often mapped to `different` `code` `repositories`.
 
 
 
@@ -187,7 +202,7 @@ Terraform Enterprise provides several added advantage compared to Terraform Clou
 
 Some of these include:
 
-● Single Sign-On
+● Single Sign-On (SSO)
 
 ● Auditing
 
@@ -206,6 +221,7 @@ migrating from terraform OSS to terraform cloud --> on the cloud we use the `sam
 __________________________________________________________________________________________
 
 ### API TOKEN
+
 Terraform Cloud can be managed from the CLI but requires an _____`API TOKEN`_____?
 
 __________________________________________________________________________________________
@@ -213,7 +229,7 @@ ________________________________________________________________________________
 
 ### Terraform Cloud for Business
 
-`Terraform` `Cloud` `Agents` are a feature that allows Terraform Cloud to communicate with private infrastructure, such as VMware hosts running on-premises.
+`Terraform` `Cloud` `Agents` are a feature that allows Terraform Cloud to communicate with `private` `infrastructure`, such as `VMware` hosts running on-premises.
 
 Which version of Terraform Cloud supports this feature?  `Terraform` `Cloud` `for` `Business`
 
@@ -229,12 +245,6 @@ ________________________________________________________________________________
 
 ### Sentinel
 
-You can use a combination of Terraform Cloud's cost estimation feature and Sentinel policies to ensure your organization doesn't apply changes to your environment that would result in `exceeding` your monthly operating `budget`.
+You can use a `combination` of Terraform Cloud's `cost estimation` feature and `Sentinel policies` to ensure your organization doesn't apply changes to your environment that would result in `exceeding` your monthly operating `budget`.
 
 __________________________________________________________________________________________
-
-
-
-
-__________________________________________________________________________________________
-
