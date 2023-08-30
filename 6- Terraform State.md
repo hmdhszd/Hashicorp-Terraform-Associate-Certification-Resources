@@ -108,6 +108,8 @@ ________________________________________________________________________________
 
 ### `terraform plan -refresh-only`
 
+### `terraform refresh`
+
 The terraform plan -refresh-only command is used to create a plan whose goal is only to `update` the `Terraform` `state` to match any changes made to remote objects outside of Terraform.
 
 
