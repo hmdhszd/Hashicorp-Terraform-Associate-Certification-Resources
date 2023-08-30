@@ -23,7 +23,7 @@ ________________________________________________________________________________
 # Example 1
 
 
-```bash
+```hcl
 provider "aws" {
   region = "us-west-2"  # Change this to your desired region
 }
@@ -31,7 +31,7 @@ provider "aws" {
 
 
 
-```bash
+```hcl
 locals {
   instance_tags = {
     Name        = "ExampleInstance"
@@ -46,7 +46,7 @@ locals {
 
 
 
-```bash
+```hcl
 resource "aws_instance" "example_instance" {
   ami           = "ami-0c55b159cbfafe1f0"  # Change this to your desired AMI
   instance_type = "t2.micro"               # Change this to your desired instance type
@@ -68,7 +68,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 provider "aws" {
   region = "us-west-2"  # Change this to your desired region
 }
@@ -76,7 +76,7 @@ provider "aws" {
 
 
 
-```bash
+```hcl
 resource "random_string" "bucket_suffix" {
   length = 4
   special = false
@@ -84,7 +84,7 @@ resource "random_string" "bucket_suffix" {
 }
 ```
 
-```bash
+```hcl
 variable "bucket_prefix" {
   description = "Prefix to be added to the bucket name"
   type        = string
@@ -93,7 +93,7 @@ variable "bucket_prefix" {
 ```
 
 
-```bash
+```hcl
 locals {
   bucket_name = "${var.bucket_prefix}-${random_string.bucket_suffix.id}"
 }
@@ -101,7 +101,7 @@ locals {
 
 
 
-```bash
+```hcl
 resource "aws_s3_bucket" "example_bucket" {
   bucket = local.bucket_name
   acl    = "private"  # Change this to your desired ACL
