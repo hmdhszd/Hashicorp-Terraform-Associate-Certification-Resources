@@ -235,6 +235,15 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 __________________________________________________________________________________________
 
+
+
+if we change an argument in a resource, after next apply, the resource will re replaced (`recreated`)
+
+
+
+__________________________________________________________________________________________
+
+
 ##### In summary, terraform init sets up the environment, terraform plan creates an execution plan, and terraform apply applies the changes to the infrastructure. This process enables you to automate the creation and management of infrastructure resources in a consistent and reproducible manner.
 
 
