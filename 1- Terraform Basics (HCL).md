@@ -186,6 +186,20 @@ can't guarantee that exactly these actions will be performed if
 
 __________________________________________________________________________________________
 
+
+
+### terraform plan -target
+
+
+Resource targeting in Terraform is a feature that allows you to apply changes to only a subset of your infrastructure, instead of applying the entire plan at once.
+
+
+terraform plan -target aws_instance.web -target module.network
+
+
+
+__________________________________________________________________________________________
+
 # terraform apply:
 
 ### Once you review and approve the execution plan, you can apply it using this command. Terraform will then execute the planned actions, making the necessary changes to the infrastructure to match the desired state.
