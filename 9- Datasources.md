@@ -138,3 +138,12 @@ Resources declared by a `resource block` are known as `managed resources`.
 __________________________________________________________________________________________
 
 
+
+
+Each data source in turn belongs to a provider.
+
+
+
+__________________________________________________________________________________________
+
+
