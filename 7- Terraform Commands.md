@@ -174,20 +174,21 @@ ________________________________________________________________________________
 
 
 
-Every terraform command listed is useful for inspecting infrastructure:
+### Every terraform command listed is useful for inspecting infrastructure:
 
-terraform output
-
-terraform graph
-
-terraform show
-
-terraform list
-
-terraform state list
+- terraform output
 
 
-terraform state show
+- terraform graph
+
+
+- terraform show
+
+
+- terraform state list
+
+
+- terraform state show
 
 
 
