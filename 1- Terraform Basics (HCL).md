@@ -91,10 +91,20 @@ ________________________________________________________________________________
 ### During initialization, Terraform downloads and installs the required providers and modules specified in the configuration.
 
 
-the provider plugins are downloaded into : `.terraform/providers`
+- it initilize a working directory
+
+- it creates `.terraform` directory
 
 
-the modules are downloaded into : `.terraform/modules`
+- the provider plugins are downloaded into : `.terraform/providers`
+
+
+- the modules are downloaded into : `.terraform/modules`
+
+
+- it does not create any `.tf` file
+
+
 
 
 ```bash
@@ -144,6 +154,8 @@ ________________________________________________________________________________
 ### validate the changes that will be made without impacting existing workloads? terraform plan
 
 
+
+- it does not create any `.tf` file
 
 ```bash
 iac-server $ terraform plan
@@ -208,6 +220,9 @@ ________________________________________________________________________________
 
 ###  tilde (~) --> resource update in place
 
+
+
+- it update the state file (`terraform.tfstate`)
 
 ```bash
 iac-server $ terraform apply
