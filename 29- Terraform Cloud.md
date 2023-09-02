@@ -210,7 +210,7 @@ Some of these include:
 
 ● `Clustering`
 
-Team & Governance features are not available for Terraform Cloud Free (Paid)
+Team & Governance features are not available for Terraform Cloud Free (it's a Paid features)
 
 
 __________________________________________________________________________________________
