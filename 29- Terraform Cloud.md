@@ -254,3 +254,18 @@ ________________________________________________________________________________
 You can use a `combination` of Terraform Cloud's `cost estimation` feature and `Sentinel policies` to ensure your organization doesn't apply changes to your environment that would result in `exceeding` your monthly operating `budget`.
 
 __________________________________________________________________________________________
+
+
+### Sentinel
+
+
+What is the use of Sentinel policy as a code in Terraform Enterprise provides what security posture?
+
+Sentinel `proactively` prevents provisioning of out-of-policy infrastructure
+
+__________________________________________________________________________________________
+
+
+__________________________________________________________________________________________
+
+
