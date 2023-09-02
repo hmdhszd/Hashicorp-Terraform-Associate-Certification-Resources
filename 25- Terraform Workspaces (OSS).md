@@ -234,6 +234,17 @@ ________________________________________________________________________________
 
 
 
+
+
+### terraform workspace list
+
+display `ALL` `workspaces`
+
+
+__________________________________________________________________________________________
+
+
+
 In the `UI` and `VCS` workflow, `every workspace` is associated with a `specific branch` of a VCS repo of Terraform configurations.
 
 
