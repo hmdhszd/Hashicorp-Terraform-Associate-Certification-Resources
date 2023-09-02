@@ -260,7 +260,7 @@ ________________________________________________________________________________
 
 
 
-“alias” and “version” are the meta-arguments which are available for all provider blocks
+`alias` and `version` are the meta-arguments which are available for all `provider` `blocks`
 
 
 
