@@ -116,3 +116,14 @@ These take the same level arguments as `TF_LOG`, but only activate a subset of t
 
 __________________________________________________________________________________________
 
+
+
+Which environment variable needs to be defined in terraform for the `persistence` of the logged output?  `TF_LOG_PATH`
+
+
+
+__________________________________________________________________________________________
+
+
+
+
