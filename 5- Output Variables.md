@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 main.tf
 
-```bash
+```hcl
 resource "random_uuid" "id1" {
    
 }
@@ -56,7 +56,7 @@ resource "random_integer" "order2" {
 output.tf
 
 
-```bash
+```hcl
 output "id1" {
    value = random_uuid.id1.result
 }
@@ -104,7 +104,7 @@ ________________________________________________________________________________
 
 to see the output use "terraform output" command:
 
-```bash
+```hcl
 iac-server $ terraform output
 
 id1 = a3449786-c28b-2617-8833-e80d74f0505b
@@ -127,7 +127,7 @@ ________________________________________________________________________________
 #### another example:
 
 
-```bash
+```hcl
 resource "local_file" "welcome" {
     filename = "/root/message.txt"
     content = "Welcome to Kodekloud."
@@ -143,7 +143,7 @@ output "welcome_message" {
 __________________________________________________________________________________________
 
 
-```bash
+```hcl
 
 iac-server $ terraform output welcome_message
 
@@ -183,7 +183,7 @@ ________________________________________________________________________________
 ## splat expression   [*]
 
 
-```bash
+```hcl
 resource "aws_instance" "example" {
   count         = 5
   ami           = "ami-12345678"
@@ -201,5 +201,13 @@ output "instance_public_ips" {
 
 
 __________________________________________________________________________________________
+
+### access one of the module’s output values:
+
+```
+module.<MODULE NAME>.<OUTPUT NAME>
+```
+
+
 
 
