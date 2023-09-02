@@ -200,3 +200,17 @@ ________________________________________________________________________________
 
 
 
+
+What is the default behaviour of Terraform when it doesn’t have an acceptable version of a required `plugin` or `module`?
+
+
+It will attempt to download the `newest` (`latest`) version that meets the applicable constraints.
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
