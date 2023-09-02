@@ -351,7 +351,7 @@ ________________________________________________________________________________
 Which of the following Terraform features supports the versioning of a module? 
 
 
-- Private Module Registry
+- Private Module Registry (in private registry, VERSION is required)
 
 
 
