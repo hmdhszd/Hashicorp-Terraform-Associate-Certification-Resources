@@ -202,13 +202,13 @@ Terraform Enterprise provides several added advantage compared to Terraform Clou
 
 Some of these include:
 
-● Single Sign-On (SSO)
+● `Single Sign-On (SSO)`
 
-● Auditing
+● `Auditing`
 
-● Private Data Center Networking
+● `Private Data Center Networking`
 
-● Clustering
+● `Clustering`
 
 Team & Governance features are not available for Terraform Cloud Free (Paid)
 
