@@ -5,8 +5,9 @@
 
 #### It provides a way to manage multiple environments, regions, or profiles within a single Terraform configuration.
 
-
-
+```hcl
+  provider = <PROVIDER NAME>.<ALIAS>
+```
 __________________________________________________________________________________________
 
 
