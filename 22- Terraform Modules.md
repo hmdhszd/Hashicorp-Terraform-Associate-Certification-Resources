@@ -389,3 +389,14 @@ However,
 the child module can declare output values to selectively export certain values to be accessed by the calling module (parent module).
 
 __________________________________________________________________________________________
+
+
+
+Every Terraform configuration has `at least` `one module`, known as its `root` module, which consists of the resources defined in the .tf files in the main working directory.
+
+
+
+__________________________________________________________________________________________
+
+
+
