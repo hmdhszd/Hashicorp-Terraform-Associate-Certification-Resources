@@ -339,7 +339,7 @@ ________________________________________________________________________________
 - #### Repository description: The `GitHub` `repository` `description` is used to populate the short description of the module.
 
 
-- #### `Standard` `module` `structure`
+- #### `Standard` `module` `structure` : (readme.md, main.tf, variable.tf, output.tf)
 
 - #### `x.y.z` tags for releases: The registry uses tags to identify module versions. Release tag names must be a `semantic version`, which can optionally be `prefixed` with a `v` .
 
