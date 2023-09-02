@@ -3,7 +3,7 @@
 The `lifecycle` meta-argument in Terraform controls how resources are managed during their lifecycle, like creation, updates, and deletion. It lets you specify actions for updates, replacements, and prevent accidental deletions.
 
 
-```bash
+```hcl
 resource "aws_s3_bucket" "example_bucket" {
   bucket = "example-bucket-name"
   acl    = "private"
@@ -40,7 +40,7 @@ ________________________________________________________________________________
 for explicit dependency, we should use "depends_on" : 
 
 
-```bash
+```hcl
 resource "local_file" "whale" {
   filename   = "/root/whale"
   content    = "whale"
@@ -82,7 +82,7 @@ ________________________________________________________________________________
 
 main.tf
 
-```bash
+```hcl
 resource "local_sensitive_file" "name" {
     filename = var.users[count.index]
     content = var.content
@@ -95,7 +95,7 @@ resource "local_sensitive_file" "name" {
 
 variable.tf
 
-```bash
+```hcl
 variable "users" {
     type = list(string)
     default = [ "/root/user10", "/root/user11", "/root/user12", "/root/user13"]
@@ -125,7 +125,7 @@ we use `each.value`
 main.tf
 
 
-```bash
+```hcl
 resource "local_sensitive_file" "name" {
     filename = each.value
     for_each = toset(var.users)
@@ -145,7 +145,7 @@ ________________________________________________________________________________
 
 variable.tf
 
-```bash
+```hcl
 variable "users" {
     type = list(string)
     default = [ "/root/user10", "/root/user11", "/root/user12", "/root/user10"]
@@ -167,7 +167,7 @@ ________________________________________________________________________________
 #### terraform state list
 
 
-```bash
+```hcl
 iac-server $ terraform state list
 
 local_sensitive_file.name["/root/user10"]
@@ -190,7 +190,7 @@ ________________________________________________________________________________
 ### When a module has multiple configurations for the same provider, which meta-argument can you use to specify the configuration? `providers`
 
 
-```bash
+```hcl
 provider "aws" {
   alias = "region_a"
   region = "us-east-1"
@@ -256,6 +256,15 @@ The lifecycle block and its contents are meta-arguments, available for `all` `re
 
 __________________________________________________________________________________________
 
+
+
+
+
+“alias” and “version” are the meta-arguments which are available for all provider blocks
+
+
+
+__________________________________________________________________________________________
 
 
 
