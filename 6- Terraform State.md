@@ -265,4 +265,19 @@ The terraform_remote_state data source uses the latest state snapshot from a spe
 __________________________________________________________________________________________
 
 
+### state file locking in terraform is  enabled by default
+
+state file locking in terraform is `enabled` by `default` when you use `local state` or `terraform cloud` or `terraform enterprise` .
+
+However if you chose to user remote  backend , such as aws s3 ,  locking  depends on the backend you use.
+
+No all the backends  supports locking. For AWS s3 backend , we use DynamoDb table to lock the state.
+
+
+
+
+__________________________________________________________________________________________
+
+
+
 
