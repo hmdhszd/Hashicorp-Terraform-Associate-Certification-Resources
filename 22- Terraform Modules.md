@@ -400,3 +400,17 @@ ________________________________________________________________________________
 
 
 
+ The module always should be public and open-source to be able to use?  NO - False
+
+
+
+You can have your own private module in Terraform cloud private registry or Terraform Enterprise private registry  or  Github repository
+
+
+__________________________________________________________________________________________
+
+
+
+ 
+
+
