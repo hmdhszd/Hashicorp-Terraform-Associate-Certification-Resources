@@ -1,5 +1,32 @@
 
 
+`chomp`: is used to remove trailing newline characters from a string. 
+
+
+```hcl
+variable "example_string" {
+  default = "This is an example string\n"
+}
+
+resource "null_resource" "example" {
+  triggers = {
+    example_string = chomp(var.example_string)
+  }
+
+  # Your resource configuration here...
+}
+
+output "chomped_string" {
+  value = null_resource.example.triggers["example_string"]
+}
+```
+
+
+__________________________________________________________________________________________
+
+
+
+
 
 `toset`: Converts a list to a set
 
@@ -8,7 +35,7 @@
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = [1, 2, 2, 3, 3, 4, 5]
 }
@@ -32,7 +59,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_numbers" {
   default = [42, 17, 99, 23, 8]
 }
@@ -56,7 +83,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_numbers" {
   default = [42, 17, 99, 23, 8]
 }
@@ -80,7 +107,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "decimal_number" {
   default = 3.14
 }
@@ -104,7 +131,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "decimal_number" {
   default = 3.14
 }
@@ -128,7 +155,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "csv_string" {
   default = "apple,banana,cherry,grape"
 }
@@ -152,7 +179,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "mixed_case_string" {
   default = "Hello WoRLd"
 }
@@ -176,7 +203,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "mixed_case_string" {
   default = "Hello WoRLd"
 }
@@ -200,7 +227,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "sentence" {
   default = "this is a title case example"
 }
@@ -224,7 +251,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "source_string" {
   default = "abcdefgh"
 }
@@ -248,7 +275,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = ["apple", "banana", "cherry"]
 }
@@ -272,7 +299,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = [1, 2, 3, 4, 5]
 }
@@ -296,7 +323,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = ["apple", "banana", "cherry"]
 }
@@ -320,7 +347,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = ["apple", "banana", "cherry"]
 }
@@ -344,7 +371,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_list" {
   default = ["apple", "banana", "cherry"]
 }
@@ -368,7 +395,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_map" {
   default = {
     key1 = "value1",
@@ -395,7 +422,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_map" {
   default = {
     key1 = "value1",
@@ -422,7 +449,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 variable "my_map" {
   default = {
     key1 = "value1",
