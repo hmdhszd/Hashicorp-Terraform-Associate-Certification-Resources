@@ -47,7 +47,7 @@ Example:
 
 main.tf
 
-```bash
+```hcl
 resource "local_file" "games" {
   filename     = "/root/favorite-games"
   content  = "FIFA 21"
@@ -107,7 +107,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 iac-server $ terraform init
 
 Initializing the backend...
@@ -157,7 +157,7 @@ ________________________________________________________________________________
 
 - it does not create any `.tf` file
 
-```bash
+```hcl
 iac-server $ terraform plan
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
@@ -205,9 +205,13 @@ ________________________________________________________________________________
 
 Resource targeting in Terraform is a feature that allows you to apply changes to only a subset of your infrastructure, instead of applying the entire plan at once.
 
+```hcl
 
-terraform plan -target aws_instance.web -target module.network
+terraform plan -target aws_instance.web
 
+terraform plan -target module.network
+
+```
 
 
 __________________________________________________________________________________________
@@ -218,13 +222,13 @@ ________________________________________________________________________________
 
 
 
-###  tilde (~) --> resource update in place
+###  tilde (~) --> update in place
 
 
 
 - it update the state file (`terraform.tfstate`)
 
-```bash
+```hcl
 iac-server $ terraform apply
 
 An execution plan has been generated and is shown below.
@@ -278,7 +282,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 iac-server $ ls -l /root/favorite-games
 
 -rwxr-xr-x 1 root root 7 Jul 23 15:34 /root/favorite-games
@@ -298,7 +302,7 @@ ________________________________________________________________________________
 
 terraform.tfstate
 
-```bash
+```hcl
 iac-server $ ls
 main.tf  terraform.tfstate
 
@@ -355,7 +359,7 @@ By default, when use trraform apply, the output will be shown on the screen.
 in order to prevent this behavior, we should use "local_sensitive_file" resource type:
 
 
-```bash
+```hcl
 resource "local_sensitive_file" "games" {
   filename     = "/root/favorite-games"
   content  = "FIFA 21"
@@ -378,7 +382,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 iac-server $ terraform destroy
 
 local_sensitive_file.games: Refreshing state... [id=f68b901eb16aff12e9458bdb656a7df8d3425d4c]
