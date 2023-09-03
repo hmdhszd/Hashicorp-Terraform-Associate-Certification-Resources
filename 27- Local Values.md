@@ -111,3 +111,53 @@ resource "aws_s3_bucket" "example_bucket" {
 
 
 __________________________________________________________________________________________
+
+
+Can a local value reference another local value?
+
+
+```hcl
+variable "base_price" {
+  description = "The base price of a product"
+  type        = number
+  default     = 100
+}
+
+variable "tax_rate" {
+  description = "The tax rate as a decimal (e.g., 0.10 for 10%)"
+  type        = number
+  default     = 0.10
+}
+
+# Calculate the tax amount
+locals {
+  calculated_tax = var.base_price * var.tax_rate
+}
+
+# Calculate the total price including tax
+locals {
+  total_price = var.base_price + local.calculated_tax
+}
+
+output "calculated_tax" {
+  description = "The calculated tax amount"
+  value       = local.calculated_tax
+}
+
+output "total_price" {
+  description = "The total price including tax"
+  value       = local.total_price
+}
+```
+
+
+
+The expression of a local value can refer to other locals, but as usual `reference cycles are not allowed`.
+
+That is, a local ca `NOT` `refer` to `itself` or to a variable that refers (directly or indirectly) back to it.
+
+
+
+__________________________________________________________________________________________
+
+
