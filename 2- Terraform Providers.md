@@ -259,3 +259,16 @@ Official Terraform providers and modules are owned and maintained by HashiCorp.
 
 
 __________________________________________________________________________________________
+
+
+You want to upgrade the provider version to the latest acceptable one. What is the approach to do it?
+
+specify new version of provider under terraform block, then issue terraform init.
+
+
+
+__________________________________________________________________________________________
+
+
+
+
