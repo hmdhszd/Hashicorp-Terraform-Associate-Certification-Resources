@@ -43,3 +43,16 @@ resource "aws_s3_bucket" "bucket_us_west" {
 
 
 __________________________________________________________________________________________
+
+
+
+### Roger is implementing Terraform in production. He realized that every region in AWS has a different AMI ID for CentOS 7 OS. He wants to create a Terraform code that works for all the regions. He has already created the EC2 resource but needs to figure on how he can deal with different AMI IDs based on regions? What is the best approach?
+
+
+create a `map` of the `REGION` to `AMI ID`
+
+
+
+__________________________________________________________________________________________
+
+
