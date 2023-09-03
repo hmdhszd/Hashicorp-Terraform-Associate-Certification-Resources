@@ -207,9 +207,11 @@ Resource targeting in Terraform is a feature that allows you to apply changes to
 
 ```hcl
 
+# First Plan, Then Apply
+
 terraform plan -target aws_instance.web
 
-terraform plan -target module.network
+terraform apply -target module.network
 
 ```
 
