@@ -1,29 +1,37 @@
 
 
-
+# remote state backend
 
 State Locking: when one person starts a change by using "terraform apply" command, the state file will be locked and no other one can use it.
 
 
 
-Version control systems such as github cannot do State Locking, so we should store the state file in a "remote state backend"
+Version control systems such as `github` can `NOT` do `State Locking`, so we should store the state file in a "remote state backend"
 
 
 like:
 
-- AWS S3
+- AWS `S3`
 
-- Terraform Cloud
+- `Terraform` `Cloud`
 
-- Google Cloud Storage
+- `Terraform` `Enterprise`
 
-- HashiCorp Consul
+- HashiCorp `Consul`
 
+- `Artifactory`
+
+- `Google` Cloud Storage
+
+- `Alibaba` Cloud
+
+
+- `Azure` Blob Storage
 
 by using a "remote state backend", it will get the state file before doing any changes, it will also upload it after doing the changes.
 
 
-"Github is NOT a supported backend"
+"`Github` is `NOT` a `supported` `backend`"
 
 __________________________________________________________________________________________
 
