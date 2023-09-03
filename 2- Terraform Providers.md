@@ -270,5 +270,16 @@ specify new version of provider under terraform block, then issue terraform init
 __________________________________________________________________________________________
 
 
+### Vault provider
+
+What is a downside to using a Terraform provider, such as the Vault provider, to interact with sensitive data, such as reading secrets from Vault?
+
+
+
+terraform requires a unique auth methode to work with Valt
+
+
+__________________________________________________________________________________________
+
 
 
