@@ -256,12 +256,17 @@ You can use a `combination` of Terraform Cloud's `cost estimation` feature and `
 __________________________________________________________________________________________
 
 
-### Sentinel
+### Sentinel --> Proactive
 
 
 What is the use of Sentinel policy as a code in Terraform Enterprise provides what security posture?
 
 Sentinel `proactively` prevents provisioning of out-of-policy infrastructure
+
+
+Sentinel policy as code is  proactive governance , prevent you to create/update resource unless your terraform code adhered to  the sentinel policy.
+
+
 
 __________________________________________________________________________________________
 
