@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 main.tf
 
-```bash
+```hcl
 provider "aws" {
   region = var.aws_region
 }
@@ -33,7 +33,7 @@ variables.tf
 
 if we don't define the "default" value, it will ask us to enter in manually at the moment of issue the command "terraform apply"
 
-```bash
+```hcl
 variable "aws_region" {
   description = "The AWS region where the EC2 instance will be created."
   default     = "us-west-2"
@@ -72,7 +72,7 @@ ________________________________________________________________________________
 
 ## string
 
-```bash
+```hcl
 # Declaring a string variable
 variable "string_var" {
   type        = string
@@ -84,7 +84,7 @@ ________________________________________________________________________________
 
 ## number
 
-```bash
+```hcl
 # Declaring a number variable
 variable "number_var" {
   type        = number
@@ -96,7 +96,7 @@ ________________________________________________________________________________
 
 ## bool
 
-```bash
+```hcl
 # Declaring a boolean variable
 variable "bool_var" {
   type        = bool
@@ -109,7 +109,7 @@ ________________________________________________________________________________
 
 ## list(string)
 
-```bash
+```hcl
 # Declaring a list variable
 variable "list_var" {
   type        = list(string)
@@ -120,7 +120,7 @@ variable "list_var" {
 
 
 
-```bash
+```hcl
 resource "local_file" "games" {
   filename     = "/root/favorite-games"
   content  = var.list_var[0]
@@ -130,7 +130,7 @@ ________________________________________________________________________________
 
 ## map(string)
 
-```bash
+```hcl
 # Declaring a map variable
 variable "map_var" {
   type        = map(string)
@@ -145,7 +145,7 @@ variable "map_var" {
 
 
 
-```bash
+```hcl
 resource "local_file" "games" {
   filename     = "/root/favorite-games"
   content  = var.map_var[key1]
@@ -156,7 +156,7 @@ ________________________________________________________________________________
 
 ## map(number)
 
-```bash
+```hcl
 # Declaring a map variable
 variable "map_var" {
   type        = map(number)
@@ -177,7 +177,7 @@ ________________________________________________________________________________
 the difference between set and list is that in the set we cannot have duplicate values.
 
 
-```bash
+```hcl
 # Declaring a set variable
 variable "set_var" {
   type        = set(number)
@@ -189,7 +189,7 @@ ________________________________________________________________________________
 
 ## object
 
-```bash
+```hcl
 # Declaring an object variable
 variable "object_var" {
   type = object({
@@ -212,7 +212,7 @@ ________________________________________________________________________________
 the difference between a tuple and a list is that list is list uses elements of the same variable type, but in tuple, we can use different variable types
 
 
-```bash
+```hcl
 # Declaring a tuple variable
 variable "tuple_var" {
   type        = tuple([string, number, bool])
@@ -231,7 +231,7 @@ Here's an example:
 
 In this example, db_password is a sensitive variable. The sensitive attribute ensures that Terraform will treat this variable as sensitive and hide its value in the console output.
 
-```bash
+```hcl
 variable "db_password" {
   description = "The password for the database"
   type = string
@@ -252,7 +252,7 @@ ________________________________________________________________________________
 
 set the environment variable in the format `TF_VAR_< variable name >`
 
-```bash
+```hcl
 export TF_VAR_filename="/root/pets.txt"
 
 terraform apply
@@ -267,7 +267,7 @@ ________________________________________________________________________________
 
 it will be added `automatically`
 
-```bash
+```hcl
 terraform apply
 ```
 
@@ -281,7 +281,7 @@ ________________________________________________________________________________
 
 it should be added `manually` by `-var-file`
 
-```bash
+```hcl
 terraform apply -var-file variables.tfvars
 ```
 
@@ -295,7 +295,7 @@ ________________________________________________________________________________
 
 it should be added `manually` by `-var`
 
-```bash
+```hcl
 terraform apply -var "filename=/root/pets.txt"
 ```
 
@@ -476,7 +476,22 @@ the porrisble values for "number" type: 10 10000 19.2323
 __________________________________________________________________________________________
 
 
+James  has created a variable and has explicitly defined the type as a string. Following is the snippet:
 
+```hcl
+variable "myvar" {
+  type = string
+}
+```
+
+
+Which of the following value will be accepted?
+
+
+`"2"`    -->    is accepted
+
+
+`2`    -->    is `NOT` accepted
 
 
 
