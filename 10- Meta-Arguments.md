@@ -1,5 +1,15 @@
 # lifecycle
 
+- ### create_before_destroy
+
+
+- ### prevent_destroy
+
+
+- ### Ignore Changes (list)
+
+
+
 The `lifecycle` meta-argument in Terraform controls how resources are managed during their lifecycle, like creation, updates, and deletion. It lets you specify actions for updates, replacements, and prevent accidental deletions.
 
 
