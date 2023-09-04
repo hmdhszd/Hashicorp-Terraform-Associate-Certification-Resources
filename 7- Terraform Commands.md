@@ -5,7 +5,7 @@
 
 to check if the syntax is correct
 
-```bash
+```hcl
 iac-server $ terraform validate
 
 Error: Unsupported argument
@@ -16,7 +16,7 @@ Error: Unsupported argument
 An argument named "dsa_bits" is not expected here. Did you mean "rsa_bits"?
 ```
 
-```bash
+```hcl
 iac-server $ terraform validate
 
 Success! The configuration is valid.
@@ -64,7 +64,7 @@ ________________________________________________________________________________
 to see all the providers used in the current configuration directory
 
 
-```bash
+```hcl
 iac-server $ terraform providers 
 
 Providers required by configuration:
@@ -83,7 +83,7 @@ ________________________________________________________________________________
 
 to see all output variables in the configuration directory
 
-```bash
+```hcl
 iac-server $ terraform output
 
 id1 = a3449786-c28b-2617-8833-e80d74f0505b
@@ -112,7 +112,7 @@ ________________________________________________________________________________
 
 
 
-The `terraform apply -refresh-only` command creates a plan whose goal is only to update the Terraform state and any root module output values to match changes made to remote objects outside of Terraform.
+The `terraform apply -refresh-only` command creates a plan whose goal is `only` to `update` the `Terraform` `state` and any root module output values to match changes made to remote objects outside of Terraform.
 
 
 
@@ -138,11 +138,11 @@ ________________________________________________________________________________
 
 
 
-## terraform graph ( ‍`DOT format` )
+## terraform graph ( ‍`.DOT format` )
 
 create a visual representation of the dependencies in a terraform configuration or execution plan.
 
-```bash
+```hcl
 iac-server $ terraform graph
 digraph {
         compound = "true"
