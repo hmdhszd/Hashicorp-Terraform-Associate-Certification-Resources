@@ -25,7 +25,14 @@ resource "aws_s3_bucket" "example_bucket" {
 
     # Define actions to be taken when the resource is replaced
     create_before_destroy = true
+
+    ignore_changes = [
+      # Ignore changes to tags, e.g. because a management agent
+      # updates these based on some ruleset managed elsewhere.
+      tags,
+    ]
   }
+
 }
 
 ```
@@ -38,14 +45,30 @@ ________________________________________________________________________________
 
 
 
+`lifecycle` is a nested block that can appear within a `resource` `block`.
+
+The lifecycle block is available for `all` `resource` `blocks` regardless of type.
+
+
+__________________________________________________________________________________________
+
+
+
+`lifecycle` is `NOT` `supported` by the `data` `block` 
+
+
+__________________________________________________________________________________________
+
+
+
 
 # depends_on
 
 ## These dependencies come in two flavours: 
 
-#### Implicit – where a resource may reference another resource/data source.
+#### - Implicit – where a resource may reference another resource/data source.
 
-#### Explicit – where an engineer explicitly calls out a dependency between two resources/data sources.
+#### - Explicit – where an engineer explicitly calls out a dependency between two resources/data sources.
 
 for explicit dependency, we should use "depends_on" : 
 
@@ -68,7 +91,7 @@ resource "local_file" "krill" {
 __________________________________________________________________________________________
 
 
-`state` `file` keeps the `dependency` between the resources
+`state` `file` keeps the `dependency` between the resources ( both Implicit and Explicit )
 
 
 __________________________________________________________________________________________
@@ -78,9 +101,8 @@ ________________________________________________________________________________
 
 # count
 
-we've seen 2 meta arguments: "depends_on" and "lifecycle"
 
-but there are other meta arguments, such as "count"
+The count meta-argument accepts a whole number, and creates that many instances of the resource or module.
 
 the created resource gonna be a `list`
 
@@ -191,7 +213,9 @@ ________________________________________________________________________________
 
 
 
-### the meta-argument which is not supported by the data block. ==> lifecycle
+
+The `for_each` meta-argument accepts: `maps` and `set of strings`
+
 
 
 __________________________________________________________________________________________
@@ -230,12 +254,6 @@ A given resource or module block CAN NOT use both `count` and `for_each` simulta
 __________________________________________________________________________________________
 
 
-`alias` and `version` are the `meta-arguments` which are available for all provider blocks.
-
-
-__________________________________________________________________________________________
-
-
 Which argument of the `lifecycle` meta-argument supports a `list` as a value ?
 
 
@@ -251,26 +269,8 @@ ________________________________________________________________________________
 
 
 
-The for_each meta-argument accepts: `maps` and `set of strings`
 
-
-
-__________________________________________________________________________________________
-
-
-
-`lifecycle` is a nested block that can appear within a resource block.
-
-The lifecycle block and its contents are meta-arguments, available for `all` `resource` `blocks` regardless of type.
-
-
-__________________________________________________________________________________________
-
-
-
-
-
-`alias` and `version` are the meta-arguments which are available for all `provider` `blocks`
+`alias` and `version` are the `meta-arguments` which are available for all `provider` `blocks`
 
 
 
