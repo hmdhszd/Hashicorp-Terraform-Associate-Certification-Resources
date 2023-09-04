@@ -154,29 +154,18 @@ Welcome to Kodekloud.
 
 __________________________________________________________________________________________
 
+### render the output variables
+
+
+- `terraform apply`
+
+- `terraform output`
 
 
 Running the "terraform plan" will NOT render outputs
 
-Running the “terraform apply” will render the output variables defined
-
-Running the “terraform output” will render the output variables defined
-
 
 __________________________________________________________________________________________
-
-
-Choose the suitable option that could be used to access one of the module’s output values:
-
-
-module.[MODULE NAME].[OUTPUT NAME]
-
-
-
-
-
-__________________________________________________________________________________________
-
 
 
 
@@ -205,7 +194,9 @@ ________________________________________________________________________________
 ### access one of the module’s output values:
 
 ```
+
 module.<MODULE NAME>.<OUTPUT NAME>
+
 ```
 
 
