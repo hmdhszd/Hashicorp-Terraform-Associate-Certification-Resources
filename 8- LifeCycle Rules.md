@@ -8,7 +8,7 @@
 - ### prevent_destroy
 
 
-- ### Ignore Changes
+- ### Ignore Changes (list)
 
 
 
@@ -41,7 +41,7 @@ By default, terraform is `immutable`, meaning it `first deletes` a resource and 
 
 but we can change that by add "lifecycle" :
 
-```bash
+```hcl
 resource "azurerm_resource_group" "example" {
   # ...
 
@@ -63,7 +63,7 @@ sometimes we do not want a resource to be destroyed for any reason,
 and Terraform will reject any changes that result in destroy of the resources
 
 
-```bash
+```hcl
 resource "azurerm_resource_group" "example" {
   # ...
 
@@ -86,7 +86,7 @@ When you want Terraform to ignore changes between subsequent apply commands you 
 
 The ignore_changes argument means that Terraform will set the value when the resource is first deployed and then forever ignore any changes to it.
 
-```bash
+```hcl
 resource "aws_instance" "example" {
   # ...
 
@@ -104,7 +104,7 @@ OR
 
 we can use "ALL" to ignore all of them
 
-```bash
+```hcl
 resource "aws_instance" "example" {
   # ...
 
