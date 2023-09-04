@@ -12,7 +12,7 @@ ________________________________________________________________________________
 
 
 
-then check the "Schema" part to see what output of this provider can be used in another provider:
+then check the `Schema` part to see what output of this provider can be used in another provider:
 
 for example for the "time_static" provider:
 
@@ -21,26 +21,25 @@ for example for the "time_static" provider:
 
 
 
-rfc3339: (String) Base timestamp in RFC3339 format (see RFC3339 time string e.g., YYYY-MM-DDTHH:MM:SSZ). Defaults to the current time.
+- rfc3339
 
-triggers: (Map of String) Arbitrary map of values that, when changed, will trigger a new base timestamp value to be saved. See the main provider documentation for more information.
+- triggers
 
-day: (Number) Number day of timestamp.
+- day
 
-hour: (Number) Number hour of timestamp.
+- hour
 
-id: (String) RFC3339 format of the offset timestamp, e.g. 2020-02-12T06:36:13Z.
+- id
 
-minute: (Number) Number minute of timestamp.
+- minute
 
-month: (Number) Number month of timestamp.
+- month
 
-second: (Number) Number second of timestamp.
+- second
 
-unix: (Number) Number of seconds since epoch time, e.g. 1581489373.
+- unix
 
-year: (Number) Number year of timestamp.
-
+- year
 
 __________________________________________________________________________________________
 
@@ -58,7 +57,7 @@ and then inserts it into the final string:
 
 __________________________________________________________________________________________
 
-Interpolation syntax allows us to reference `variables`, `resource attributes` and even make use of `built-in functions` in terraform
+Interpolation syntax allows us to "reference" `variables`, `resource attributes` and even make use of `built-in functions` in terraform
 
 __________________________________________________________________________________________
 
@@ -127,7 +126,7 @@ ________________________________________________________________________________
 
 
 
-Terraform resources and data sources make all of their arguments available as readable attributes,
+Terraform `resources` and `data sources` make all of their `arguments` available as `readable` `attributes`,
 
 and also typically export additional read-only attributes.
 
