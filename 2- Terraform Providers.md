@@ -1,9 +1,9 @@
 
 
 
-## Terraform Providers:
+## Terraform Providers: `Official`, `Partner`, `Community`
 
-- official: owned by HashiCorp
+- `Official`: `owned` by `HashiCorp`
 
   * hashicorp/local
  
@@ -13,9 +13,9 @@
 
   there can be hostname as well
 
-- partner: owned by a third-party company (reviewed and tested by HashiCorp)
+- `Partner`: owned by a third-party company (`reviewed` and `tested` by `HashiCorp`)
 
-- community: publish and contribute by individual contributers
+- `Community`: publish and contribute by `individual` `contributers`
 
 
 
@@ -35,7 +35,7 @@ ________________________________________________________________________________
 you can find terraform providers here at `terraform registry`:    https://registry.terraform.io/browse/providers
 
 
-with the `terraform init` command, the terraform `provider` `plugins` will be `installed`.
+with the `terraform init` command, the terraform `provider` `plugins` will be `downloaded` and `installed`.
 
 these plugins will be downloaded in the `.terraform/providers` in the current working directory
 
@@ -47,9 +47,9 @@ ex:
 * hashicorp/local: version = "~> 2.4.0"
 ```
 
-Orgazinational Namespace: hashicorp (registry.terraform.io/hashicorp/local)
+`Orgazinational` `Namespace`: hashicorp (registry.terraform.io/hashicorp/local)
 
-Provider: local
+`Provider`: local
 
 
 
@@ -130,29 +130,17 @@ the used provider was not initilized for the configuration
 __________________________________________________________________________________________
 
 
-
-#### Select the reasons why we may need to specify the `provider’s argument`?
-
-
-
-To use `multiple configurations` of the `same provider` ???????????????
-
-To change the `default` `Provider` `Configurations`
-
-
-__________________________________________________________________________________________
-
 ### There are two reasons to use a `Provider` `Argument` in the Configuration.
 
 
-1. To `override` the `default` `provider` `configuration`.
+- 1. To `override` the `default` `provider` `configuration`.
 
 For example, the default configuration may be to deploy resources in the "us-east-1" region.
 
 If the requirement is to deploy resources in a different region, we can use the provider argument to override the default.
 
 
-2. In some cases, a configuration may need to use `multiple` `versions` of the `same` `provider`.
+- 2. In some cases, a configuration may need to use `multiple` `versions` of the `same` `provider`.
 
 For example - a resource that deploys to the "us-east-1" and another resource within the same configuration that deploys to the "us-west-2" region.
 
@@ -254,13 +242,6 @@ where can you `install` `providers` from?
 __________________________________________________________________________________________
 
 
-
-Official Terraform providers and modules are owned and maintained by HashiCorp.
-
-
-__________________________________________________________________________________________
-
-
 You want to upgrade the provider version to the latest acceptable one. What is the approach to do it?
 
 specify new version of provider under terraform block, then issue terraform init.
@@ -270,13 +251,13 @@ specify new version of provider under terraform block, then issue terraform init
 __________________________________________________________________________________________
 
 
-### Vault provider
+### Vault Provider
 
-What is a downside to using a Terraform provider, such as the Vault provider, to interact with sensitive data, such as reading secrets from Vault?
+What is a downside to using a Terraform provider, such as the `Vault` `Provider`, to interact with sensitive data, such as reading secrets from Vault?
 
 
 
-terraform requires a unique auth methode to work with Valt
+terraform requires a `unique` `auth` `methode` to work with Vault
 
 
 __________________________________________________________________________________________
