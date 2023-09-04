@@ -16,13 +16,16 @@
 __________________________________________________________________________________________
 
 
-a Resource is an object that Terraform manages it.
+a `Resource` is an object that Terraform `manages` it.
 
 
 it could be a file, s3 bucket, virtual machine, ec2, DynamoDB, IAM user and Groups, Roles, Policies,...
 
 
 a HCL file (.tf) consist of blocks and arguments,
+
+
+__________________________________________________________________________________________
 
 
 
@@ -203,7 +206,7 @@ ________________________________________________________________________________
 ### terraform plan -target
 
 
-Resource targeting in Terraform is a feature that allows you to apply changes to only a subset of your infrastructure, instead of applying the entire plan at once.
+Resource targeting in Terraform is a feature that allows you to `apply` changes to `only a subset of your infrastructure`, instead of applying the entire plan at once.
 
 ```hcl
 
@@ -307,8 +310,9 @@ terraform.tfstate
 ```hcl
 iac-server $ ls
 main.tf  terraform.tfstate
+```
 
-
+```hcl
 iac-server $ cat terraform.tfstate
 
 {
@@ -358,7 +362,7 @@ ________________________________________________________________________________
 
 By default, when use trraform apply, the output will be shown on the screen.
 
-in order to prevent this behavior, we should use "local_sensitive_file" resource type:
+in order to prevent this behavior, we should use `local_sensitive_file` resource type:
 
 
 ```hcl
@@ -378,9 +382,9 @@ ________________________________________________________________________________
 # Destroy the resource
 
 
-# terraform destroy
+## terraform destroy
 
-# terraform apply -destroy
+## terraform apply -destroy
 
 
 
