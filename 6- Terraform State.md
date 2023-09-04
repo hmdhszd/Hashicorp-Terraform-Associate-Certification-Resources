@@ -2,13 +2,19 @@
 
 # Terraform State
 
-#### The primary purpose of Terraform state is to store bindings between objects in a remote system and resource instances declared in your configuration.
+#### The primary purpose of Terraform state is to store bindings between objects in a remote system and resources declared in your configuration.
 
-
-after running the "terraform apply" command for the first time, one JSON file will be created: terraform.tfstate
 
 it has the complete state of the resources that created by terraform.
 
+
+
+__________________________________________________________________________________________
+
+
+### `terraform apply` --> `create: terraform.tfstate`
+
+after running the "terraform apply" command for the first time, one JSON file will be created: terraform.tfstate
 
 and the output of the command "terraform show" comes from the "terraform.tfstate" file
 
@@ -20,7 +26,7 @@ ________________________________________________________________________________
 
 main.tf
 
-```bash
+```hcl
 resource "local_file" "games" {
   filename     = "/root/favorite-games"
   content  = "FIFA 21"
@@ -36,7 +42,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 iac-server $ terraform show
 
 # local_file.games:
@@ -78,7 +84,11 @@ ________________________________________________________________________________
 
 
 
-If supported by your backend, Terraform will lock your state for all operations that could write state. This prevents others from acquiring the lock and potentially corrupting your state.
+### Terraform State Locking
+
+If `supported` by your `backend`, Terraform will lock your state for all `operations` that could `write` `state`.
+
+This prevents others from acquiring the lock and potentially corrupting your state.
 
 
 
@@ -89,10 +99,12 @@ ________________________________________________________________________________
 
 
 
-#### force-unlock Manually unlock the state for the defined configuration
+### `force-unlock`
+
+Manually unlock the state for the defined configuration
 
 
-```bash
+```hcl
 terraform force-unlock [options] LOCK_ID
 ```
 
@@ -137,9 +149,9 @@ ________________________________________________________________________________
 
 ### `terraform apply -refresh=false`
 
-the refresh command is automatically issued by the "terraform plan" and "terraform apply" command.
+the `refresh` command is `automatically` issued by the `terraform plan` and `terraform apply` command.
 
-The -refresh=false option is used in normal planning mode to skip the default behavior of refreshing Terraform state before checking for configuration changes.
+The `-refresh=false` option is used in normal planning mode to skip the default behavior of refreshing Terraform state before checking for configuration changes.
 
 
 
@@ -155,29 +167,16 @@ ________________________________________________________________________________
 
 
 
-`.terraform` directory
-
-`terraform.tfstate` and `terraform.tfstate.backup`
+- `.terraform` directory
 
 
-`.tfvars` files
-
-`*.tfplan` files
-
-__________________________________________________________________________________________
+- `*.tfstate` and `*.tfstate.backup`
 
 
+- `.tfvars` files
 
 
-
-### state encryption
-
-- `local state`, state is stored in `plain-text` JSON files
-
-- `Terraform Cloud`, state is alwasys `encrypted` at-rest
-
-
-
+- `.tfplan` files
 
 __________________________________________________________________________________________
 
@@ -189,16 +188,19 @@ ________________________________________________________________________________
 
 __________________________________________________________________________________________
 
+ ### `state` `locking`
 
 
- ####  these backends support `state` `locking`
+these backends support `state` `locking`
 
 
-- Kubernetes
+- `Kubernetes`
 
-- Consul
+- `Consul`
 
-- S3 / DynamoDB
+- `S3 / DynamoDB`
+
+- `Terraform Cloud`
 
 
 but local backend does not support state locking
@@ -206,18 +208,41 @@ but local backend does not support state locking
 __________________________________________________________________________________________
 
 
+### `State` `Locking` in terraform is `enabled` by `default`
+
+state file locking in terraform is `enabled` by `default` when you use `local state` or `terraform cloud` or `terraform enterprise` .
+
+However if you chose to user remote  backend , such as aws s3 ,  locking  depends on the backend you use.
+
+No all the backends  supports locking. For AWS s3 backend , we use DynamoDb table to lock the state.
 
 
-Terraform `State` File can be `encrypted` on `S3` (it is not encrypted on S3 by default)
-
-Terraform `State` File is always `encrypted` on `Terraform Cloud` 
 
 
 __________________________________________________________________________________________
 
 
 
-In both `Terraform OSS` and `Terraform Cloud`, workspaces provide similar functionality of using a `separate` `state` `file` for each workspace.
+ ### `state` `encryption`
+
+
+
+- `local state`, state is stored in `plain-text` JSON files
+
+- Terraform `State` File can be `encrypted` on `S3` (it is not encrypted on S3 by default)
+
+- Terraform `State` File is always `encrypted` on `Terraform Cloud` 
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+In both `Terraform OSS` and `Terraform Cloud`,
+
+workspaces provide similar functionality of using a `separate` `state` `file` for `each workspace`.
 
 
 
@@ -263,21 +288,4 @@ The terraform_remote_state data source uses the latest state snapshot from a spe
 
 
 __________________________________________________________________________________________
-
-
-### state file locking in terraform is  enabled by default
-
-state file locking in terraform is `enabled` by `default` when you use `local state` or `terraform cloud` or `terraform enterprise` .
-
-However if you chose to user remote  backend , such as aws s3 ,  locking  depends on the backend you use.
-
-No all the backends  supports locking. For AWS s3 backend , we use DynamoDb table to lock the state.
-
-
-
-
-__________________________________________________________________________________________
-
-
-
 
