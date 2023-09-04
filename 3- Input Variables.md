@@ -1,6 +1,6 @@
 
 
-### We can have our variables in a separate file (variables.tf) and refer to them with a "var." prefix
+### We can have our variables in a separate file (like: variables.tf) and refer to them with a "var." prefix
 
 ex: var.aws_region
 
@@ -69,6 +69,25 @@ Type: string, number, bool, list(string), list(number), map(string), set(number)
 Default Type: any
 
 __________________________________________________________________________________________
+
+## Variable Types:
+
+####  - `string`
+
+
+####  - `list`
+
+
+####  - `map`
+
+
+####  - `number`
+
+
+"float" is NOT a valid variable type
+
+__________________________________________________________________________________________
+
 
 ## string
 
@@ -209,7 +228,7 @@ ________________________________________________________________________________
 
 ## tuple
 
-the difference between a tuple and a list is that list is list uses elements of the same variable type, but in tuple, we can use different variable types
+the difference between tuple and list is that a list uses elements of the same variable type, but in tuple, we can use `different` `variable` `types`
 
 
 ```hcl
@@ -231,6 +250,8 @@ Here's an example:
 
 In this example, db_password is a sensitive variable. The sensitive attribute ensures that Terraform will treat this variable as sensitive and hide its value in the console output.
 
+- it will be saved in the State file clear text!
+
 ```hcl
 variable "db_password" {
   description = "The password for the database"
@@ -248,9 +269,13 @@ ________________________________________________________________________________
 
 *** set explicit values for the current working directory that will `override` the `default` `variable` values
 
-### use environment variables
+__________________________________________________________________________________________
 
-set the environment variable in the format `TF_VAR_< variable name >`
+
+
+### use environment variables ( `TF_VAR_< variable name >` )
+
+set the environment variable before apply 
 
 ```hcl
 export TF_VAR_filename="/root/pets.txt"
@@ -263,7 +288,15 @@ terraform apply
 __________________________________________________________________________________________
 
 
-### Automatically loaded ( `*.auto.tfvars` OR `*.auto.tfvars.json` OR `terraform.tfvars` OR `terraform.tfvars.json` )
+### Automatically loaded
+
+### - `terraform.tfvars`
+
+### - `terraform.tfvars.json`
+
+### - `*.auto.tfvars`
+
+### - `*.auto.tfvars.json`
 
 it will be added `automatically`
 
@@ -303,24 +336,9 @@ terraform apply -var "filename=/root/pets.txt"
 
 __________________________________________________________________________________________
 
+### Variable Input:
 
-
-
-
-## In Terraform, variables can be defined in several ways, with different sources providing values for those variables. The typical variable sources are:
-
-#### Variable Defaults: You can define default values for variables in the Terraform configuration. If no other value is provided, Terraform will use the default value.
-
-#### Terraform Variable Files (.tfvars): You can create separate variable definition files with the extension .tfvars that contain values for variables. Terraform automatically loads these files if they are present in the same directory as the configuration file.
-
-#### Command-line Flags: You can override variable values by specifying them via command-line flags when running terraform apply or terraform plan.
-
-#### Environment Variables: Terraform allows you to set variables through environment variables prefixed with TF_VAR_.
-
-#### Variable Input: When using Terraform with remote backends, such as Terraform Cloud or AWS S3, you can input variable values through the backend's interface.
-
-
-
+When using Terraform with remote backends, such as Terraform Cloud or AWS S3, you can input variable values through the backend's interface.
 
 __________________________________________________________________________________________
 
@@ -354,63 +372,25 @@ ________________________________________________________________________________
 
 We can use any name for a variable except for:
 
-##### source,
 
-##### version
+-  source
 
-##### providers
+-  version
 
-##### count
+-  providers
 
-##### for_each
+-  count
 
-##### lifecycle
+-  for_each
 
-##### depends_on
+-  lifecycle
 
-##### locals
+-  depends_on
 
-
-__________________________________________________________________________________________
-
-
-
-Which among the following are the techniques that could be used to safely and securely manage secrets inside terraform?
-
-
-
-- Secret Stores (e.g., Vault, AWS Secrets manager)
-
-- Store Terraform state in a backend that supports encryption.
-
-- Encrypted Files (e.g., KMS, PGP, SOPS)
-
-- Environment Variables
-
+-  locals
 
 
 __________________________________________________________________________________________
-
-
-## Variable Types:
-
-####  - string
-
-
-####  - list
-
-
-####  - map
-
-
-####  - number
-
-
-float is not a valid variable type
-
-__________________________________________________________________________________________
-
-
 
 
 ### Here are some examples of invalid variable names:
@@ -428,19 +408,19 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
-When configuring a remote backend in Terraform, it might be a good idea to purposely omit some of the required arguments to ensure secrets and other relevant data are not inadvertently shared with others. 
 
-What alternatives are available to provide the remaining values to Terraform to initialize and communicate with the remote backend?
+Which among the following are the techniques that could be used to safely and securely `manage` `secrets` inside terraform?
 
-#### With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
 
-- `HashiCorp Vault`
 
-- `Command-line` `key/value` pairs (`-backend-config="KEY=VALUE"`): To specify a single key/value pair, when running terraform init.
+- Secret Stores (e.g., `Vault`, `AWS Secrets manager`)
 
-- `Interactively` on the `command line`: Terraform will interactively ask you for the required values unless interactive input is disabled.
+- Store Terraform `state` in a `backend` that `supports` `encryption`.
 
-- `File` (`-backend-config=PATH`): To specify a configuration file, use the -backend-config=PATH option when running terraform init. (?????)
+- `Encrypted` `Files` (e.g., `KMS`, PGP, SOPS)
+
+- `Environment` `Variables`
+
 
 
 __________________________________________________________________________________________
@@ -462,9 +442,28 @@ ________________________________________________________________________________
 
 
 
-if you put a terraform variable as "null", terraform will ommite this value and use default value instead of that.
+
+When configuring a remote backend in Terraform, it might be a good idea to purposely omit some of the required arguments to ensure secrets and other relevant data are not inadvertently shared with others. 
+
+What alternatives are available to provide the remaining values to Terraform to initialize and communicate with the remote backend?
+
+#### With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
+
+- `HashiCorp Vault`
+
+- `Command-line` `key/value` pairs (`-backend-config="KEY=VALUE"`): To specify a single key/value pair, when running terraform init.
+
+- `Interactively` on the `command line`: Terraform will interactively ask you for the required values unless interactive input is disabled.
+
+- `File` (`-backend-config=PATH`): To specify a configuration file, use the -backend-config=PATH option when running terraform init. (?????)
 
 
+__________________________________________________________________________________________
+
+
+#### `null` --> `default value`
+
+if you put a terraform variable as "null", terraform will ommit this value and use default value instead of that.
 
 
 
