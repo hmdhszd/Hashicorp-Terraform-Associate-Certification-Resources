@@ -25,7 +25,7 @@ Example:
 
 we want to get the data of the file that is already created "without terraform" and put its content into an output variable called "os-version":
 
-```bash
+```hcl
 
 data "local_file" "os" {
   filename = "/etc/os-release"
@@ -47,7 +47,7 @@ Example:
 
 a data source that will be used to read data of an existing S3 bucket
 
-```bash
+```hcl
 data "aws_s3_bucket" "selected" {
   bucket = "bucket.test.com"
 }
@@ -59,9 +59,9 @@ ________________________________________________________________________________
 
 
 
-data rource with filter:
+data source with filter:
 
-```bash
+```hcl
 data "aws_ec2_transit_gateway" "tgw" {
   filter {
     name   = "tag:Name"
