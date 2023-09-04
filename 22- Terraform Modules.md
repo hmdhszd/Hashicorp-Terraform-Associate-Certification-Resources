@@ -1,5 +1,18 @@
 
 
+## Terraform Modules: `Official`, `Verified`, `Community`
+
+in the Terraform Registry, you can find 3 types of modules:
+
+- `Official` Modules own and maintain by HashiCorp
+
+- `Verified` Modules (have verified checkmark beside its name)
+
+- `Community` Modules
+
+
+__________________________________________________________________________________________
+
 ### A Terraform module is a set of Terraform configuration files in a single directory.
 
 Even a simple configuration consisting of a single directory with one or more .tf files is a module. When you run Terraform commands directly from such a directory, it is considered the root module.
@@ -36,17 +49,6 @@ Child modules can be called multiple times within the same configuration, and mu
 __________________________________________________________________________________________
 
 
-
-in the Terraform Registry, you can find 2 types of modules:
-
-- `Official` Modules own and maintain by HashiCorp
-
-- `Verified` Modules (have verified checkmark beside its name)
-
-- `Community` Modules
-
-
-__________________________________________________________________________________________
 
 
 
