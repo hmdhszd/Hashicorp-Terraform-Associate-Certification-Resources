@@ -212,6 +212,16 @@ upgrade all previously-selected plugins to the `newest` (`latest`) available ver
 __________________________________________________________________________________________
 
 
+You want to upgrade the provider version to the latest acceptable one. What is the approach to do it?
+
+specify new version of provider under terraform block, then issue terraform init.
+
+
+
+__________________________________________________________________________________________
+
+
+
 #### how add `credentials` to access the API for the underlying platform, such as VMware, AWS, or Google Cloud?
 
 
@@ -230,22 +240,13 @@ ________________________________________________________________________________
 
 where can you `install` `providers` from?
 
-- Terraform Public or Private `registry`
+- `Terraform` Public or Private `registry`
 
-- Official HashiCorp Releases `Site`
+- Official `HashiCorp` Releases `Site`
 
 - `Local` Plugins `Directory`
 
 - Terraform `Plugin` `Cache`
-
-
-__________________________________________________________________________________________
-
-
-You want to upgrade the provider version to the latest acceptable one. What is the approach to do it?
-
-specify new version of provider under terraform block, then issue terraform init.
-
 
 
 __________________________________________________________________________________________
