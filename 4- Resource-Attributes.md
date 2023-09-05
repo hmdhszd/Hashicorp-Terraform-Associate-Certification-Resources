@@ -65,7 +65,7 @@ ________________________________________________________________________________
 
 ${time_static.time_update.id}
 
-```bash
+```hcl
  resource "time_static" "time_update" {
 }
 
@@ -85,7 +85,7 @@ ________________________________________________________________________________
 Make use of the "terraform show" command and identify the attribute values.
 
 
-```bash
+```hcl
 iac-server $ terraform show
 # local_file.time:
 resource "local_file" "time" {
