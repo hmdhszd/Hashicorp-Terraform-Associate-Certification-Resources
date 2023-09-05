@@ -72,14 +72,19 @@ ________________________________________________________________________________
 
 ## Variable Types:
 
+####  - `tuple` (different variable type)
+
+####  - `list` (same variable type)
+
+####  - `set` (no duplicate values)
+
 ####  - `string`
 
+####  - `bool`
 
-####  - `list`
-
+####  - `object`
 
 ####  - `map`
-
 
 ####  - `number`
 
@@ -244,7 +249,7 @@ variable "tuple_var" {
 __________________________________________________________________________________________
 __________________________________________________________________________________________
 
-## sensitive variable:
+## sensitive variable: (sensitive = true)
 
 Here's an example:
 
@@ -367,6 +372,20 @@ A variable name or a label must be unique within the same "module" or "configura
 
 __________________________________________________________________________________________
 
+### Here are some examples of invalid variable names:
+
+- Names that start with a number: 1_invalid_variable_name
+
+- Names that contain spaces or special characters (space) (other than underscores): invalid variable name
+
+- Names that contain only numbers: 12345
+
+- Names that are the same as Terraform reserved words, such as var, module, data, count, etc.
+
+
+
+__________________________________________________________________________________________
+
 
 ### Invalid variable names:
 
@@ -393,48 +412,19 @@ We can use any name for a variable except for:
 __________________________________________________________________________________________
 
 
-### Here are some examples of invalid variable names:
-
-- Names that start with a number: 1_invalid_variable_name
-
-- Names that contain spaces or special characters (space) (other than underscores): invalid variable name
-
-- Names that contain only numbers: 12345
-
-- Names that are the same as Terraform reserved words, such as var, module, data, count, etc.
-
-
-
-__________________________________________________________________________________________
-
-
+### `Manage` `Secrets` (Credentials)
 
 Which among the following are the techniques that could be used to safely and securely `manage` `secrets` inside terraform?
 
 
 
-- Secret Stores (e.g., `Vault`, `AWS Secrets manager`)
-
-- Store Terraform `state` in a `backend` that `supports` `encryption`.
+- `Secret` `Stores` (e.g., `Vault`, `AWS Secrets manager`)
 
 - `Encrypted` `Files` (e.g., `KMS`, PGP, SOPS)
 
+- Store Terraform `state` in a `backend` that `supports` `encryption`.
+
 - `Environment` `Variables`
-
-
-
-__________________________________________________________________________________________
-
-
-
-#### where should you store the credentials?
-
-
-- `Environment Variables`
-
-
-- `Credentials Files`
-
 
 
 
