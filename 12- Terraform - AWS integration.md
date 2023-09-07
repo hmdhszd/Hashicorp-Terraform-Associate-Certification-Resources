@@ -7,7 +7,7 @@ for connect terraform to AWS, we need to set the "access_key" and "secret_key"
 __________________________________________________________________________________________
 
 
-### 1- we can have it inside our configuration file as a "provider" block:
+### 1- we can have it inside our configuration file as a `provider` `block`:
 
 
 
@@ -26,7 +26,7 @@ provider "aws" {
 __________________________________________________________________________________________
 
 
-### 2- or we can have another hidden file for store the credentials called: ".aws/config/credentials"
+### 2- or we can have another hidden `file` for store the `credentials` called: ".aws/config/credentials"
 
 .aws/config/credentials
 
@@ -42,7 +42,7 @@ ________________________________________________________________________________
 
 
 
-### 3- we can use the environment variables as well:
+### 3- we can use the `environment` `variables` as well:
 
 
 
