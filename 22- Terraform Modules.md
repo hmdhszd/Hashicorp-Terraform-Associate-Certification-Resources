@@ -274,11 +274,11 @@ ________________________________________________________________________________
 
 
 
-#### Choose the ways available to DOWNLOAD and UPDATE the module in your current terraform configuration directory.
+#### Choose the ways available to `DOWNLOAD` and `UPDATE` the `module` in your current terraform configuration directory.
 
-- terraform init
+- terraform `init`
 
-- terraform get
+- terraform `get`
 
 
 __________________________________________________________________________________________
