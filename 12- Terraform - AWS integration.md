@@ -13,7 +13,7 @@ ________________________________________________________________________________
 
 main.tf
 
-```bash
+```hcl
 provider "aws" {
   region     = "us-west-2"
   access_key = "my-access-key"
@@ -30,7 +30,7 @@ ________________________________________________________________________________
 
 .aws/config/credentials
 
-```bash
+```hcl
 [default]
 aws_access_key_id = AKIAIOSFODNN7EXAMPLE
 aws_secret_access_key = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
@@ -46,7 +46,7 @@ ________________________________________________________________________________
 
 
 
-```bash
+```hcl
 export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 export AWS_DEFAULT_REGION=us-west-2
