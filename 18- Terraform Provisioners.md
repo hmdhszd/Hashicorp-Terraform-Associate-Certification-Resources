@@ -10,7 +10,7 @@ but there should be a network connectivity between the local machine and the ins
 
 so we make use of a AWS security group.
 
-also, we need an AWS ssh key pair for authentication to the machine. and we use connection block
+also, we need an AWS ssh key pair for authentication to the machine. and we use `connection` `block`
 
 
 
@@ -250,11 +250,14 @@ ________________________________________________________________________________
 
 
 
-in the provisioners, we can use "when" and "on_failure"
+
+in the provisioners, we can use `when` and `on_failure`
 
 if running the command is not important for us, we use: `on_failure = continue`, otherwise "default" is `on_failure = fail`
 
-If `when = destroy` is specified, the provisioner will run when the resource it is defined within is destroyed, otherwise "default" when create.
+If `when = destroy` is specified, the provisioner will run when the resource it is defined within is destroyed,
+
+otherwise "default" is when it's create.
 
 
 
