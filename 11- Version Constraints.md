@@ -51,7 +51,7 @@ The "terraform version" command provides the version of terraform as well as the
 
 For example, the below command shows that the version of aws provider is v3.69.0 and that of local provider is v2.1.0
 
-```bash
+```hcl
 
 iac-server $ terraform version
 
@@ -97,7 +97,7 @@ Our terraform configuration may not work as expected when using a version differ
 
 
 
-```bash
+```hcl
 terraform {
   required_providers {
     aws = {
@@ -117,7 +117,7 @@ provider "aws" {
 
 
 
-```bash
+```hcl
 terraform {
   required_version = ">= 0.14, < 0.15"
 }
@@ -136,7 +136,7 @@ provider "aws" {
 
 
 
-```bash
+```hcl
 module_aws_s3_bucket/
   ├── main.tf
   └── variables.tf
@@ -146,7 +146,7 @@ module_aws_s3_bucket/
 
 module_aws_s3_bucket/variables.tf
 
-```bash
+```hcl
 variable "bucket_name" {
   type    = string
   default = "my-tf-bucket"
@@ -156,7 +156,7 @@ variable "bucket_name" {
 
 module_aws_s3_bucket/main.tf
 
-```bash
+```hcl
 provider "aws" {
   region = "us-west-2"
 }
@@ -171,7 +171,7 @@ resource "aws_s3_bucket" "my_bucket" {
 
 my-tf-bucket.tf
 
-```bash
+```hcl
 module "s3_bucket" {
   source = "./module_aws_s3_bucket"
   version = ">= 1.0, < 2.0"
@@ -183,16 +183,6 @@ module "s3_bucket" {
 
 
 
-
-
-
-__________________________________________________________________________________________
-
-
-
-What is the default behaviour of Terraform when it doesn’t have an acceptable version of a required plugin or module?
-
-It will attempt to download the newest version that meets the applicable constraints.
 
 
 
