@@ -274,6 +274,9 @@ Sentinel policy as code is  proactive governance , prevent you to create/update 
 
 __________________________________________________________________________________________
 
+Where is the most secure place to store `credentials` when using a `remote backend`? `define outside of terraform`
+
+do NOT use environment variable
 
 __________________________________________________________________________________________
 
