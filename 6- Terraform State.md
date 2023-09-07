@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 ### `terraform apply` --> `create: terraform.tfstate`
 
-after running the "terraform apply" command for the first time, one JSON file will be created: terraform.tfstate
+after running the "terraform apply" command for the first time, one `JSON` file will be created: terraform.tfstate
 
 and the output of the command "terraform show" comes from the "terraform.tfstate" file
 
@@ -118,7 +118,7 @@ By default, Terraform does not provide the ability to mask secrets in the Terraf
 
 __________________________________________________________________________________________
 
-### `terraform plan -refresh-only`
+### `terraform apply -refresh-only`
 
 ### `terraform refresh`
 
