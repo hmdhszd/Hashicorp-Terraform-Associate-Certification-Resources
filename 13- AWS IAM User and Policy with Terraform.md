@@ -5,7 +5,7 @@
 user_create.tf
 
 
-```bash
+```hcl
 terraform {
 
 required_providers {
@@ -23,7 +23,7 @@ required_providers {
 }
 
 ```
-```bash
+```hcl
 
 provider "aws" {
 
@@ -36,7 +36,7 @@ provider "aws" {
 }
 
 ```
-```bash
+```hcl
 
 
 resource "aws_iam_user" "new_user" {
@@ -46,7 +46,7 @@ resource "aws_iam_user" "new_user" {
 }
 
 ```
-```bash
+```hcl
 
 
 resource "aws_iam_access_key" "AccK" {
@@ -56,7 +56,7 @@ resource "aws_iam_access_key" "AccK" {
 }
 
 ```
-```bash
+```hcl
 
 
 output "secret_key" {
@@ -68,7 +68,7 @@ output "secret_key" {
 }
 
 ```
-```bash
+```hcl
 
 
 output "access_key" {
@@ -78,7 +78,7 @@ output "access_key" {
 }
 
 ```
-```bash
+```hcl
 
 
 
