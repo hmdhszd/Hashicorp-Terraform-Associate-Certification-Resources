@@ -11,7 +11,7 @@ ________________________________________________________________________________
 
 ### terraform apply -replace=aws_instance.web
 
-recreate the one resource without having to destroy everything that was created
+`recreate` the one resource without having to destroy everything that was created
 
 we use replace instead of taint
 
