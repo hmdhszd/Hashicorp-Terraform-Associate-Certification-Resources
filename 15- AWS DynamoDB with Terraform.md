@@ -5,7 +5,7 @@ we create a table and add 4 attributes:
 
 
 
-```bash
+```hcl
 resource "aws_dynamodb_table" "project_sapphire_inventory" {
   name           = "inventory"
   billing_mode   = "PAY_PER_REQUEST"
