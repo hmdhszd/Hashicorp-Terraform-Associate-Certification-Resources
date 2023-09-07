@@ -100,7 +100,9 @@ It allows you to include resources that were created manually or through other m
 
 Importing resources helps Terraform understand the existing state of those resources, allowing you to further manage and modify them using Terraform.
 
-Before importing, you need to define the resource in your Terraform configuration, After importing you need to to align its desired state with the actual state.
+`Before importing`, you need to define the resource in your Terraform configuration,
+
+`After importing` you need to to align its desired state with the actual state.
 
 
 __________________________________________________________________________________________
@@ -129,7 +131,7 @@ and is `re-calculated` each time a `new plan` is created.
 
 __________________________________________________________________________________________
 
-Resources declared using `data block` are known as `data resource`s.
+Resources declared using `data block` are known as `data resources`.
 
 Resources declared by a `resource block` are known as `managed resources`.
 
