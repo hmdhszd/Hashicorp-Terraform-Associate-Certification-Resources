@@ -104,6 +104,8 @@ ________________________________________________________________________________
 
 The count meta-argument accepts a whole number, and creates that many instances of the resource or module.
 
+The `count` meta-argument accepts: `list`
+
 the created resource gonna be a `list`
 
 
@@ -150,7 +152,10 @@ ________________________________________________________________________________
 
 when there are duplicate values, we use "toset"
 
-the resource gonna be a "map"
+
+The `for_each` meta-argument accepts: `maps` and `set of strings`
+
+the created resource gonna be a `map`
 
 we use `each.value`
 
@@ -160,8 +165,8 @@ main.tf
 ```hcl
 resource "local_sensitive_file" "name" {
     filename = each.value
-    for_each = toset(var.users)
     content = var.content
+    for_each = toset(var.users)
 
 }
 ```
@@ -206,15 +211,6 @@ local_sensitive_file.name["/root/user10"]
 local_sensitive_file.name["/root/user11"]
 local_sensitive_file.name["/root/user12"]
 ```
-
-
-
-__________________________________________________________________________________________
-
-
-
-
-The `for_each` meta-argument accepts: `maps` and `set of strings`
 
 
 
