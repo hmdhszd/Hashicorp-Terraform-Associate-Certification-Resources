@@ -5,7 +5,7 @@
 First, create a bucket:
 
 
-```bash
+```hcl
 resource "aws_s3_bucket" "finance" {
   bucket  = "finanace-21092020"
   tags    =  {
@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "finance" {
 upload a file to the created S3 bucket:
 
 
-```bash
+```hcl
 resource "aws_s3_bucket_object" "finance-2020" {
   content  =  "/root/finance/finance-2020.doc"
   key  =  "finance-2020.doc"
@@ -32,7 +32,7 @@ resource "aws_s3_bucket_object" "finance-2020" {
 the the info of the previously created "iam group":
 
 
-```bash
+```hcl
 data "aws_iam_group" "finance-data" {
   group_name  =  "finance-analysts"
 }
@@ -46,7 +46,7 @@ create a bucket policy and give access to the group members to the bucket:
 
 
 
-```bash
+```hcl
 resource "aws_s3_bucket_policy" "finance-policy" {
   bucket  =  aws_s3_bucket.finance.id
   policy  =  <<EOF
