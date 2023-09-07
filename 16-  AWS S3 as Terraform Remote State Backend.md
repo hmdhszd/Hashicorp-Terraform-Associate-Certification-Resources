@@ -40,7 +40,7 @@ ________________________________________________________________________________
 to use S3 as the remote backend, we need S3 for the "Terraform State" and DynamoDB for the "State Locking"
 
 
-```bash
+```hcl
 terraform {
   backend "s3" {
     bucket = "mybucket"
