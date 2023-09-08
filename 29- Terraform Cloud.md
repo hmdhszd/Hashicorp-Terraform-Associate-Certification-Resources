@@ -17,7 +17,7 @@ ________________________________________________________________________________
 
 - `remote state management`
 
-- `policy enforcement`
+- `policy enforcement` (Sentinel)
 
 - `enabling organizations`
 
@@ -77,7 +77,7 @@ ________________________________________________________________________________
 
 
 
-When using variables in Terraform Cloud, what level of scope can the variable be applied to?
+When using `variables` in Terraform `Cloud`, what level of scope can the variable be applied to?
 
 - a specific terraform run in a `single` `workspace`
 
@@ -91,7 +91,7 @@ ________________________________________________________________________________
 
 
 
-Select the workflows that Terraform cloud utilizes to manage Terraform runs: 
+Select the `workflows` that `Terraform` `cloud` utilizes to manage Terraform runs: 
 
 - `UI/VCS`-driven run workflow,
 
@@ -198,7 +198,7 @@ ________________________________________________________________________________
 
 ## Terraform Enterprise & Terraform Cloud
 
-Terraform Enterprise is our self-hosted distribution of Terraform Cloud.
+Terraform `Enterprise` is our `self-hosted` distribution of Terraform Cloud.
 
 Terraform Enterprise is used for the AirGapped systems
 
@@ -229,9 +229,6 @@ ________________________________________________________________________________
 ### `API` `TOKEN`
 
 Terraform Cloud can be managed from the CLI but requires an _____`API TOKEN`_____?
-
-
-__________________________________________________________________________________________
 
 
 __________________________________________________________________________________________
