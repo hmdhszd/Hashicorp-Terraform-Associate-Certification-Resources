@@ -439,14 +439,14 @@ What alternatives are available to provide the remaining values to Terraform to 
 
 #### With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
 
-- `HashiCorp Vault`
-
 - `Command-line` `key/value` pairs (`-backend-config="KEY=VALUE"`): To specify a single key/value pair, when running terraform init.
 
 - `Interactively` on the `command line`: Terraform will interactively ask you for the required values unless interactive input is disabled.
 
-- `File` (`-backend-config=PATH`): To specify a configuration file, use the -backend-config=PATH option when running terraform init. (?????)
+- `File` (`-backend-config=PATH`): To specify a configuration file, use the -backend-config=PATH option when running terraform init.
 
+
+*** do NOT use Vault
 
 __________________________________________________________________________________________
 
