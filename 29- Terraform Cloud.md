@@ -277,6 +277,8 @@ Where is the most secure place to store `credentials` when using a `remote backe
 
 - ✅ environment variables
 
+- Defined in a connection configuration outside of Terraform
+
 
 
 __________________________________________________________________________________________
