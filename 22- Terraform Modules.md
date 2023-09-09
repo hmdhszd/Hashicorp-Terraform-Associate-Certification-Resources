@@ -414,5 +414,15 @@ ________________________________________________________________________________
 
 
  
+The module always should be public and open-source to be able to use? NO
+
+modules can be both public and private
 
 
+
+
+__________________________________________________________________________________________
+
+
+
+ 
