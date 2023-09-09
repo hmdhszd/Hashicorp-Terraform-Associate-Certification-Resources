@@ -284,3 +284,32 @@ Where is the most secure place to store `credentials` when using a `remote backe
 __________________________________________________________________________________________
 
 
+
+
+`Workspace` in `Terraform CLI` VS `Terraform Cloud` :
+
+
+
+- `Terraform Cloud` --> `workspace` / `Terraform CLI` --> `directory`
+
+- CLI workspaces are `alternative state files` in the `same` working `directory`
+
+- Terraform Cloud maintain `state version` and `run history` for each workspace
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
