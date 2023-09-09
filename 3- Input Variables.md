@@ -433,7 +433,7 @@ ________________________________________________________________________________
 
 
 
-When configuring a remote backend in Terraform, it might be a good idea to purposely omit some of the required arguments to ensure secrets and other relevant data are not inadvertently shared with others. 
+When configuring a remote backend in Terraform, it might be a good idea to purposely omit some of the required arguments to ensure `secrets` and other relevant data are not inadvertently shared with others. 
 
 What alternatives are available to provide the remaining values to Terraform to initialize and communicate with the remote backend?
 
