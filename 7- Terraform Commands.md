@@ -3,7 +3,7 @@
 
 ## terraform validate
 
-to check if the syntax is correct
+to check if the `syntax` is correct
 
 ```hcl
 iac-server $ terraform validate
@@ -25,6 +25,23 @@ Success! The configuration is valid.
 
 
 __________________________________________________________________________________________
+
+
+
+
+Which configuration inconsistency errors does terraform validate report?
+
+
+
+
+declaring resources identifier more than once
+
+
+
+__________________________________________________________________________________________
+
+
+
 
 
 
