@@ -439,7 +439,7 @@ What alternatives are available to provide the remaining values to Terraform to 
 
 #### With a partial configuration, the remaining configuration arguments must be provided as part of the initialization process. There are several ways to supply the remaining arguments:
 
-- `Command-line` `key/value` pairs (`-backend-config="KEY=VALUE"`): To specify a single key/value pair, when running terraform init.
+- `Command-line` `key/value` pairs: To specify a single key/value pair, when running terraform init.
 
 - `Interactively` on the `command line`: Terraform will interactively ask you for the required values unless interactive input is disabled.
 
