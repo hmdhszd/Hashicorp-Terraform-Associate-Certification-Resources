@@ -257,8 +257,7 @@ ________________________________________________________________________________
 What is a downside to using a Terraform provider, such as the `Vault` `Provider`, to interact with sensitive data, such as reading secrets from Vault?
 
 
-
-terraform requires a `unique` `auth` `methode` to work with Vault
+- `Secrets` are persisted `cleartext` to the `state` `file`
 
 
 __________________________________________________________________________________________
