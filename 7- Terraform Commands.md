@@ -135,6 +135,13 @@ Acquiring state lock. This may take a few moments...
 
 __________________________________________________________________________________________
 
+## terraform login
+
+The terraform login command can be used to automatically obtain and save an API token for Terraform Cloud, Terraform Enterprise, or any other host that offers Terraform services.
+
+__________________________________________________________________________________________
+
+
 
 
 
