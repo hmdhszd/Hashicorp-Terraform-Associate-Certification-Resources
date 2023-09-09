@@ -306,3 +306,18 @@ Destroy provisioners are run before the resource is destroyed.
 
 
 __________________________________________________________________________________________
+
+
+
+You run a local-exec provisioner in a null resource called null_resource.run_script and realize that you need to rerun the script.
+Which of the following commands would you use first?
+
+- terraform taint null_resource.run_scrip
+
+__________________________________________________________________________________________
+
+
+
+
+
+
