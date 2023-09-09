@@ -127,6 +127,21 @@ ________________________________________________________________________________
 
 
 
+What is not processed when running a terraform refresh?
+
+
+
+Configuration file
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
 
 
 The `terraform apply -refresh-only` command creates a plan whose goal is `only` to `update` the `Terraform` `state` and any root module output values to match changes made to remote objects outside of Terraform.
