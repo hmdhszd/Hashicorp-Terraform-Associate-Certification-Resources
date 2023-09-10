@@ -306,6 +306,22 @@ ________________________________________________________________________________
 
 
 
+What features does the hosted service Terraform Cloud provide? (Choose two.)
+
+
+- Remote state storage
+
+- A web-based user interface (UI)
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
 
 
 
