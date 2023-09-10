@@ -424,5 +424,17 @@ modules can be both public and private
 __________________________________________________________________________________________
 
 
+Modules do not inherit variables from the parent module.
+
+
+All modules are self-contained units.
+
+So you have to explicitly define variables in the child module, and then explicit set these variables in the parent module, when you instantiate the child module.
+
+
+
+__________________________________________________________________________________________
+
+
 
  
