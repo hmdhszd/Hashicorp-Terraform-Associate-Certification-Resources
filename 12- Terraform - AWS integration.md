@@ -60,8 +60,10 @@ ________________________________________________________________________________
 
 
 
-### 4- integrated services (AWS IAM, Azure Managed Service Identity)
+*** integrated services (AWS IAM, Azure Managed Service Identity)
 
+
+Only for connecting to the API in the underlying platform
 
 
 
