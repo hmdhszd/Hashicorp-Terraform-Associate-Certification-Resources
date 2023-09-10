@@ -512,3 +512,18 @@ ________________________________________________________________________________
 When running a terraform plan, how can you save the plan so it can be applied at a later time? `-out`
 
 __________________________________________________________________________________________
+
+
+Outside of the required_providers block, Terraform configurations always refer to providers by their local names.
+
+
+
+
+
+__________________________________________________________________________________________
+
+
+
+
+
+
