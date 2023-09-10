@@ -406,7 +406,7 @@ ________________________________________________________________________________
 
 
 
-You can have your own private module in Terraform cloud private registry or Terraform Enterprise private registry  or  Github repository
+You can have your own private module in `Terraform cloud private registry` or `Terraform Enterprise private registry`  or  `Github repository`
 
 
 __________________________________________________________________________________________
