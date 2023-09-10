@@ -158,3 +158,17 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 
+
+Examine the following Terraform configuration, which uses the data source for an AWS AMI.
+What value should you enter for the ami argument in the AWS instance resource?
+
+
+we add `id` at the end:
+
+- data.aws_ami.ubuntu.id
+
+
+
+__________________________________________________________________________________________
+
+
