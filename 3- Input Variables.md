@@ -489,3 +489,17 @@ ________________________________________________________________________________
 
 
 
+The safest method to inject sensitive variables into your Terraform run in a CI/CD pipeline is:
+
+- Pass variables to Terraform with a -var flag.
+
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+
+
