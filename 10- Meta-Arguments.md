@@ -217,7 +217,7 @@ local_sensitive_file.name["/root/user12"]
 __________________________________________________________________________________________
 
 
-### When a module has multiple configurations for the same provider, which meta-argument can you use to specify the configuration? `providers`
+### When a `module` has multiple configurations for the same provider, which meta-argument can you use to specify the configuration? `providers`
 
 
 ```hcl
@@ -240,7 +240,9 @@ module "example_module" {
 }
 ```
 
+for modules => providerS
 
+for others => provider
 
 __________________________________________________________________________________________
 
