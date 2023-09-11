@@ -149,7 +149,7 @@ For example - a resource that deploys to the "us-east-1" and another resource wi
 
 *** to use multiple versions of the same provider NOT multiple configurations of the same provider ???????????????
 
-
+*** to have multiple versions of the same configuration, you can use workspaces
 
 __________________________________________________________________________________________
 
