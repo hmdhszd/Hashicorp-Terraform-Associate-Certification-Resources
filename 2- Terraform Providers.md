@@ -222,7 +222,7 @@ ________________________________________________________________________________
 
 
 
-#### how add `credentials` to access the API for the underlying platform, such as VMware, AWS, or Google Cloud?
+#### how add `credentials` to access the `API` for the `underlying platform`, such as VMware, AWS, or Google Cloud?
 
 
 - in the `provider` `block` by hardcoding or using variable
