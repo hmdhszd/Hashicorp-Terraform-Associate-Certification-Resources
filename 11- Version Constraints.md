@@ -200,7 +200,14 @@ ________________________________________________________________________________
 
 
 
+If Terraform isn't able to obtain acceptable versions of external dependencies, or if it doesn't have an acceptable version of itself, it won't proceed with any plans, applies, or state manipulation actions.
 
+
+
+
+
+
+__________________________________________________________________________________________
 
 
 
